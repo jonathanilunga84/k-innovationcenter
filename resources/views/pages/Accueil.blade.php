@@ -1,4 +1,4 @@
-@extends('pages.base.base')
+@extends('pagesHeader.base')
 
 @section('title')
     Accueil

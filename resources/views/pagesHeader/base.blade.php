@@ -42,7 +42,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-    @include('pages.base.navigation')
+    @include('pagesHeader.navigation')
   <!-- End Header -->
 
   <!-- ======= Content ======= -->
@@ -119,7 +119,7 @@
   <!-- End Creat Compte -->
 
   <!-- ======= Footer ======= -->
-    @include('pages.base.footer')
+    @include('pagesHeader.footer')
   <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
