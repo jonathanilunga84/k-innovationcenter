@@ -26,7 +26,7 @@
   <link href="{{ asset('css/style/vd/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{{ asset('css/style/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
   <!-- =======================================================
     <link href="{{ asset('css/style/') }}" rel="stylesheet">
