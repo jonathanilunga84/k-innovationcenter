@@ -2,7 +2,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <!--h1 class="logo"><a href="index.html">Me &amp; Family</a></h1-->
-      <h1 class="logo text-center"><a href="index.html"><span>KINSHASA</span> <br /> <span>INNOVATION</span><br /><span>CENTER</span></a></h1>
+      <h1 class="logo text-center"><a href="{{ route('Home')}} "><span>KINSHASA</span> <br /> <span>INNOVATION</span><br /><span>CENTER</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -31,7 +31,22 @@
           </li>
           <li><a href="">REJOINDRE LE RESEAUX</a></li>
           <li><a href="https://www.ccsc.ch/blog">Blog</a></li>
-          <li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li>
+          <!--li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li-->
+         
+             @if (Route::has('login'))
+                
+                    @auth
+                         <li> <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a></li>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline"></a>
+
+                        @if (Route::has('register'))
+                            <li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li>
+                        @endif
+                    @endauth
+               
+            @endif
+          
           <!--li><a href="contact.html">Contact</a></li-->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

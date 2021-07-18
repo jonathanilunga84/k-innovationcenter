@@ -62,8 +62,10 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title text-center" id="exampleModalLabel">Create Compte KIC</h3>
+        <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
+               @csrf
+      <div id="creationCompte" class="modal-header  bg-danger-">
+        <h3 class="modal-title text-center fw-bold" id="exampleModalLabel">CREATION DE COMPTE KIC</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -71,29 +73,30 @@
          <div class="row">
           <div class="col-lg-12 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
+               @csrf
                <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Nom" data-rule="minlen:4" required>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nom" data-rule="" required autofocus>
                 <div class="validate"></div>
               </div>
                <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Postnom" data-rule="minlen:4" required>
+                <input type="text" class="form-control" name="postnom" id="postnom" placeholder="Postnom" data-rule="">
                 <div class="validate"></div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Prenom" data-rule="minlen:4" required>
+                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" data-rule="">
                 <div class="validate"></div>
               </div>
                <div class="form-group mt-3">
-                <input type="mail" class="form-control" name="subject" id="subject" placeholder="Adrese mail" data-rule="minlen:4" required>
+                <input type="email" class="form-control" name="email" id="" placeholder="Adrese mail" data-rule="" required>
                 <div class="validate"></div>
               </div>
                <div class="form-group mt-3">
-                <input type="password" class="form-control" name="subject" id="subject" placeholder="Mot de passe" data-rule="minlen:4" required>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" data-rule="" required>
                 <div class="validate"></div>
               </div>
               <div class="form-group mt-3">
-                <input type="password" class="form-control" name="subject" id="subject" placeholder="Confirme Mot de passe" data-rule="minlen:4" required>
+                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirme Mot de passe" data-rule="" required>
                 <div class="validate"></div>
               </div>
               
@@ -103,20 +106,98 @@
                 <!--div class="sent-message">Your message has been sent. Thank you!</div-->
               </div>
               <!--div class="text-center"><button type="submit">Envoyer Message</button></div-->
-            </form>
+            
 
           </div>
          </div>
        </div>
       </div>
       <div class="modal-footer">
+        <div class="container">
+          <div class="row">
+          <div class="col-sm-6">
+            <!--a data-bs-toggle="modal" data-bs-target="#exampleModal_login">login</a-->
+            <a href="{{ route('login') }}">J'ai déja un Compte</a>
+          </div>
+          <div class="col-sm-6 form-group">
+            <button id="btn_createCompte" type="submit" class="btn btn-primary form-control">Créer Compte KIC</button>
+          </div>
+          </div>
+        </div>
         <!--button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button-->
-        <button id="btn_createCompte" type="button" class="btn btn-primary">Créer Compte KIC</button>
+        <!--input id="btn_createCompte" type="submit" class="btn btn-primary" value="Créer Compte KIC" /-->
       </div>
+      </form>
     </div>
   </div>
 </div>
   <!-- End Creat Compte -->
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
+               @csrf
+      <div id="creationCompte" class="modal-header  bg-danger-">
+        <h3 class="modal-title text-center fw-bold" id="exampleModalLabel">CONNEXION AUX KIC</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <div class="container">
+         <div class="row">
+          <div class="col-lg-12 mt-5 mt-lg-0">
+
+            <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
+               @csrf
+               <div class="form-group mt-3">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nom" data-rule="" required autofocus>
+                <div class="validate"></div>
+              </div>
+               <div class="form-group mt-3">
+                <input type="text" class="form-control" name="postnom" id="postnom" placeholder="Postnom" data-rule="">
+                <div class="validate"></div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" data-rule="">
+                <div class="validate"></div>
+              </div>
+               <div class="form-group mt-3">
+                <input type="email" class="form-control" name="email" id="" placeholder="Adrese mail" data-rule="" required>
+                <div class="validate"></div>
+              </div>
+               <div class="form-group mt-3">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" data-rule="" required>
+                <div class="validate"></div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirme Mot de passe" data-rule="" required>
+                <div class="validate"></div>
+              </div>
+          </div>
+         </div>
+       </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <div class="row">
+          <div class="col-sm-6">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal_login">login</a>
+            <a href="{{ route('login') }}">J'ai déja un Compte</a>
+          </div>
+          <div class="col-sm-6 form-group">
+            <button id="btn_createCompte" type="submit" class="btn btn-primary form-control">Créer Compte KIC</button>
+          </div>
+          </div>
+        </div>
+        <!--button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button-->
+        <!--input id="btn_createCompte" type="submit" class="btn btn-primary" value="Créer Compte KIC" /-->
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <!-- End login -->
 
   <!-- ======= Footer ======= -->
     @include('page.footer')
