@@ -82,19 +82,20 @@
             </span><br />
   					Activité.
   					<p><br />
-  						<a href="{{ asset('css/style/pdf/ActivitesKIC') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
+  						<a href="{{ asset('css/style/pdf/ActivitesKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
   					</p>
   				</div>
   			</div>
   			<div id="video_page" class="row justify-content-center">
-  				<div class="col-sm-12 col-lg-12 text-center">
-  					<iframe width="900" height="500" src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  				<div class="col-sm-12 ratio ratio-21x9 col-lg-8 text-center">
+  					<iframe src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   						
   					</iframe>
   				</div>
   			</div>
   		</div>
   	</section>
+
   	<section id="story-intro" class="story-intro">
   		<div class="container-fluid">
   	     <div class="row">
