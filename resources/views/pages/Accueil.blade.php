@@ -65,7 +65,7 @@
             </span> <br />
   					Nos Objectifs.
   					<p><br />
-              <a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
+              <a href="{{ asset('css/style/pdf/ObjectifsKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
   					
   				</div>
   				<div class="col-sm-3 fw-bold">
@@ -74,7 +74,7 @@
             </span><br />
   					APPROCHE.
   					<p><br />
-              <a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
+              <a href="{{ asset('css/style/pdf/ApprocheKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
   				</div>
   				<div class="col-sm-3 fw-bold">
             <span>
@@ -82,7 +82,7 @@
             </span><br />
   					Activité.
   					<p><br />
-  						<a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
+  						<a href="{{ asset('css/style/pdf/ActivitesKIC') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
   					</p>
   				</div>
   			</div>
