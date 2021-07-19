@@ -575,10 +575,7 @@ section {
   margin-top: 50px;
 }
 
-#story-intro{
-  background-: #006fbe;
-  background-color: #1d284b;
-}
+
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
@@ -762,43 +759,32 @@ section {
 /*--------------------------------------------------------------
 # Story Intro
 --------------------------------------------------------------*/
-.story-intro .content h3 {
-  font-weight: 600;
-  font-size: 26px;
+
+
+#story-intro .story-intro-ligne{
+  background-: #006fbe;
+  background-color: #1d284b;
+  padding-left: 0;
+}
+#story-intro #conte{
+  padding-left: 0;
+}
+#story-intro #Coluumn_carousel{
+  background-color-: yellow;
+  border-right-: 5px solid red;
+
 }
 
-.story-intro .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.story-intro .content ul li {
-  padding-bottom: 10px;
-}
-
-.story-intro .content ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: #006fbe;
-}
-
-.story-intro .content p:last-child {
-  margin-bottom: 0;
-}
-
-.story-intro .title-sous{
-  color-: #006fbe;
-  margin-top: 10px;
-  margin-left: 5px;
+#story-intro #title_appel_projet{
   font-weight: bold;
-  font-size: 15px;
+  color-: red;
+  padding-top-: 15px;
 }
-.story-intro .title-sous span{
-  padding: 5px 10px;
-  color: #fff;
-  font-size: 14px;
-  margin-right: 5px;
-  background: #006fbe;
+#story-intro #content_text{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .btn-learn-more {

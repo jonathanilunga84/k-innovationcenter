@@ -14,25 +14,25 @@
 			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			  </div>
 			  <div class="carousel-inner">
-			    <div class="carousel-item active">
+			    <!--div class="carousel-item active">
 			      <img src="{{ asset('images/slide/bg_header.jpeg') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5></h5>
 			        <h6>Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h6>
 			        <p></p>
 			      </div>
-			    </div>
-			    <div class="carousel-item">
+			    </div-->
+			    <div class="carousel-item active">
 			      <img src="{{ asset('images/slide/KIC IMAGEA-min.png') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
-			        <h6>Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h6>
+			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
 			      </div>
 			    </div>
 			    <div class="carousel-item">
 			      <img src="{{ asset('images/slide/light-bulb-3104355.jpg') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5></h5>
-			        <h6>Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h6>
+			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
 			      </div>
 			    </div>
 			  </div>
@@ -96,19 +96,44 @@
   		</div>
   	</section>
 
-  	<section id="story-intro" class="story-intro">
-  		<div class="container-fluid">
-  	     <div class="row">
-          <div class="col-sm-6 col-lg-6 Oorder-1 order-lg-22">
-            <img src="{{ asset('images/img-appel-aprojet.jpg') }}" class="img-fluid" alt="" />
+  	<section id="story-intro" class="story-intro bg-success-">
+  		<div id="conte" class="container-fluid">
+  	     <div class="row story-intro-ligne">
+          <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 bg-success- order-lg-22">
+             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('images/img-appel-aprojet.jpg') }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
           </div>
           <div class="col-sm-6 text-light text-center">
-            <h2>Appel à projet 2021</h2>
+            <div id="content_text">   
+           
+            <h2 id="title_appel_projet">Appel à projet 2021</h2>
             <br />
-            <p class="fst-italic">Etudiant, Entrepreuneur et Chercheurs</p>
+            <p id="content">
+              Vous êtes étudiant, finaliste du secondaire, entrepreneur, chercheurs voici l'occasion vous est donnée pour soumettre vos projets et bénéficier d'un accompagnement (acquisition des compétences nécessaires, accès aux incubateurs, accès au financement, espace de travail, participation au programme accelerate 2030 pour l'atteinte des objectifs de développement durable)
+            </p>
             <p>
               <a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Je postule</a>
             </p>
+            </div>
           </div> 
          </div>
   		</div>

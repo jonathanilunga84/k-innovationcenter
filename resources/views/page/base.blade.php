@@ -206,16 +206,21 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{{ asset('css/style/') }}"></script>
+  <script src="{{ asset('css/style/vendor/jquery/jQuery3.5.1.min.js') }}"></script>
   <script src="{{ asset('css/style/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
   <script src="{{ asset('css/style/vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
   <script src="{{ asset('css/style/vendor/swiper/swiper-bundle.min.js') }}"></script>
-
   <!-- Template Main JS File -->
   <script src="{{ asset('js/js/main.js') }}"></script>
+   <script>
+     /*$(document).ready(function(){
+
+     });*/
+  </script>
 </body>
 
 </html>
