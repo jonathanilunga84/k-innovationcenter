@@ -14,15 +14,15 @@
 			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			  </div>
 			  <div class="carousel-inner">
-			    <!--div class="carousel-item active">
-			      <img src="{{ asset('images/slide/bg_header.jpeg') }}" class="d-block w-100" alt="...">
+			    <div class="carousel-item active">
+			      <img src="{{ asset('images/slide/slide-3.jpg') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5></h5>
-			        <h6>Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h6>
+			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
 			        <p></p>
 			      </div>
-			    </div-->
-			    <div class="carousel-item active">
+			    </div>
+			    <div class="carousel-item">
 			      <img src="{{ asset('images/slide/KIC IMAGEA-min.png') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
@@ -103,13 +103,13 @@
              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('images/img-appel-aprojet.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('images/Appel-a-projets-1.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('images/Appel-a-projets-2.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('images/Appel-a-projets-3.jpg') }}" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
