@@ -16,7 +16,7 @@ body {
     background-size: 100% 100%
 }
 
-#formb {background: url("/images/Appel-a-projets-1.jpg");}
+#formbackground {background: url("/images/Appel-a-projets-1.jpg");}
 
 .card {
     padding: 30px 40px;
@@ -100,7 +100,7 @@ button:focus {
                                 
                                
                                 <div class="container-fluid px-1 py-5 mx-auto">
-    <div class="row d-flex justify-content-center" id="formb">
+    <div class="row d-flex justify-content-center" id="formbackground">
         <div class="col-xl-7 col-lg-12 col-md-9 col-11 text-center">           
             <div class="card">
                 <h5 class="text-center mb-4 fw-bold">JOINDRE LE RESEAUX</h5>
@@ -130,8 +130,8 @@ button:focus {
                          </div>
                     </div>
                     <div class="row justify-content-between text-left">
-                        <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Mot de passe <span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)"> </div>
-                        <div class="form-group col-6 flex-column d-flex"> <label class="form-control-label px-3">Confirm Mot de passe<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)"> </div>
+                        <div class="form-group col-sm-12 col-6 flex-column d-flex"> <label class="form-control-label px-3">Mot de passe <span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)"> </div>
+                        <div class="form-group col-sm-12 col-6 flex-column d-flex"> <label class="form-control-label px-3">Confirm Mot de passe<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)"> </div>
                     </div>
                     <div class="row justify-content-end">
                         <div class="form-group col-sm-12"> 
