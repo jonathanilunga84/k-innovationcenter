@@ -96,10 +96,10 @@
   		</div>
   	</section>
 
-  	<section id="story-intro" class="story-intro bg-success-">
+  	<section id="story-intro" class="story-intro">
   		<div id="conte" class="container-fluid">
   	     <div class="row story-intro-ligne">
-          <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 bg-success- order-lg-22">
+          <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 order-lg-22">
              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">

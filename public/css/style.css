@@ -1,4 +1,4 @@
-/**
+stor/**
 * Template Name: MeFamily - v4.2.0
 * Template URL: https://bootstrapmade.com/family-multipurpose-html-bootstrap-template-free/
 * Author: BootstrapMade.com
@@ -440,6 +440,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+   #hero {
+   margin-top: 500px;
+    height: 100vh;
+  }
   #hero h2 {
     font-size: 28px;
   }
@@ -448,6 +452,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
   #hero .carousel-control-prev, #hero .carousel-control-next {
     width: 5%;
+  }
+}
+@media (max-width: 500px) {
+  #hero {
+    height: 100%;
   }
 }
 
@@ -769,16 +778,9 @@ section {
 #story-intro #conte{
   padding-left: 0;
 }
-#story-intro #Coluumn_carousel{
-  background-color-: yellow;
-  border-right-: 5px solid red;
-
-}
 
 #story-intro #title_appel_projet{
   font-weight: bold;
-  color-: red;
-  padding-top-: 15px;
 }
 #story-intro #content_text{
   position: relative;
@@ -1282,7 +1284,8 @@ section {
 }
 
 .contact-us .php-email-form button[type="submit"] {
-  background: #006fbe;
+  background-: #006fbe;
+  background-color: #1d284b;
   border: 0;
   padding: 10px 30px;
   color: #fff;

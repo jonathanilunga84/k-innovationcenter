@@ -29,7 +29,7 @@
               <li><a href="#">Drop Down 4</a></li-->
             </ul>
           </li>
-          <li><a href="">REJOINDRE LE RESEAUX</a></li>
+          <li><a href="{{ route('rejoindre-le-reseaux') }}">REJOINDRE LE RESEAUX</a></li>
           <li><a href="https://www.ccsc.ch/blog">Blog</a></li>
           <!--li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li-->
          
