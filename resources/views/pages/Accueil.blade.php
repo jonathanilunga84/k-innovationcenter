@@ -3,12 +3,12 @@
 @section('title')
     Accueil
 @endsection
-<style>
+<!--style>
   #more-{
     display: none;
   }
 
-</style>
+</style-->
 
 @section('contenu')
 	<!-- ======= Hero Section ======= -->
@@ -154,7 +154,7 @@
               Vous bénéficierez d'un accès aux incubateurs, à un espace de travail, des échanges avec les anciens lauréat, participation au programme accelerate 2030  et bien plus encore! N'attendez plus et envoyez-nous votre dossier en cliquant ci-dessous.
             </p>
             <p>
-              <a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Je postule</a>
+              <a href="#" id="btn-learn-more" class="btn-learn-more">Je postule</a>
             </p>
             </div>
           </div> 
@@ -250,7 +250,7 @@
 
         <div class="recent-photos-slider swiper-container">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a href="https://www.ccsc.ch" class="Chambre de commerce"><img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="img-fluid-" height="80" alt=""></a>
+            <div class="swiper-slide"><a href="https://www.ccsc.ch" class="glightbox Chambre de commerce"><img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="img-fluid-" height="80" alt=""></a>
             </div>
             <div class="swiper-slide"><a href="https://www.unige.ch/" class="glightbox"><img src="{{ asset( 'images/partainers/1280px-Université_de_Genève_(logo).svg.png') }}" class="img-fluid-" height="50" alt="Université de Genève"></a>
             </div>
@@ -265,6 +265,8 @@
             <div class="swiper-slide"><a href="https://www.eda.admin.ch/countries/democratic-republic-congo/fr/home/actualite/nouveautes.html/content/countries/democratic-republic-congo/fr/meta/news/2020/11/novembre/Communique-de-presse-de-l%27ambassade-de-Suisse-en-RDC" class="glightbox"><img src="{{ asset('images/partainers/7-logo7AMBASSADESUISSE.png') }}" class="img-fluid" title="AMbassade Suisse" alt="AMBASSADE SUISSE"></a>
             </div>
             <div class="swiper-slide"><a href="https://www.wipo.in/portal/fr/index.html" class="glightbox"><img src="{{ asset('images/partainers/8-logoWIPO.png') }}" class="img-fluid" alt="WIPO"></a>
+            </div>
+            <div class="swiper-slide"><a href="https://lusaka.impacthub.net/" class="glightbox"><img src="{{ asset('images/partainers/9-WhatsApp.jpeg') }}" class="img-fluid" alt="WIPO"></a>
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -317,7 +319,7 @@
           </div>
 
           <div class="col-lg-6 mt-5 mt-lg-0 text-center fw-bold">
-              <h6>Joindre le reseaux</h6>
+              <!--h6>Joindre le reseaux</h6-->
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-12 form-group">

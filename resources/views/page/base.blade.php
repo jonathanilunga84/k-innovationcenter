@@ -208,7 +208,6 @@
   <!-- Vendor JS Files -->
   <script src="{{ asset('css/style/vendor/jquery/jQuery3.5.1.min.js') }}"></script>
   <script src="{{ asset('css/style/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/readmore-js@2.2.1/readmore.min.js"></script>
   <script src="{{ asset('css/style/vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
@@ -219,7 +218,7 @@
    <script>
      /*$(document).ready(function(){
        }*/
-       function read_more_less(){
+       /*function read_more_less(){
         var dots = document.getElementById('dots');
         var moretext = document.getElementById('more');
         var mybtn = document.getElementById('mybtn');
@@ -229,7 +228,7 @@
         else{
           
         }
-       }
+       }*/
   </script>
 </body>
 
