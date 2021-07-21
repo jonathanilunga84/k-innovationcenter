@@ -9,7 +9,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="active" href="{{ route('Home')}}">ACCUEIL</a></li>
-          <li><a href="">Appel à projet 2021</a></li>
+          <li><a href="{{ route('Appel-aprojet') }}">Appel à projet 2021</a></li>
           <!--li><a href="quiSommesNous.php">QUI SOMME NOUS</a></li-->
           <!--li><a href="">EDITIONS</a></li-->
           <li class="dropdown"><a href="#"><span>EDITIONS</span> <i class="bi bi-chevron-down"></i></a>
@@ -36,12 +36,12 @@
              @if (Route::has('login'))
                 
                     @auth
-                         <li> <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a></li>
+                         <!--li> <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a></li-->
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline"></a>
 
                         @if (Route::has('register'))
-                            <li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li>
+                            <!--li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li-->
                         @endif
                     @endauth
                

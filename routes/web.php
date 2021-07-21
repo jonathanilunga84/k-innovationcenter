@@ -25,6 +25,8 @@ Route::get('/rejoindre-le-reseaux', function () {
 })->name('rejoindre-le-reseaux');
 Route::get('/',[HomeController::class,'home'])->name('Home');
 
+Route::get('/Appel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

@@ -54,7 +54,15 @@
   				<div class="col-sm-12">
   					<div class="section-title">
   						<h2>Bienvenue à Kinshasa Innovation Center</h2>
-  						<p>Kinshasa Innovation Center (KIC) est une initiative de la Chambre de commerce Suisse- RD Congo (CCSC) en partenariat avec les universités de Genève et de Kinshasa. Il a pour but de promouvoir les jeunes entrepreneurs Congolais en les accompagnant avec des outils utiles et indispensables à la création d’entreprise. L’approche envisagée est l’apprentissage et la mise en situation de cas pratiques avec l’assistance des mentors et chefs d’entreprises expérimentés.</p>
+  						<p>Kinshasa Innovation Center (KIC) est une initiative de la Chambre de commerce Suisse- RD Congo (CCSC) en partenariat avec les universités de Genève et de Kinshasa. Il a pour but de promouvoir les jeunes entrepreneurs Congolais en les accompagnant avec des outils utiles et indispensables à la création d’entreprise. L’approche envisagée est l’apprentissage et la mise en situation de cas pratiques avec l’assistance des mentors et chefs d’entreprises expérimentés.  
+              <span class="bg-danger-">
+                Pour cette nouvelle édition, nous avons le plaisir de renouveler notre partenariat avec l'Organisation Mondiale de la Propriété Intellectuelle (OMPI) qui oeuvre pour l' investissement dans la recherche & développement, l'innovation, la création et la production culturelle. Nous sommes également heureux de compter l' Office de Promotion des Petites et Moyennes Entreprises Congolaises (OPEC) comme nouveau partenaire du KIC
+              </span>
+               
+              </p>
+              <p>
+               . 
+              </p>
   					</div>  					
   				</div>
   			</div>
@@ -63,7 +71,7 @@
             <span>
               <img src="{{ asset('images/objectif.png')}}" width="100" alt=""><br/>
             </span> <br />
-  					Nos Objectifs.
+  					Nos objectifs
   					<p><br />
               <a href="{{ asset('css/style/pdf/ObjectifsKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
   					
@@ -72,7 +80,7 @@
             <span>
               <img src="{{ asset('images/approche.png')}}" width="100" alt=""><br/>
             </span><br />
-  					APPROCHE.
+  					Notre approche
   					<p><br />
               <a href="{{ asset('css/style/pdf/ApprocheKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
   				</div>
@@ -80,7 +88,7 @@
             <span>
               <img src="{{ asset('images/activite.png')}}" width="100" alt=""><br/>
             </span><br />
-  					Activité.
+  					Nos activités
   					<p><br />
   						<a href="{{ asset('css/style/pdf/ActivitesKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
   					</p>
@@ -106,7 +114,7 @@
       <img src="{{ asset('images/Appel-a-projets-1.jpg') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('images/Appel-a-projets-2.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('images/Appel-a-projet-4.png') }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="{{ asset('images/Appel-a-projets-3.jpg') }}" class="d-block w-100" alt="...">
@@ -122,7 +130,7 @@
   </button>
 </div>
           </div>
-          <div class="col-sm-6 text-light text-center">
+          <div id="Appel-aprojet" class="col-sm-6 text-light text-center">
             <div id="content_text">   
            
             <h2 id="title_appel_projet">Appel à projet 2021</h2>
@@ -221,7 +229,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>NOS PARTENAIRES</h2>
+          <h2>Cliquez sur le logo et découvrez nos partenaires</h2>
           <!--p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p-->
         </div>
 
@@ -239,7 +247,7 @@
             </div>
             <div class="swiper-slide"><a href="https://www.4ipgroup.org/" class="glightbox"><img src="{{ asset('images/partainers/6-group.png') }}" class="img-fluid-" height="80" alt="4ipGroup"></a>
             </div>
-            <div class="swiper-slide"><a href="https://www.eda.admin.ch/kinshasa" class="glightbox"><img src="{{ asset('images/partainers/7-logo7AMBASSADESUISSE.png') }}" class="img-fluid" alt="AMBASSADE SUISSE"></a>
+            <div class="swiper-slide"><a href="https://www.eda.admin.ch/countries/democratic-republic-congo/fr/home/actualite/nouveautes.html/content/countries/democratic-republic-congo/fr/meta/news/2020/11/novembre/Communique-de-presse-de-l%27ambassade-de-Suisse-en-RDC" class="glightbox"><img src="{{ asset('images/partainers/7-logo7AMBASSADESUISSE.png') }}" class="img-fluid" title="AMbassade Suisse" alt="AMBASSADE SUISSE"></a>
             </div>
             <div class="swiper-slide"><a href="https://www.wipo.in/portal/fr/index.html" class="glightbox"><img src="{{ asset('images/partainers/8-logoWIPO.png') }}" class="img-fluid" alt="WIPO"></a>
             </div>
@@ -276,14 +284,17 @@
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <!--p>info@example.com</p-->
-                <p>info@ccsc.ch / Richard.mukundji@ccsc.ch / crispin.mulaji@unikin.ac.cd</p>
+                <p>Pour les informations générales: info@ccsc.ch </p>
+                <p>Concernant la(le) technique : info@k-innovationcenter.com</p>
+                <!--p>info@ccsc.ch / Richard.mukundji@ccsc.ch / crispin.mulaji@unikin.ac.cd</p-->
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <!--p>+1 5589 55488 55s</p-->
-                <p>+243 820 656 983 / +41 778 150 566 / +243 973 562 348</p>
+                <!--p>+243 820 656 983 / +41 778 150 566 / +243 973 562 348</p-->
+                <p>+41 778 150 556 / +243 820 656 983</p>
               </div>
 
             </div>
