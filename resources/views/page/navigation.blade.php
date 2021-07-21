@@ -14,7 +14,7 @@
           <!--li><a href="">EDITIONS</a></li-->
           <li class="dropdown"><a href="#"><span>EDITIONS</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="https://www.ccsc.ch/kinshasa-innovation-center">Edition 2020</a></li>
+              <li><a href="https://www.ccsc.ch/kinshasa-innovation-center" target="_blank">Edition 2020</a></li>
               <!--li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -29,8 +29,8 @@
               <li><a href="#">Drop Down 4</a></li-->
             </ul>
           </li>
-          <li><a href="{{ route('rejoindre-le-reseaux') }}">REJOINDRE LE RESEAUX</a></li>
-          <li><a href="https://www.ccsc.ch/blog">Blog</a></li>
+          <li><a href="{{ route('Rejoindre-lereseaux') }}">REJOINDRE LE RESEAUX</a></li>
+          <li><a href="https://www.ccsc.ch/blog" target="_blank">Blog</a></li>
           <!--li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li-->
          
              @if (Route::has('login'))

@@ -3,6 +3,12 @@
 @section('title')
     Accueil
 @endsection
+<style>
+  #more-{
+    display: none;
+  }
+
+</style>
 
 @section('contenu')
 	<!-- ======= Hero Section ======= -->
@@ -54,10 +60,12 @@
   				<div class="col-sm-12">
   					<div class="section-title">
   						<h2>Bienvenue à Kinshasa Innovation Center</h2>
-  						<p>Kinshasa Innovation Center (KIC) est une initiative de la Chambre de commerce Suisse- RD Congo (CCSC) en partenariat avec les universités de Genève et de Kinshasa. Il a pour but de promouvoir les jeunes entrepreneurs Congolais en les accompagnant avec des outils utiles et indispensables à la création d’entreprise. L’approche envisagée est l’apprentissage et la mise en situation de cas pratiques avec l’assistance des mentors et chefs d’entreprises expérimentés.  
-              <span class="bg-danger-">
+  						<p>Kinshasa Innovation Center (KIC) est une initiative de la Chambre de commerce Suisse- RD Congo (CCSC) en partenariat avec les universités de Genève et de Kinshasa. Il a pour but de promouvoir les jeunes entrepreneurs Congolais en les accompagnant avec des outils utiles et indispensables à la création d’entreprise. L’approche envisagée est l’apprentissage et la mise en situation de cas pratiques avec l’assistance des mentors et chefs d’entreprises expérimentés. <!--span id="" class="dots">...</span-->
+
+              <span id="more" class="">
                 Pour cette nouvelle édition, nous avons le plaisir de renouveler notre partenariat avec l'Organisation Mondiale de la Propriété Intellectuelle (OMPI) qui oeuvre pour l' investissement dans la recherche & développement, l'innovation, la création et la production culturelle. Nous sommes également heureux de compter l' Office de Promotion des Petites et Moyennes Entreprises Congolaises (OPEC) comme nouveau partenaire du KIC
               </span>
+              <!--span id="mybtn" onclick="read_more_less();">Lire la suite</span-->
                
               </p>
               <p>
@@ -105,7 +113,7 @@
   	</section>
 
   	<section id="story-intro" class="story-intro">
-  		<div id="conte" class="container-fluid">
+  		<div id="Appel-aprojet" class="container-fluid">
   	     <div class="row story-intro-ligne">
           <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 order-lg-22">
              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -130,13 +138,20 @@
   </button>
 </div>
           </div>
-          <div id="Appel-aprojet" class="col-sm-6 text-light text-center">
+          <div id="Appel-aprojetM" class="col-sm-6 text-light text-center">
             <div id="content_text">   
            
             <h2 id="title_appel_projet">Appel à projet 2021</h2>
             <br />
-            <p id="content">
+            <!--p id="content">
               Vous êtes étudiant, finaliste du secondaire, entrepreneur, chercheurs voici l'occasion vous est donnée pour soumettre vos projets et bénéficier d'un accompagnement (acquisition des compétences nécessaires, accès aux incubateurs, accès au financement, espace de travail, participation au programme accelerate 2030 pour l'atteinte des objectifs de développement durable)
+            </p-->
+            <p id="content">
+              Vous êtes étudiant(e), finaliste du secondaire, entrepreneur, chercheurs ou tout simplement passionné(e) par l'innovation et la création d'entreprise ?
+              <br /> <br />
+              Voici pour vous l'opportunité de nous soumettre votre projet et ainsi bénéficier d'un accompagnement aussi bien pratique que théorique, qui regroupera notamment les thématiques suivantes: création d'un business plan, propriété intellectuelle, sources de financement, éthique des affaires.
+              <br /> <br />
+              Vous bénéficierez d'un accès aux incubateurs, à un espace de travail, des échanges avec les anciens lauréat, participation au programme accelerate 2030  et bien plus encore! N'attendez plus et envoyez-nous votre dossier en cliquant ci-dessous.
             </p>
             <p>
               <a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Je postule</a>
@@ -260,7 +275,7 @@
     <section id="contact-us" class="contact-us">
       <div class="container">
         <div class="section-title">
-          <h2>CONTACT</h2>
+          <h2 id="rejoindreReseaux">CONTACT</h2>
         </div>
         <!--div>
           <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
@@ -285,7 +300,7 @@
                 <h4>Email:</h4>
                 <!--p>info@example.com</p-->
                 <p>Pour les informations générales: info@ccsc.ch </p>
-                <p>Concernant la(le) technique : info@k-innovationcenter.com</p>
+                <p>Concernant la technique : info@k-innovationcenter.com</p>
                 <!--p>info@ccsc.ch / Richard.mukundji@ccsc.ch / crispin.mulaji@unikin.ac.cd</p-->
               </div>
 
@@ -301,8 +316,8 @@
 
           </div>
 
-          <div class="col-lg-6 mt-5 mt-lg-0">
-
+          <div class="col-lg-6 mt-5 mt-lg-0 text-center fw-bold">
+              <h6>Joindre le reseaux</h6>
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-12 form-group">

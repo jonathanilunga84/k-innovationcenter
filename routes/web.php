@@ -20,12 +20,13 @@ use App\Http\Controllers\HomeController;
 Route::get('', function () {
     return view('pages.Accueil');
 });
-Route::get('/rejoindre-le-reseaux', function () {
+/*Route::get('/rejoindre-le-reseaux', function () {
     return view('pages.form-Rejoindre-Les-Reseaux');
-})->name('rejoindre-le-reseaux');
+})->name('rejoindre-le-reseaux');*/
 Route::get('/',[HomeController::class,'home'])->name('Home');
 
-Route::get('/Appel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
+Route::get('/ppel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
+Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->name('Rejoindre-lereseaux');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

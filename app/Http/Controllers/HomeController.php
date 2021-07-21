@@ -13,4 +13,8 @@ class HomeController extends Controller
     public function appelaprojet(){
         return redirect()->to(app('url')->previous(). '#Appel-aprojet');
     }
+    public function rejoindreReseaux(){
+        return redirect()->to(app('url')->previous(). '#rejoindreReseaux');
+    }
+
 }
