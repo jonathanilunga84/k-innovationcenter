@@ -20,25 +20,49 @@
 			    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			  </div>
 			  <div class="carousel-inner">
-			    <div class="carousel-item active">
-			      <img src="{{ asset('images/slide/slide-3.jpg') }}" class="d-block w-100" alt="...">
+          <div class="carousel-item active">
+            <img src="{{ asset('images/slide/non2.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
+              <p></p>
+            </div>
+          </div>
+			    <div class="carousel-item">
+			      <img src="{{ asset('images/slide/non4.jpeg') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5></h5>
-			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
+			        <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
 			        <p></p>
 			      </div>
 			    </div>
+          <div class="carousel-item">
+            <img src="{{ asset('images/slide/non3.jpeg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
+              <p></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{ asset('images/slide/non1.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5></h5>
+              <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
+              <p></p>
+            </div>
+          </div>
 			    <div class="carousel-item">
 			      <img src="{{ asset('images/slide/KIC IMAGEA-min.png') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
-			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
+			        <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
 			      </div>
 			    </div>
 			    <div class="carousel-item">
 			      <img src="{{ asset('images/slide/light-bulb-3104355.jpg') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5></h5>
-			        <h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3>
+			        <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
 			      </div>
 			    </div>
 			  </div>

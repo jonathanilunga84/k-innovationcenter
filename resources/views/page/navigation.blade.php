@@ -9,7 +9,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="active" href="{{ route('Home')}}">ACCUEIL</a></li>
-          <li><a href="{{ route('Appel-aprojet') }}">Appel à projet 2021</a></li>
+          <li><a href="#Appel-aprojet">APPEL A PROJET 2021</a></li>
           <!--li><a href="quiSommesNous.php">QUI SOMME NOUS</a></li-->
           <!--li><a href="">EDITIONS</a></li-->
           <li class="dropdown"><a href="#"><span>EDITIONS</span> <i class="bi bi-chevron-down"></i></a>
@@ -29,8 +29,8 @@
               <li><a href="#">Drop Down 4</a></li-->
             </ul>
           </li>
-          <li><a href="{{ route('Rejoindre-lereseaux') }}">REJOINDRE LE RESEAUX</a></li>
-          <li><a href="https://www.ccsc.ch/blog" target="_blank">Blog</a></li>
+          <li><a href="#rejoindreReseaux">REJOINDRE LE RESEAUX</a></li>
+          <li><a href="https://www.ccsc.ch/blog" target="_blank">BLOG</a></li>
           <!--li><a id="createCompte" data-bs-toggle="modal" data-bs-target="#exampleModal">CRÉER UN COMPTE</a></li-->
          
              @if (Route::has('login'))
