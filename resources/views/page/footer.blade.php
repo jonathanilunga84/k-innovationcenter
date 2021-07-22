@@ -5,7 +5,7 @@
       <!--p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p-->
       <p>Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu universitaire</p>
       <div class="social-links">
-        <a href="https://twitter.com/yeccolapp/status/1417746496905228290?s=09" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://twitter.com/giselle_01" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
         <!--a href="#" class="facebook"><i class="bx bxl-facebook"></i></a-->
         <!--a href="#" class="instagram"><i class="bx bxl-instagram"></i></a-->
         <!--a href="#" class="google-plus"><i class="bx bxl-skype"></i></a-->

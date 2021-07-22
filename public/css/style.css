@@ -304,9 +304,9 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-color: rgba(22, 30, 56, 0.8);
-  overflow: hidden;
+  overflow-: hidden;
   position: relative;
 }
 

@@ -45,10 +45,10 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="{{ asset('images/slide/non1.jpg') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('images/slide/light-bulb-3104355.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5></h5>
-              <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
+              
               <p></p>
             </div>
           </div>
