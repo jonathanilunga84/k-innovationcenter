@@ -102,9 +102,10 @@
   			</div>
   			<div id="video_page" class="row justify-content-center">
   				<div class="col-sm-12 ratio ratio-21x9 col-lg-8 text-center">
-  					<iframe src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  					<!--iframe src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   						
-  					</iframe>
+  					</iframe-->
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   				</div>
   			</div>
   		</div>
