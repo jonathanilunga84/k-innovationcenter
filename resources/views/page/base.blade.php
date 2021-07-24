@@ -24,6 +24,9 @@
   <link href="{{ asset('css/style/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style/vendor/slick-1.8.1/slick/slick.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style/vendor/slick-1.8.1/slick/slick-theme.css') }}" rel="stylesheet">
+
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -210,7 +213,7 @@
   <script src="{{ asset('css/style/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('css/style/vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('css/style/vendor/slick-1.8.1/slick/slick.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
   <script src="{{ asset('css/style/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <!-- Template Main JS File -->
@@ -229,6 +232,25 @@
           
         }
        }*/
+
+       $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+
+       $(".center").slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+
+      });
+
+
   </script>
 </body>
 

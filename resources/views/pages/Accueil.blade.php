@@ -13,8 +13,7 @@
 @section('contenu')
 	<!-- ======= Hero Section ======= -->
 	<section id="hero">
-		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-			  
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">			  
 			 
 			    <div class="carousel-item active">
 			      <img src="{{ asset('images/slide/non1.jpg') }}" class="d-block w-100" alt="...">
@@ -79,7 +78,7 @@
             </span> <br />
   					Nos objectifs
   					<p><br />
-              <a href="{{ asset('css/style/pdf/ObjectifsKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
+              <a href="{{ asset('css/style/pdf/Objectifs KIC 2021.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
   					
   				</div>
   				<div class="col-sm-3 fw-bold">
@@ -88,7 +87,7 @@
             </span><br />
   					Notre approche
   					<p><br />
-              <a href="{{ asset('css/style/pdf/ApprocheKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
+              <a href="{{ asset('css/style/pdf/Notre approche KIC 2021.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a></p>
   				</div>
   				<div class="col-sm-3 fw-bold">
             <span>
@@ -96,7 +95,7 @@
             </span><br />
   					Nos activités
   					<p><br />
-  						<a href="{{ asset('css/style/pdf/ActivitesKIC.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
+  						<a href="{{ asset('css/style/pdf/Activités KIC 2021.pdf') }}" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
   					</p>
   				</div>
   			</div>
@@ -110,7 +109,8 @@
   			</div>
   		</div>
   	</section>
-
+        
+   
   	<section id="story-intro" class="story-intro">
   		<div id="Appel-aprojet" class="container-fluid">
   	     <div class="row story-intro-ligne">
@@ -158,8 +158,64 @@
             </div>
           </div> 
          </div>
-  		</div>
   	</section>
+
+    <section id="equipe-de-gestion" class="equipe-de-gestion bg-danger-">
+      <div class="container">
+        <div class="section-title">
+          <h2>Equipe de gestion</h2>
+        </div>
+          <div class="row">
+            <div class="center slider">
+              <div class="col-sm-12 col-md-3 col-lg-3 bg-danger-">
+                <div class="single-box">
+                  <div class="img-area"><img src="{{ asset('images/equipe/Dr-Gauthier-KALONJI.jpg') }}" class="w-100"></div>
+                  <div class="img-text">
+                    <h5>Dr Gauthier KALONJI</h5>
+                    <p>Responsable formation</p>
+                </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="single-box">
+                  <div class="img-area"><img src="{{ asset('images/equipe/sacre.jpeg') }}" class="w-100"></div>
+                  <div class="img-text">
+                    <h5>Mr Sacré MBUMINA Benoît</h5>
+                    <p>Responsable Mentorat</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="single-box">
+                    <div class="img-area"><img src="{{ asset('images/equipe/Mme-Giselle-Van-Muller.png') }}" class="w-100"></div>
+                    <div class="img-text">
+                      <h5>Mme Giselle Van Muller</h5>
+                      <p>Responsable communication</p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="single-box">
+                  <div class="img-area"><img src="{{ asset('images/equipe/Dr-Richard-MUKUNJI.png') }}" class="w-100"></div>
+                    <div class="img-text">
+                      <h5>Dr Richard MUKUNJI</h5>
+                      <p>Coordonnateur</p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="single-box">
+                  <div class="img-area"><img src="{{ asset('images/equipe/Professeur-Crispin-MULAJI.png') }}" class="w-100"></div>
+                    <div class="img-text">
+                      <h5>Professeur Crispin MULAJI</h5>
+                      <p>Point focal partenariat UNIGE - UNIKIN</p>
+                    </div>
+                </div>              
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
 
     <!-- ======= NOS OBJECTIFS  Section ======= -->
     <!--section id="story-intro" class="story-intro">
