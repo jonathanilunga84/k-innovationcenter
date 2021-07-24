@@ -104,7 +104,7 @@
   					<!--iframe src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   						
   					</iframe-->
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   				</div>
   			</div>
   		</div>
@@ -163,11 +163,11 @@
     <section id="equipe-de-gestion" class="equipe-de-gestion bg-danger-">
       <div class="container">
         <div class="section-title">
-          <h2>Equipe de gestion</h2>
+          <h2>Equipe de coordination</h2>
         </div>
           <div class="row">
             <div class="center slider">
-              <div class="col-sm-12 col-md-3 col-lg-3 bg-danger-">
+              <div class="col-sm-12 col-md-3 col-lg-2 bg-danger-">
                 <div class="single-box">
                   <div class="img-area"><img src="{{ asset('images/equipe/Dr-Gauthier-KALONJI.jpg') }}" class="w-100"></div>
                   <div class="img-text">
@@ -176,7 +176,7 @@
                 </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-3 col-lg-3">
+              <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
                   <div class="img-area"><img src="{{ asset('images/equipe/sacre.jpeg') }}" class="w-100"></div>
                   <div class="img-text">
@@ -185,7 +185,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-3 col-lg-3">
+              <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
                     <div class="img-area"><img src="{{ asset('images/equipe/Mme-Giselle-Van-Muller.png') }}" class="w-100"></div>
                     <div class="img-text">
@@ -194,7 +194,7 @@
                     </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-3 col-lg-3">
+              <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
                   <div class="img-area"><img src="{{ asset('images/equipe/Dr-Richard-MUKUNJI.png') }}" class="w-100"></div>
                     <div class="img-text">
@@ -203,7 +203,7 @@
                     </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-3 col-lg-3">
+              <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
                   <div class="img-area"><img src="{{ asset('images/equipe/Professeur-Crispin-MULAJI.png') }}" class="w-100"></div>
                     <div class="img-text">
