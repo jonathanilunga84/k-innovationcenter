@@ -104,7 +104,7 @@
   					<!--iframe src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   						
   					</iframe-->
-            <iframe src="https://www.youtube-nocookie.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/EK3doKUWuI0?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   				</div>
   			</div>
   		</div>
@@ -198,7 +198,7 @@
                 <div class="single-box">
                   <div class="img-area"><img src="{{ asset('images/equipe/Dr-Richard-MUKUNJI.png') }}" class="w-100"></div>
                     <div class="img-text">
-                      <h5>Dr Richard MUKUNJI</h5>
+                      <h5>Dr Richard MUKUNDJI</h5>
                       <p>Coordonnateur</p>
                     </div>
                 </div>
@@ -394,11 +394,11 @@
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="my-3">
+              <!--div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+              </div-->
               <div class="text-center"><button type="submit">Envoyer Message</button></div>
             </form>
 
