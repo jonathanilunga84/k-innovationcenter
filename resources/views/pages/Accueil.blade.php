@@ -153,7 +153,7 @@
               Vous bénéficierez d'un accès aux incubateurs, à un espace de travail, des échanges avec les anciens lauréat, participation au programme accelerate 2030  et bien plus encore! N'attendez plus et envoyez-nous votre dossier en cliquant ci-dessous.
             </p>
             <p>
-              <a href="#" id="btn-learn-more" class="btn-learn-more">Je postule</a>
+              <a href="appel-a-projet" id="btn-learn-more" class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Je postule</a>
             </p>
             </div>
           </div> 
@@ -409,4 +409,549 @@
       </div>
     </section><!-- End Contact Us Section -->
   </main><!-- End #main -->
+
+  <!-- section formulaire appel a projet  -->
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content bg-lightM">
+      <form action="">
+      <div class="modal-header">
+        <h3 class="modal-title fw-bold" id="staticBackdropLabel">FORMULAIRE DE SOUMISSION DE PROJET EDITION 2021</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row justify-content-center bg-danger-">
+             <!-- form -->
+              <div class="col-sm12 col-md-12 col-lg-10 bg-successM">
+                
+              </div>
+              <!-- sectionOne -->
+              <section id="sectionOne" class="row justify-content-center sectionOne bg-dangerM">
+                <h4 class=""><span class="numerotation_section">I. </span>RENSEIGNEMENTS GENERAUX SUR LE PROJET</h4>
+                <div class="col-sm12 col-md-8 col-lg-8">
+                  <div class="form-group">
+                    <label for="intitule_projet" class="form-label"><span class="title_input">1.</span>Intitulé du Projet</label>
+                    <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" required/>
+                    <!--div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div-->
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Resume_projet_fr" class="form-label fw-bold"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
+                    <p class=""><span class="float-left"><strong>-</strong> En français</span> <span class="float-end text-danger">(0/1600)*</span></p>
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" aria-describedby="g" style="height: 100px"></textarea>
+                    <span id="g" class="form-text">
+    </span>
+                  </div>
+                  <div class="form-group">
+                    <label for="Resume_projet_us" class="form-label"><span class="title_input">.</span>Résumé du rojet <span>max caratere (0/1200)</span><br/> <span>- </span> En Anglais</label> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_us" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="secteur_projet" class="form-label"><span class="title_input">3.</span> Domaine/ secteur du projet et Objectifs du Développement Durable (ODD) correspondant<span> (0/1200)</span></label> 
+                    <textarea class="form-control" placeholder="" id="secteur_projet" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Localisation_projet" class="form-label"><span class="title_input">4.</span>Localisation du Projet (éventuellement)<span> (0/200)</span></label> 
+                    <textarea class="form-control" placeholder="" id="Localisation_projet" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Duree_projet" class="form-label"><span class="title_input">5.</span>Durée du Projet (éventuellement) <span>(0/200)</span></label> 
+                    <input type="text" class="form-control" id="Duree_projet" name="Duree_projet" />
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Financement_projet" class="form-label"><span class="title_input">6.</span>Financement du Projet (éventuellement) <span>(0/600)</span></label> 
+                    <textarea class="form-control" placeholder="" id="Financement_projet" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Description_projet" class="form-label"><span class="title_input">7.</span>Description du Projet<span>(0/1600)</span></label> 
+                    <textarea class="form-control" placeholder="" id="Description_projet" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Objectifs_projet" class="form-label"><span class="title_input">8.</span>Objectifs généraux du Projet<span>(0/800)</span></label> 
+                    <textarea class="form-control" placeholder="" id="Objectifs_projet" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Objectifs_spécifiques_projet" class="form-label"><span class="title_input">9.</span>Objectifs spécifiques du Projet<span>(0/600)</span></label> 
+                    <textarea class="form-control" placeholder="" id="Objectifs_spécifiques_projet" style="height: 100px"></textarea>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <h6 class=""><span class="title_input">10.</span> Responsable principal(e) du Projet</h6>
+                    <div class="col-sm-4">  
+                      <div class="form-group">
+                        <label for="">Prénom</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      </div>                    
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Nom</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Postnom</label>
+                      <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4"> 
+                      <div class="form-group">
+                        <label for="">Téléphone</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      </div>                      
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">E-mail</label>
+                        <input type="email" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div> 
+                  </div>
+
+                  <div class="row bg-dangerM">
+                    <h6 for="exampleInputEmail1" class="form-label"><span class="title_input">11.</span>Autre associé(s) au Projet (éventuellement)</h6>
+                    <h6><span class="title_input">1)</span></h6>
+                    <div class="col-sm-4">                      
+                      <label for="">Prénom</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Nom</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Postnom</label>
+                      <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Téléphone</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+
+                    <div class="col-sm-4">                      
+                      <label for="">E-mail</label>
+                        <input type="email" class="form-control" id="intitule_projet" name="intitule_projet" />
+                        <br/>
+                    </div> 
+
+                    <h6><span class="title_input">2)</span></h6>
+                    <div class="col-sm-4">                      
+                      <label for="">Prénom</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Nom</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Postnom</label>
+                      <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">                      
+                      <label for="">Téléphone</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                    </div>
+                    <div class="col-sm-4">  
+                      <div class="form-group">
+                        <label for="">E-mail</label>
+                        <input type="email" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      </div>                    
+                    </div>                   
+                  </div>
+                </div><!-- end div sectionOne -->
+              </section><!-- end sectionOne -->
+
+              <!-- sectionTwee -->
+              <section id="sectionTwee" class="row justify-content-center sectionOne bg-successM">
+                <h4><span class="numerotation_section">II. </span>RENSEIGNEMENTS SPECIFIQUES (IDENTIFICATION DES BESOINS D’INCUBATION DU PROJET)</h4>
+                <div class="col-sm12 col-md-8 col-lg-8 bg-lightM">
+                  <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Business plan</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Business_plan" id="Business_plan1" value="oui">
+                          <label class="form-check-label" for="Business_plan1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="Business_plan" id="Business_plan2" value="non">
+                          <label class="form-check-label" for="Business_plan2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Leadership entrepreneurial</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Processus d’élaboration d’un projet entrepreneurial</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Création d’entreprise en RD Congo</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Propriété intellectuelle, innovation et transfert de technologie</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Analyse de marché et proposition de valeur</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Développement de la productivité et de la compétitivité</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Marketing digital et usage des réseaux sociaux</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Responsabilité de l’entrepreneur face à la réussite et à l’échec</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Ethique des affaires</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Sources de financement d’un projet/une entreprise</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Comptabilité et planification financière</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Elémentaires du droit des affaires (Ohada)</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Pitch d’un projet entrepreneurial</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8 title-">
+                        <p>Anglais des affaires</p>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                        </div>
+                      </div>
+                    </div>
+                </div><!-- end div sectionTwee -->
+              </section><!-- end sectionTwee -->
+
+              <!-- sectionTree -->
+              <section id="sectionTree" class="row justify-content-center sectionOne bg-lightM">
+                <h4><span class="numerotation_section">III. </span>MOTIVATION A LA SOUMISSION DU PROJET</h4>
+                <div class="col-sm12 col-md-8 col-lg-8 bg-lightM">
+                  <div class="form-group">
+                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">13.</span>Quel est l’état actuel de réalisation/mise en œuvre/implémentation de votre Projet ? <span>max caratere (0/600)</span> <br/> <span>- </span> En français</label> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">14.</span>Quel est l’intérêt portez-vous en soumettant votre Projet à Kinshasa Innovation Center (KIC) ?<span>max caratere (0/400)</span> <br/> <span>- </span> En français</label> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">15.</span>Votre projet bénéficie-t-il déjà d’un autre soutien ou encadrement (coaching, financement,          etc.) ? Si oui, par quel organisme ?<span>max caratere (0/400)</span> <br/> <span>- </span> En français</label> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">16. </span>En quoi votre Projet pourrait-il contribuer à la création de valeurs et/ou d’emplois dans le milieu d’implémentation en particulier et dans la ville de Kinshasa en général ?<span>max caratere (0/1200)</span> <br/> <span>- </span> En français</label> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                  </div>
+                  <br/>
+                  <div class="row">
+                    <div id="title_radio" class="col-sm-8 title_radio">
+                        <p><span class="title_input">17. </span> Etes-vous le(la) concepteur(trice) du Projet ci-haut présenté ?</p>
+                    </div>
+                    <div class="col-sm-4 buttom_radio">
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                      </div>
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                      </div>
+                    </div>
+                  </div>
+                   
+                  <div class="row">
+                    <div id="title_radio" class="col-sm-8 title_radio">
+                        <p><span class="title_input">18. </span> Détiendrez-vous TOUS les droits de propriété intellectuelle liés au Projet présenté ?</p>
+                    </div>
+                    <div class="col-sm-4 buttom_radio">
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                      </div>
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="title_radio" class="col-sm-8 title_radio">
+                        <p><span class="title_input">19. </span> Seriez-vous disposé(e) à vous investir en temps et financièrement pour la participation sans paiement à TOUTES les sessions d’incubation organisées par le KIC (4 heures par semaines
+                        durant 5 mois) ?</p>
+                    </div>
+                    <div class="col-sm-4 buttom_radio">
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                      </div>
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="title_radio" class="col-sm-8 title_radio">
+                        <p><span class="title_input">20. </span> Seriez-vous disposé(e) à suivre certains modules de formation à distance, en ligne avec votre propre équipement ?</p>
+                    </div>
+                    <div class="col-sm-4 buttom_radio">
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                      </div>
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="title_radio" class="col-sm-8 title_radio">
+                        <p><span class="title_input">21. </span> A l’issue de la période d’incubation, ACCEPTERIEZ-VOUS que votre Projet apparaisse dans les pages internet de KIC et éventuellement de ses partenaires ?</p>
+                    </div>
+                    <div class="col-sm-4 buttom_radio">
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                      </div>
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div id="title_radio" class="col-sm-8 title_radio">
+                        <p><span class="title_input">22. </span> Avez -vous lu et approuvés-vous le règlement du programme KIC ?</p>
+                    </div>
+                    <div class="col-sm-4 buttom_radio">
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                      </div>
+                      <div class="form-check form-check-inline text_radio">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">23. </span>Avez-vous une information supplémentaire et particulière pouvant soutenir votre candidature ? (En rapport avec les conditions d’éligibilité, votre niveau d’étude...)<span>max caratere (0/600)</span> <br/> <span>- </span> En français</label> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="Resume_projet_fr" class="form-label text_confirm">Je confirme que toutes les informations fournies dans ce formulaire sont exactes et véridiques</label> 
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <p id="text_nb">NB : Associez dans ce formulaire votre portrait photo (haute définition), la copie de votre carte d’identité et votre curriculum vitae (CV).</p>
+                    <!--label for="formFileSm" class="form-label">Small file input example</label-->
+                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  </div>
+                </div><!-- end div sectionTree -->
+              </section><!-- end sectionTree -->
+            <!-- end form -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container bg-danger-">
+          <div class="row justify-content-center">
+            <div class="col-sm-2 bg-light-">
+              <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">X</button>
+            </div>
+            <div class="col-sm-10 text-center">
+
+              <button type="submit" class="btn btn-primary w-100 fw-bold">SOUMETTRE</button>
+            </div>
+          </div>        
+        </div>
+      </div>
+      </form>
+    </div><!-- end content form -->
+  </div>
+</div>
+  <!-- End section formulaire appel a projet  -->
+
 @endsection
