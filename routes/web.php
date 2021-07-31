@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\AppelaprojetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,9 @@ Route::get('/',[HomeController::class,'home'])->name('Home');
 
 Route::get('/ppel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
 Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->name('Rejoindre-lereseaux');
+
+//pour traiter le formulaire et envoyer le contenue du form par mail
+Route::post('/Appel-aprojet',[AppelaprojetController::class,'store'])->name('store.Add');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

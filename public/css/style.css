@@ -1428,3 +1428,49 @@ section {
 #footer .credits a:hover {
   color: #008df1;
 }
+
+/*--------------------------
+#appel_a_projet
+----------------------------*/
+.modal-content{
+  background-color:;
+}
+#staticBackdrop .title_appel_aprojet{
+  color-: #C0C0C0;
+  font-family: "Raleway", sans-serif;
+}
+#staticBackdrop sectionOne{
+ 
+}
+
+#staticBackdrop section h4{
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+#staticBackdrop .numerotation_section{
+  color: ;
+  font-weight: bolder;
+  font-size: 25px;
+  color-: red;
+  font-family: "Raleway", sans-serif;
+}
+#staticBackdrop label{
+  background-color-: red;
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+#staticBackdrop .title_input{
+  background-color-: red;
+  font-weight: bolder;
+  margin-right:5px;
+  font-size: 20px;
+}
+#staticBackdrop h6{
+  font-weight: bold;
+
+}
+px{
+  font-family: "Open Sans", sans-serif;
+}

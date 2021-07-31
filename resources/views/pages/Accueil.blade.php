@@ -415,150 +415,163 @@
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content bg-lightM">
-      <form action="">
+      <form id="appel_a_projet" action="{{ route('store.Add') }}" method="POST" enctype="multipart/form-data">
+        @csrf
       <div class="modal-header">
-        <h3 class="modal-title fw-bold" id="staticBackdropLabel">FORMULAIRE DE SOUMISSION DE PROJET EDITION 2021</h3>
+        <h3 class="modal-title fw-bold title_appel_aprojet" id="staticBackdropLabel">FORMULAIRE DE SOUMISSION DE PROJET EDITION 2021</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="container-fluid">
           <div class="row justify-content-center bg-danger-">
              <!-- form -->
-              <div class="col-sm12 col-md-12 col-lg-10 bg-successM">
-                
-              </div>
+      
               <!-- sectionOne -->
-              <section id="sectionOne" class="row justify-content-center sectionOne bg-dangerM">
+              <section id="sectionOne" class="row justify-content-center sectionOne">
                 <h4 class=""><span class="numerotation_section">I. </span>RENSEIGNEMENTS GENERAUX SUR LE PROJET</h4>
                 <div class="col-sm12 col-md-8 col-lg-8">
                   <div class="form-group">
                     <label for="intitule_projet" class="form-label"><span class="title_input">1.</span>Intitulé du Projet</label>
-                    <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" required/>
+                    <input type="text" class="form-control" id="intitule_projet" name="intitule_projet"required/>
                     <!--div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div-->
                   </div>
                   <div class="form-group">
                     <br/>
                     <label for="Resume_projet_fr" class="form-label fw-bold"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
                     <p class=""><span class="float-left"><strong>-</strong> En français</span> <span class="float-end text-danger">(0/1600)*</span></p>
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" aria-describedby="g" style="height: 100px"></textarea>
-                    <span id="g" class="form-text">
-    </span>
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" name="Resume_projet_fr" style="height: 100px" maxlength="1600">
+                    </textarea>
+                    <span id="g" class="form-text"></span>
                   </div>
                   <div class="form-group">
-                    <label for="Resume_projet_us" class="form-label"><span class="title_input">.</span>Résumé du rojet <span>max caratere (0/1200)</span><br/> <span>- </span> En Anglais</label> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_us" style="height: 100px"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <br/>
-                    <label for="secteur_projet" class="form-label"><span class="title_input">3.</span> Domaine/ secteur du projet et Objectifs du Développement Durable (ODD) correspondant<span> (0/1200)</span></label> 
-                    <textarea class="form-control" placeholder="" id="secteur_projet" style="height: 100px"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <br/>
-                    <label for="Localisation_projet" class="form-label"><span class="title_input">4.</span>Localisation du Projet (éventuellement)<span> (0/200)</span></label> 
-                    <textarea class="form-control" placeholder="" id="Localisation_projet" style="height: 100px"></textarea>
+                    <!--label for="Resume_projet_us" class="form-label"><span class="title_input">.</span>Résumé du rojet <span>max caratere (0/1200)</span><br/> <span>- </span> En Anglais</label--> 
+                    <p for="Resume_projet_us" class=" bg-successM">
+                      <span class="float-left"><strong>-</strong> En Anglais</span> <span class="float-end text-danger">(0/1600)*
+                      </span>
+                    </p>
+                    <textarea class="form-control" placeholder="" name="Resume_projet_us" id="Resume_projet_us" style="height: 100px" maxlength="1600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Duree_projet" class="form-label"><span class="title_input">5.</span>Durée du Projet (éventuellement) <span>(0/200)</span></label> 
-                    <input type="text" class="form-control" id="Duree_projet" name="Duree_projet" />
+                    <label for="secteur_projet" class="form-label"><span class="title_input">3.</span> Domaine/ secteur du projet et Objectifs du Développement Durable (ODD) correspondant</label> 
+                    <span class="text-danger float-end"> (0/1200)*</span>
+                    <textarea class="form-control" name="secteur_projet" id="secteur_projet" style="height: 100px" maxlength="1200"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Financement_projet" class="form-label"><span class="title_input">6.</span>Financement du Projet (éventuellement) <span>(0/600)</span></label> 
-                    <textarea class="form-control" placeholder="" id="Financement_projet" style="height: 100px"></textarea>
+                    <label for="Localisation_projet" class="form-label"><span class="title_input">4.</span>Localisation du Projet (éventuellement)
+                    </label> 
+                    <span class="text-danger float-end"> (0/200)*</span>
+                    <textarea class="form-control" name="Localisation_projet" id="Localisation_projet" style="height: 100px" maxlength="200"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Description_projet" class="form-label"><span class="title_input">7.</span>Description du Projet<span>(0/1600)</span></label> 
-                    <textarea class="form-control" placeholder="" id="Description_projet" style="height: 100px"></textarea>
+                    <label for="Duree_projet" class="form-label"><span class="title_input">5.</span>Durée du Projet (éventuellement)</label> 
+                    <span class="float-end text-danger">(0/200)*</span>
+                    <input type="text" class="form-control" id="Duree_projet" name="Duree_projet" maxlength="200" />
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Objectifs_projet" class="form-label"><span class="title_input">8.</span>Objectifs généraux du Projet<span>(0/800)</span></label> 
-                    <textarea class="form-control" placeholder="" id="Objectifs_projet" style="height: 100px"></textarea>
+                    <label for="Financement_projet" class="form-label"><span class="title_input">6.
+                    </span>Financement du Projet (éventuellement) 
+                    </label> 
+                    <span class="text-danger float-end">(0/600)*</span>
+                    <textarea class="form-control" placeholder="" id="Financement_projet" name="Financement_projet" style="height: 100px" maxlength="600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Objectifs_spécifiques_projet" class="form-label"><span class="title_input">9.</span>Objectifs spécifiques du Projet<span>(0/600)</span></label> 
-                    <textarea class="form-control" placeholder="" id="Objectifs_spécifiques_projet" style="height: 100px"></textarea>
+                    <label for="Description_projet" class="form-label"><span class="title_input">7.</span>Description du Projet</label> 
+                    <span class="text-danger float-end">(0/1600)*</span>
+                    <textarea class="form-control" name="Description_projet" id="Description_projet" style="height: 100px" maxlength="1600"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Objectifs_projet" class="form-label"><span class="title_input">8.</span>Objectifs généraux du Projet</label> 
+                    <span class="text-danger float-end">(0/800)*</span>
+                    <textarea class="form-control" placeholder="" id="Objectifs_projet" name="Objectifs_projet" style="height: 100px" maxlength="800" />
+                    </textarea>
+                  </div>
+                  <div class="form-group">
+                    <br/>
+                    <label for="Objectifs_spécifiques_projet" class="form-label"><span class="title_input">9.</span>Objectifs spécifiques du Projet</label>
+                    <span class="text-danger float-end">(0/600)*</span> 
+                    <textarea class="form-control" name="Objectifs_spécifiques_projet" id="Objectifs_spécifiques_projet" style="height: 100px" maxlength="600"></textarea>
                   </div>
                   <br/>
                   <div class="row">
-                    <h6 class=""><span class="title_input">10.</span> Responsable principal(e) du Projet</h6>
+                    <h6 class="font-size"><span class="title_input">10.</span> Responsable principal(e) du Projet</h6>
                     <div class="col-sm-4">  
                       <div class="form-group">
-                        <label for="">Prénom</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                        <label for="prenom_responsable_principal">Prénom</label>
+                        <input type="text" class="form-control" id="prenom_responsable_principal" name="nom_responsable_principal" required/>
                       </div>                    
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Nom</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="nom_responsable_principal">Nom</label>
+                        <input type="text" class="form-control" id="nom_responsable_principal" name="nom_responsable_principal" required />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Postnom</label>
-                      <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="postnom_responsable_principal">Postnom</label>
+                      <input type="text" class="form-control" id="postnom_responsable_principal" name="postnom_responsable_principal"required />
                     </div>
                     <div class="col-sm-4"> 
                       <div class="form-group">
-                        <label for="">Téléphone</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                        <label for="phone_responsable_principal">Téléphone</label>
+                        <input type="text" class="form-control" id="intitule_projet" name="phone_responsable_principal" required />
                       </div>                      
                     </div>
                     <div class="col-sm-4">                      
                       <label for="">E-mail</label>
-                        <input type="email" class="form-control" id="intitule_projet" name="intitule_projet" />
+                        <input type="email" class="form-control" id="emil_responsable_principal" name="email_responsable_principal" required />
                     </div> 
                   </div>
-
+                  <br/>
                   <div class="row bg-dangerM">
-                    <h6 for="exampleInputEmail1" class="form-label"><span class="title_input">11.</span>Autre associé(s) au Projet (éventuellement)</h6>
+                    <h6 class="form-label"><span class="title_input">11.</span>Autre associé(s) au Projet (éventuellement)</h6>
                     <h6><span class="title_input">1)</span></h6>
                     <div class="col-sm-4">                      
-                      <label for="">Prénom</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="prenom_associe1">Prénom</label>
+                        <input type="text" class="form-control" id="prenom_associe1" name="prenom_associe1" />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Nom</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="nom_associe1">Nom</label>
+                        <input type="text" class="form-control" id="nom_associe1" name="nom_associe1" />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Postnom</label>
-                      <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="postnom_associe1">Postnom</label>
+                      <input type="text" class="form-control" id="postnom_associe1" name="postnom_associe1" />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Téléphone</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="phone_associe1">Téléphone</label>
+                        <input type="text" class="form-control" id="phone_associe1" name="phone_associe1" />
                     </div>
-
                     <div class="col-sm-4">                      
-                      <label for="">E-mail</label>
-                        <input type="email" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="email_associe1">E-mail</label>
+                        <input type="email" class="form-control" id="email_associe1" name="email_associe1" />
                         <br/>
                     </div> 
 
                     <h6><span class="title_input">2)</span></h6>
                     <div class="col-sm-4">                      
-                      <label for="">Prénom</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="prenom_associe2">Prénom</label>
+                        <input type="text" class="form-control" id="prenom_associe2" name="intitule_projet" />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Nom</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="nom_associe2">Nom</label>
+                        <input type="text" class="form-control" id="nom_associe2" name="nom_associe2" />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Postnom</label>
-                      <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="postnom_associe2">Postnom</label>
+                      <input type="text" class="form-control" id="postnom_associe2" name="postnom_associe2" />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="">Téléphone</label>
-                        <input type="text" class="form-control" id="intitule_projet" name="intitule_projet" />
+                      <label for="phone_associe2">Téléphone</label>
+                        <input type="text" class="form-control" id="phone_associe2" name="phone_associe2" />
                     </div>
                     <div class="col-sm-4">  
                       <div class="form-group">
-                        <label for="">E-mail</label>
-                        <input type="email" class="form-control" id="intitule_projet" name="intitule_projet" />
+                        <label for="email_associe2">E-mail</label>
+                        <input type="email" class="form-control" id="email_associe2" name="email_associe2" />
                       </div>                    
                     </div>                   
                   </div>
@@ -567,7 +580,7 @@
 
               <!-- sectionTwee -->
               <section id="sectionTwee" class="row justify-content-center sectionOne bg-successM">
-                <h4><span class="numerotation_section">II. </span>RENSEIGNEMENTS SPECIFIQUES (IDENTIFICATION DES BESOINS D’INCUBATION DU PROJET)</h4>
+                <h4><span class="numerotation_section">II. </span>RENSEIGNEMENTS SPECIFIQUES (IDENTIFICATION DES BESOINS D’INCUBATION DU PROJET )</h4>
                 <div class="col-sm12 col-md-8 col-lg-8 bg-lightM">
                   <div class="row">
                       <div class="col-sm-8 title-">
@@ -590,12 +603,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="Leadership" id="Leadership1" value="oui">
+                          <label class="form-check-label" for="Leadership1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="Leadership" id="Leadership2" value="non">
+                          <label class="form-check-label" for="Leadership2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -605,12 +618,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="Processus" id="Processus1" value="oui">
+                          <label class="form-check-label" for="Processus1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="Processus" id="Processus2" value="non">
+                          <label class="form-check-label" for="Processus2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -620,12 +633,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="Creation" id="Creation1" value="oui">
+                          <label class="form-check-label" for="Creation1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="Creation" id="Creation2" value="non">
+                          <label class="form-check-label" for="Creation2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -635,12 +648,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="propriete" id="propriete1" value="oui">
+                          <label class="form-check-label" for="propriete1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="propriete" id="propriete2" value="propriete2">
+                          <label class="form-check-label" for="propriete2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -650,12 +663,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="analyse" id="analyse1" value="oui">
+                          <label class="form-check-label" for="analyse1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="analyse" id="analyse2" value="non">
+                          <label class="form-check-label" for="analyse2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -665,12 +678,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="developpement" id="developpement1" value="oui">
+                          <label class="form-check-label" for="developpement1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="developpement" id="developpement2" value="non2">
+                          <label class="form-check-label" for="developpement2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -680,12 +693,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="marketing" id="marketing1" value="oui">
+                          <label class="form-check-label" for="marketing1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="marketing" id="marketing2" value="non">
+                          <label class="form-check-label" for="marketing2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -695,12 +708,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="responsabilite" id="responsabilite1" value="oui">
+                          <label class="form-check-label" for="responsabilite1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="responsabilite" id="responsabilite2" value="option2">
+                          <label class="form-check-label" for="responsabilite2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -710,12 +723,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="ethique" id="ethique1" value="oui">
+                          <label class="form-check-label" for="ethique1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="ethique" id="ethique2" value="non">
+                          <label class="form-check-label" for="ethique2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -725,12 +738,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="sources" id="sources1" value="oui">
+                          <label class="form-check-label" for="sources1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="sources" id="sources2" value="non">
+                          <label class="form-check-label" for="sources2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -740,12 +753,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="comptabilite" id="comptabilite1" value="oui">
+                          <label class="form-check-label" for="comptabilite1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="comptabilite" id="comptabilite2" value="non">
+                          <label class="form-check-label" for="comptabilite2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -755,12 +768,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="elementaires" id="elementaires1" value="oui">
+                          <label class="form-check-label" for="elementaires1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="elementaires" id="elementaires2" value="non">
+                          <label class="form-check-label" for="elementaires2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -770,12 +783,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="pitch" id="pitch1" value="oui">
+                          <label class="form-check-label" for="pitch1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="pitch" id="pitch2" value="non" />
+                          <label class="form-check-label" for="pitch2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -785,12 +798,12 @@
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="anglais" id="anglais1" value="oui">
+                          <label class="form-check-label" for="anglais1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="anglais" id="anglais2" value="non">
+                          <label class="form-check-label" for="anglais2">NON</label>
                         </div>
                       </div>
                     </div>
@@ -802,23 +815,28 @@
                 <h4><span class="numerotation_section">III. </span>MOTIVATION A LA SOUMISSION DU PROJET</h4>
                 <div class="col-sm12 col-md-8 col-lg-8 bg-lightM">
                   <div class="form-group">
-                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">13.</span>Quel est l’état actuel de réalisation/mise en œuvre/implémentation de votre Projet ? <span>max caratere (0/600)</span> <br/> <span>- </span> En français</label> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                    <label for="etat_actual_du_projet13" class="form-label"><span class="title_input">13.</span>Quel est l’état actuel de réalisation/mise en œuvre/implémentation de votre Projet ?
+                    </label> <span class="text-danger float-end">(0/600)*</span>
+                    <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="etat_actual_du_projet" name="etat_actual_du_projet13" style="height: 100px" maxlength="600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">14.</span>Quel est l’intérêt portez-vous en soumettant votre Projet à Kinshasa Innovation Center (KIC) ?<span>max caratere (0/400)</span> <br/> <span>- </span> En français</label> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                    <label for="interet_en_soumettant14" class="form-label"><span class="title_input">14.</span>Quel est l’intérêt portez-vous en soumettant votre Projet à Kinshasa Innovation Center (KIC) ?</label>
+                    <span class="text-danger float-end">max caratere (0/400)</span> 
+                    <textarea class="form-control" placeholder="" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">15.</span>Votre projet bénéficie-t-il déjà d’un autre soutien ou encadrement (coaching, financement,          etc.) ? Si oui, par quel organisme ?<span>max caratere (0/400)</span> <br/> <span>- </span> En français</label> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                    <label for="projet_beneficie_de_financement15" class="form-label"><span class="title_input">15.</span>Votre projet bénéficie-t-il déjà d’un autre soutien ou encadrement (coaching, financement,          etc.) ? Si oui, par quel organisme ?</label> 
+                    <span class="text-danger float-end">max caratere (0/1200)</span>
+                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" style="height: 100px" maxlength="400" required></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">16. </span>En quoi votre Projet pourrait-il contribuer à la création de valeurs et/ou d’emplois dans le milieu d’implémentation en particulier et dans la ville de Kinshasa en général ?<span>max caratere (0/1200)</span> <br/> <span>- </span> En français</label> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                    <label for="projet_pourrait_contribuer16" class="form-label"><span class="title_input">16. </span>En quoi votre Projet pourrait-il contribuer à la création de valeurs et/ou d’emplois dans le milieu d’implémentation en particulier et dans la ville de Kinshasa en général ?
+                    </label>
+                    <span class="text-danger float-end">max caratere (0/1200)</span> 
+                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px" maxlength="1200" required=""></textarea>
                   </div>
                   <br/>
                   <div class="row">
@@ -827,12 +845,12 @@
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="concepteur_du_projet17" id="concepteur_du_projet1" value="oui">
+                          <label class="form-check-label" for="concepteur_du_projet1">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="concepteur_du_projet17" id="concepteur_du_projet2" value="non">
+                          <label class="form-check-label" for="concepteur_du_projet2">NON</label>
                       </div>
                     </div>
                   </div>
@@ -843,12 +861,12 @@
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="propriete_intellectuelle18" id="propriete_intellectuelle1_18" value="oui">
+                          <label class="form-check-label" for="propriete_intellectuelle1_18">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="propriete_intellectuelle18" id="propriete_intellectuelle2_18" value="option2">
+                          <label class="form-check-label" for="propriete_intellectuelle2_18">NON</label>
                       </div>
                     </div>
                   </div>
@@ -859,12 +877,12 @@
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="investir_en_temps19" id="investir_en_temps1_19" value="oui">
+                          <label class="form-check-label" for="investir_en_temps1_19">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="investir_en_temps19" id="investir_en_temps2_19" value="non">
+                          <label class="form-check-label" for="investir_en_temps2_19">NON</label>
                       </div>
                     </div>
                   </div>
@@ -874,12 +892,12 @@
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="formation_a_distance20" id="formation_a_distance1_20" value="oui">
+                          <label class="form-check-label" for="formation_a_distance1_20">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="formation_a_distance20" id="formation_a_distance2_20" value="option2">
+                          <label class="form-check-label" for="formation_a_distance2_20">NON</label>
                       </div>
                     </div>
                   </div>
@@ -889,45 +907,46 @@
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="periode_incubation21" id="periode_incubation1_21" value="oui">
+                          <label class="form-check-label" for="periode_incubation1_21">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="periode_incubation21" id="periode_incubation2_21" value="option2">
+                          <label class="form-check-label" for="periode_incubation2_21">NON</label>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div id="title_radio" class="col-sm-8 title_radio">
-                        <p><span class="title_input">22. </span> Avez -vous lu et approuvés-vous le règlement du programme KIC ?</p>
+                        <p><span class="title_input">22. </span> Avez-vous lu et approuvés-vous le règlement du programme KIC ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">OUI</label>
+                          <input class="form-check-input" type="radio" name="approuve_le_reglement22" id="approuve_le_reglement1_22" value="oui">
+                          <label class="form-check-label" for="approuve_le_reglement1_22">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">NON</label>
+                          <input class="form-check-input" type="radio" name="approuve_le_reglement22" id="approuve_le_reglement2_22" value="oui">
+                          <label class="form-check-label" for="approuve_le_reglement2_22">NON</label>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr" class="form-label"><span class="title_input">23. </span>Avez-vous une information supplémentaire et particulière pouvant soutenir votre candidature ? (En rapport avec les conditions d’éligibilité, votre niveau d’étude...)<span>max caratere (0/600)</span> <br/> <span>- </span> En français</label> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px"></textarea>
+                    <label for="" class="form-label"><span class="title_input">23. </span>Avez-vous une information supplémentaire et particulière pouvant soutenir votre candidature ? (En rapport avec les conditions d’éligibilité, votre niveau d’étude...)</label> 
+                    <span class="text-danger float-end">max caratere (0/600)*</span>
+                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" maxlength="600" required ></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label for="Resume_projet_fr" class="form-label text_confirm">Je confirme que toutes les informations fournies dans ce formulaire sont exactes et véridiques</label> 
+                    <input type="checkbox" class="form-check-input" name="confirm_info" id="confirm_info">
+                    <label for="confirm_info" class="form-label text_confirm">Je confirme que toutes les informations fournies dans ce formulaire sont exactes et véridiques</label> 
                   </div>
                   <div class="form-group">
                     <br/>
                     <p id="text_nb">NB : Associez dans ce formulaire votre portrait photo (haute définition), la copie de votre carte d’identité et votre curriculum vitae (CV).</p>
                     <!--label for="formFileSm" class="form-label">Small file input example</label-->
-                    <input class="form-control form-control-sm" id="formFileSm" type="file">
+                    <input class="form-control form-control-sm" name="document_lie" id="document_lie" type="file">
                   </div>
                 </div><!-- end div sectionTree -->
               </section><!-- end sectionTree -->
