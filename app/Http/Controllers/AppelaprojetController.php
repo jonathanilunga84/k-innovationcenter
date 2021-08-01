@@ -51,9 +51,17 @@ class AppelaprojetController extends Controller
             "postnom_responsable_principal10"=>"required|min:2|alpha",
             "phone_responsable_principal10"=>"required|min:2|alpha",
             "email_responsable_principal10"=>"email:rfc,dns",
-            "prenom_associe1"=>"required|min:2|alpha",
-            "nom_associe1"=>"required|min:2|alpha",
-            "nom_associe1"=>"required|min:2|alpha",
+            "prenom_associe1"=>"min:2|alpha",
+            "nom_associe1"=>"min:2|alpha",
+            "postnom_associe1"=>"min:2|alpha",
+            "phone_associe1"=>"min:2|alpha",
+            "email_associe1"=>"min:2|alpha",
+            "prenom_associe2"=>"min:2|alpha",
+            "nom_associe2"=>"min:2|alpha",
+            "postnom_associe2"=>"min:2|alpha",
+            "phone_associe2"=>"min:2",
+            "email_associe2"=>"min:2|alpha",
+
 
             //""=>"required|min:2|max:200",
         ]);
