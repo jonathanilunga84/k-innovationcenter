@@ -34,7 +34,24 @@ class AppelaprojetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $details = $request->validate([
+            "intitule_projet"=>"required|min:2",
+            "email"=>"email:rfc,dns",
+            "Resume_projet_fr2"=>"required|min:2|max:1600",
+            "Resume_projet_us2"=>"required|min:2|max:1600",
+            "secteur_projet3"=>"required|min:2|max:1200",
+            "Localisation_projet4"=>"required|min:2|max:200",
+            "Duree_projet5"=>"required|min:2|max:200",
+            "Financement_projet6"=>"required|min:2|max:600",
+            "Description_projet7"=>"required|min:2|max:1600",
+            "Objectifs_projet8"=>"required|min:2|max:800",
+            "Objectifs_spécifiques_projet9"=>"required|min:2|max:600",
+            "nom_responsable_principal10"=>"required|min:2|alpha",
+            "prenom_responsable_principal10"=>"required|min:2|alpha",
+            "postnom_responsable_principal10"=>"required|min:2|alpha",
+
+            //""=>"required|min:2|max:200",
+        ]);
     }
 
     /**

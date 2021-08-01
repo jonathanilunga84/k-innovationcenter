@@ -375,87 +375,88 @@
                 <div class="col-sm12 col-md-8 col-lg-8">
                   <div class="form-group">
                     <label for="intitule_projet" class="form-label"><span class="title_input">1.</span>Intitulé du Projet</label>
-                    <input type="text" class="form-control" id="intitule_projet" name="intitule_projet"required/>
+                    @error('intitule_projet1')
+                      <div class="text-danger">{{$message}}ddd</div>
+                    @enderror
+                    <input type="text" class="form-control" id="intitule_projet1" name="intitule_projet1" minlength="2" required/>
                     <!--div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div-->
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr" class="form-label fw-bold"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
-                    <p class=""><span class="float-left"><strong>-</strong> En français</span> <span class="float-end text-danger">(0/1600)*</span></p>
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" name="Resume_projet_fr" style="height: 100px" maxlength="1600">
-                    </textarea>
+                    <label for="Resume_projet_fr2" class="form-label fw-bold"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
+                    <p class=""><span class="float-left"><strong>-</strong> En français</span> <!--span class="float-end text-danger">(0/1600)*</span--></p>
+                    <textarea class="form-control" name="Resume_projet_fr2" id="Resume_projet_fr2" placeholder="nombre de caractère max 1600" style="height: 100px" maxlength="1600"></textarea>
                     <span id="g" class="form-text"></span>
                   </div>
                   <div class="form-group">
                     <!--label for="Resume_projet_us" class="form-label"><span class="title_input">.</span>Résumé du rojet <span>max caratere (0/1200)</span><br/> <span>- </span> En Anglais</label--> 
-                    <p for="Resume_projet_us" class=" bg-successM">
-                      <span class="float-left"><strong>-</strong> En Anglais</span> <span class="float-end text-danger">(0/1600)*
-                      </span>
+                    <p class="bg-successM">
+                      <span class="float-left"><strong>-</strong> En Anglais</span> <!--span class="float-end text-danger">(0/1600)*
+                      </span-->
                     </p>
-                    <textarea class="form-control" placeholder="" name="Resume_projet_us" id="Resume_projet_us" style="height: 100px" maxlength="1600"></textarea>
+                    <textarea class="form-control" placeholder="nombre de caractère max 1600" name="Resume_projet_us2" id="Resume_projet_us2" style="height: 100px" maxlength="1600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="secteur_projet" class="form-label"><span class="title_input">3.</span> Domaine/ secteur du projet et Objectifs du Développement Durable (ODD) correspondant</label> 
-                    <span class="text-danger float-end"> (0/1200)*</span>
-                    <textarea class="form-control" name="secteur_projet" id="secteur_projet" style="height: 100px" maxlength="1200"></textarea>
+                    <label for="secteur_projet3" class="form-label"><span class="title_input">3.</span> Domaine/ secteur du projet et Objectifs de Développement Durable (ODD) correspondants</label> 
+                    <!--span class="text-danger float-end"> (0/1200)*</span-->
+                    <textarea class="form-control" name="secteur_projet3" id="secteur_projet3" style="height: 100px" placeholder="nombre de caractère max 1200" maxlength="1200"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Localisation_projet" class="form-label"><span class="title_input">4.</span>Localisation du Projet (éventuellement)
+                    <label for="Localisation_projet4" class="form-label"><span class="title_input">4.</span>Localisation du Projet (éventuellement)
                     </label> 
-                    <span class="text-danger float-end"> (0/200)*</span>
-                    <textarea class="form-control" name="Localisation_projet" id="Localisation_projet" style="height: 100px" maxlength="200"></textarea>
+                    <!--span class="text-danger float-end"> (0/200)*</span-->
+                    <textarea class="form-control" name="Localisation_projet4" id="Localisation_projet4" style="height: 100px" placeholder="nombre de caractère max 200*" maxlength="200"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Duree_projet" class="form-label"><span class="title_input">5.</span>Durée du Projet (éventuellement)</label> 
-                    <span class="float-end text-danger">(0/200)*</span>
-                    <input type="text" class="form-control" id="Duree_projet" name="Duree_projet" maxlength="200" />
+                    <label for="Duree_projet5" class="form-label"><span class="title_input">5.</span>Durée du Projet (éventuellement)</label> 
+                    <!--span class="float-end text-danger">(0/200)*</span-->
+                    <input type="text" class="form-control" id="Duree_projet5" name="Duree_projet5" placeholder="nombre de caractère max 200*" maxlength="200" />
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Financement_projet" class="form-label"><span class="title_input">6.
+                    <label for="Financement_projet6" class="form-label"><span class="title_input">6.
                     </span>Financement du Projet (éventuellement) 
                     </label> 
-                    <span class="text-danger float-end">(0/600)*</span>
-                    <textarea class="form-control" placeholder="" id="Financement_projet" name="Financement_projet" style="height: 100px" maxlength="600"></textarea>
+                    <!--span class="text-danger float-end">(0/600)*</span-->
+                    <textarea class="form-control" placeholder="nombre de caractère max 600" id="Financement_projet6" name="Financement_projet6" style="height: 100px" maxlength="600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Description_projet" class="form-label"><span class="title_input">7.</span>Description du Projet</label> 
-                    <span class="text-danger float-end">(0/1600)*</span>
-                    <textarea class="form-control" name="Description_projet" id="Description_projet" style="height: 100px" maxlength="1600"></textarea>
+                    <label for="Description_projet7" class="form-label"><span class="title_input">7.</span>Description du Projet</label> 
+                    <!--span class="text-danger float-end">(0/1600)*</span-->
+                    <textarea class="form-control" name="Description_projet7" id="Description_projet7" style="height: 100px" placeholder="nombre de caractère max 1600" maxlength="1600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Objectifs_projet" class="form-label"><span class="title_input">8.</span>Objectifs généraux du Projet</label> 
-                    <span class="text-danger float-end">(0/800)*</span>
-                    <textarea class="form-control" placeholder="" id="Objectifs_projet" name="Objectifs_projet" style="height: 100px" maxlength="800" />
-                    </textarea>
+                    <label for="Objectifs_projet8" class="form-label"><span class="title_input">8.</span>Objectifs généraux du Projet</label> 
+                    <!--span class="text-danger float-end">(0/800)*</span-->
+                    <textarea class="form-control" name="Objectifs_projet8" id="Objectifs_projet8" cols="30" rows="10" placeholder="nombre de caractère max 800" style="height: 100px" maxlength="800" required></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Objectifs_spécifiques_projet" class="form-label"><span class="title_input">9.</span>Objectifs spécifiques du Projet</label>
-                    <span class="text-danger float-end">(0/600)*</span> 
-                    <textarea class="form-control" name="Objectifs_spécifiques_projet" id="Objectifs_spécifiques_projet" style="height: 100px" maxlength="600"></textarea>
+                    <label for="Objectifs_spécifiques_projet9" class="form-label"><span class="title_input">9.</span>Objectifs spécifiques du Projet</label>
+                    <!--span class="text-danger float-end">(0/600)*</span--> 
+                    <textarea class="form-control" name="Objectifs_spécifiques_projet9" id="Objectifs_spécifiques_projet8" style="height: 100px" placeholder="nombre de caractère max 600" maxlength="600"></textarea>
                   </div>
                   <br/>
                   <div class="row">
                     <h6 class="font-size"><span class="title_input">10.</span> Responsable principal(e) du Projet</h6>
                     <div class="col-sm-4">  
                       <div class="form-group">
-                        <label for="prenom_responsable_principal">Prénom</label>
-                        <input type="text" class="form-control" id="prenom_responsable_principal" name="nom_responsable_principal" required/>
+                        <label for="prenom_responsable_principal10">Prénom</label>
+                        <input type="text" class="form-control" id="prenom_responsable_principal10" name="prenom_responsable_principal10" placeholder="Obligatoire" required/>
                       </div>                    
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="nom_responsable_principal">Nom</label>
-                        <input type="text" class="form-control" id="nom_responsable_principal" name="nom_responsable_principal" required />
+                      <label for="nom_responsable_principal10">Nom</label>
+                        <input type="text" class="form-control" id="nom_responsable_principal10" name="nom_responsable_principal10" required />
                     </div>
                     <div class="col-sm-4">                      
-                      <label for="postnom_responsable_principal">Postnom</label>
-                      <input type="text" class="form-control" id="postnom_responsable_principal" name="postnom_responsable_principal"required />
+                      <label for="postnom_responsable_principal10">Postnom</label>
+                      <input type="text" class="form-control" id="postnom_responsable_principal10" name="postnom_responsable_principal10"required />
                     </div>
                     <div class="col-sm-4"> 
                       <div class="form-group">
@@ -470,7 +471,7 @@
                   </div>
                   <br/>
                   <div class="row bg-dangerM">
-                    <h6 class="form-label"><span class="title_input">11.</span>Autre associé(s) au Projet (éventuellement)</h6>
+                    <h6 class="form-label"><span class="title_input">11.</span>Autres associé(s) au Projet (éventuellement)</h6>
                     <h6><span class="title_input">1)</span></h6>
                     <div class="col-sm-4">                      
                       <label for="prenom_associe1">Prénom</label>
@@ -764,7 +765,7 @@
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="interet_en_soumettant14" class="form-label"><span class="title_input">14.</span>Quel est l’intérêt portez-vous en soumettant votre Projet à Kinshasa Innovation Center (KIC) ?</label>
+                    <label for="interet_en_soumettant14" class="form-label"><span class="title_input">14.</span>Quel intérêt portez-vous en soumettant votre projet à Kinshasa Innovation Center (KIC) ?</label>
                     <span class="text-danger float-end">max caratere (0/400)</span> 
                     <textarea class="form-control" placeholder="" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required></textarea>
                   </div>
@@ -861,7 +862,7 @@
                   </div>
                   <div class="row">
                     <div id="title_radio" class="col-sm-8 title_radio">
-                        <p><span class="title_input">22. </span> Avez-vous lu et approuvés-vous le règlement du programme KIC ?</p>
+                        <p><span class="title_input">22. </span> Avez-vous lu et approuvez-vous le règlement du programme KIC ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
