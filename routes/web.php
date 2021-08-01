@@ -39,7 +39,8 @@ Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->n
 Route::post('/Appel-aprojet',[AppelaprojetController::class,'store'])->name('store.Add');
 
 //pour traiter le formulaire et envoyer le contenue du form par mail
-Route::post('/contactenvoi',[HomeController::class,'contact'])->name('contact.envoiM');
+Route::get('/contacte',[AppelaprojetController::class,'create'])->name('contactform');
+Route::post('/contactenvoi',[AppelaprojetController::class,'contact'])->name('contact.envoiM');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

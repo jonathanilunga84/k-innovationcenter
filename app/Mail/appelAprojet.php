@@ -27,7 +27,8 @@ class appelAprojet extends Mailable
      * @return $this
      */
     public function build()
-    {
+    {   
+        var_dump(details['email_responsable_principal10']);
         $email = $this->details['email_responsable_principal10'];
         return $this->from($email,$email)
                     ->subject($this->details['intitule_projet'])->view('pages.appel-a-projetMailSend');

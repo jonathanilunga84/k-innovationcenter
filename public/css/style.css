@@ -1251,9 +1251,14 @@ section {
 }
 
 .contact-us .php-email-form {
-  width: 100%;
+  width: php-email-form100%;
   background: #fff;
 }
+.contact-usM .btM {
+  width: btM100%;
+  background: #fff;
+}
+
 
 .contact-us .php-email-form .form-group {
   padding-bottom: 8px;

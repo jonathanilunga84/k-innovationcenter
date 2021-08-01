@@ -239,17 +239,33 @@
   <script>
 
     $(document).ready(function(){
-      //alert('ok ajax');
-      $("#appel_a_projet").on('submit',function(e){
+      alert('ok ajax');
+      /*$("#appel_a_projet").on('submit',function(e){
         e.preventDefault();
 
         $.ajax({
           url:$(this).attr('action'),
           method:$(this).attr(method),
-          data:new formData('');
+          data:new formData(this),
+          processData:false,
+          datatype:'json',
+          contenType:false,
+          beforeSend:function(){
+            $(document).find('span.error-text').text('');
+          },
+          success:function(data){
+            if(data.status == 0) {
+
+            }else{
+              console.log(data);
+            }else{
+              $('#main_form')[0].reset();
+              alert(data.msg);
+            }
+          }
         });
       });
-    });
+    });*/
      /*$(document).ready(function(){
        }*/
        /*function read_more_less(){
