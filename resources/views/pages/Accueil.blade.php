@@ -466,7 +466,7 @@
                     </div>
                     <div class="col-sm-4">                      
                       <label for="">E-mail</label>
-                        <input type="email" class="form-control" id="emil_responsable_principal" name="email_responsable_principal" required />
+                        <input type="email" class="form-control" id="emil_responsable_principal10" name="email_responsable_principal10" required />
                     </div> 
                   </div>
                   <br/>

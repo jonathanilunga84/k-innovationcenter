@@ -36,7 +36,7 @@ class AppelaprojetController extends Controller
     {
         $details = $request->validate([
             "intitule_projet"=>"required|min:2",
-            "email"=>"email:rfc,dns",
+            //"email"=>"email:rfc,dns",
             "Resume_projet_fr2"=>"required|min:2|max:1600",
             "Resume_projet_us2"=>"required|min:2|max:1600",
             "secteur_projet3"=>"required|min:2|max:1200",
@@ -49,7 +49,10 @@ class AppelaprojetController extends Controller
             "nom_responsable_principal10"=>"required|min:2|alpha",
             "prenom_responsable_principal10"=>"required|min:2|alpha",
             "postnom_responsable_principal10"=>"required|min:2|alpha",
-            "phone_responsable_principal10"=>"required|min:2|alpha"
+            "phone_responsable_principal10"=>"required|min:2|alpha",
+            "email_responsable_principal10"=>"email:rfc,dns",
+            "prenom_associe1"=>"required|min:2|alpha",
+
 
             //""=>"required|min:2|max:200",
         ]);
