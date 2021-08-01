@@ -26,7 +26,11 @@ use App\Http\Controllers\AppelaprojetController;
     return view('pages.form-Rejoindre-Les-Reseaux');
 })->name('rejoindre-le-reseaux');*/
 Route::get('/',[HomeController::class,'home'])->name('Home');
-Route::post('/contact',[HomeController::class,'contact'])->name('contact.envoi');
+
+Route::group(['middleware' => ['CorsMiddleware']], function(){
+    Route::post('/contact',[HomeController::class,'contact'])->name('contact.envoi');
+});
+
 
 Route::get('/ppel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
 Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->name('Rejoindre-lereseaux');
