@@ -217,83 +217,6 @@
       </div>
     </section>
 
-    <!-- ======= NOS OBJECTIFS  Section ======= -->
-    <!--section id="story-intro" class="story-intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/bg-objectif.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>NOS OBJECTIFS.</h3>
-            <div>
-              <h6 class="title-sous"><span>1</span> INNOVATION</h6>
-              <p class="fst-italic">
-              Stimuler et promouvoir l'innovation ainsi que la créativité en Republique Démocratique du Congo(RDC) et favoriser la culture entrepreneuriale en place des modules de formation.
-              </p>
-            </div>            
-            <div>
-              <h6 class="title-sous"><span>2</span>INCUBATION</h6>
-              <p class="fst-italic">
-              Permettre l'identification, l'incubation et la maturation des idées innovantes.
-              </p>
-            </div>
-            <div>
-              <h6 class="title-sous"><span>3</span>EXPERTISE</h6>
-              <p>
-              Favoriser le tranfert de technologie et expertise entre l'Univerité de Géneve et les institutions académiques congolaises
-              </p>
-            </div>
-             <a href="assets/pdf/Objectifs KIC.pdf" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
-          </div>
-        </div>
-
-      </div>
-    </section--><!-- End Story Intro Section -->
-
-    <!-- ======= Featured Members Section ======= -->
-    <!--section id="featured-members" class="featured-members">
-      <div class="container">
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <img src="assets/img/bg-approche.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-3 pt-lg-0">
-            <h3>APPROCHE.</h3>
-            <p class="fst-italic">
-              
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> <span>Identifier les besoins de la region </span> pour circoncire les sujets d'innovation et restreindre les besoins et compétences nécessaires pour atteindre l'objectif poursuivi.</li>
-              <li><i class="bi bi-check-circle-fill"></i> <span>Recruter les participants à l'incubateur </span> ésidant dans la région:</li>
-              <li><i class="bi bi-check-circle-fill"></i> Diplômés universitaires: les penseurs.</li>
-               <li><i class="bi bi-check-circle-fill"></i> Diplômés technique: les développeurs.</li>
-                <li><i class="bi bi-dash-circle-fill"></i> Diplômés secondaires: les pratiques.</li>
-            </ul>
-            <a href="assets/pdf/Approche KIC.pdf " id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
-          </div>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6 order-1 order-lg-2">
-            <img src="assets/img/bg-activite.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1 pt-3 pt-lg-0">
-            <h3>ACTIVITE.</h3>
-            <h6>ACQUÉRIR LES COMPÉTENCES ENTREPRENEURIALES.</h6>
-            <ul>
-              <li class="fst-italic"><i class="bi bi-dash-circle-fill"></i>Business plan</li>
-              <li class="fst-italic"><i class="bi bi-dash-circle-fill"></i>Notion de comptabilité</li>
-              <li class="fst-italic"><i class="bi bi-dash-circle-fill"></i>Création d'entreprise en RDC</li>
-              <li class="fst-italic"><i class="bi bi-dash-circle-fill"></i>Propriété intellectuelle et innovation: mécanismes de protection nationale et internationale</li>
-            </ul>
-            <a href="assets/pdf/Activités KIC.pdf" id="btn-learn-more" class="btn-learn-more">Lire la suite...</a>
-          </div>
-        </div>
-      </div>
-    </section--><!-- End Featured Members Section -->
-
     <!-- ======= Nos partainer Section ======= -->
     <section id="recent-photos" class="recent-photos">
       <div class="container">
@@ -375,24 +298,44 @@
 
           <div class="col-lg-6 mt-5 mt-lg-0 text-center fw-bold">
               <!--h6>Joindre le reseaux</h6-->
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="{{ route('contact.envoi') }}" method="POST" class="php-email-form">
+              @csrf
               <div class="row">
+                @if(session()->has('successSend'))
+                    <div class="alert alert-success">
+                        <h3>{{ session()->get('successSend') }}</h3>
+                    </div>                    
+                @endif 
                 <div class="col-md-12 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+                  <span>{{ $errors->has('name') }} {{ $errors->first('name') }}</span>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" value="{{ old('name') }}" required>
+                  @error('name')
+                    <div class="validate text-danger">{{$message}}</div>
+                  @enderror
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-12 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
-                  <div class="validate"></div>
+                  <span>{{ $errors->has('email') }} {{ $errors->first('email') }}</span>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" value="{{ old('email') }}" required>
+                  @error('email')
+                    <div class="validate text-danger">{{$message}}</div>
+                  @enderror
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" required>
-                <div class="validate"></div>
+                <span>{{ $errors->has('subject') }} {{ $errors->first('subject') }}</span>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" value="{{ old('subject') }}" required>
+                @error('subject')
+                  <div class="validate text-danger">{{$message}}</div>
+                @enderror
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                <div class="validate"></div>
+                <span>{{ $errors->has('msg') }} {{ $errors->first('msg') }}</span>
+                <textarea class="form-control" name="msg" rows="5" placeholder="Message" required>{{ old('msg') }}</textarea>
+                @error('msg')
+                  <div class="validate text-danger">{{$message}}</div>
+                @enderror
+
               </div>
               <!--div class="my-3">
                 <div class="loading">Loading</div>

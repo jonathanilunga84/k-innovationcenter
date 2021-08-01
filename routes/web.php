@@ -33,6 +33,9 @@ Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->n
 //pour traiter le formulaire et envoyer le contenue du form par mail
 Route::post('/Appel-aprojet',[AppelaprojetController::class,'store'])->name('store.Add');
 
+//pour traiter le formulaire et envoyer le contenue du form par mail
+Route::post('/contactenvoi',[HomeController::class,'contact'])->name('contact.envoi');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
