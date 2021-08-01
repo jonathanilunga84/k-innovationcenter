@@ -219,20 +219,6 @@
   <!-- Template Main JS File -->
   <script src="{{ asset('js/js/main.js') }}"></script>
    <script>
-     /*$(document).ready(function(){
-       }*/
-       /*function read_more_less(){
-        var dots = document.getElementById('dots');
-        var moretext = document.getElementById('more');
-        var mybtn = document.getElementById('mybtn');
-        if (dots.style.display === 'none') {
-
-        }
-        else{
-          
-        }
-       }*/
-
        $(".regular").slick({
         dots: true,
         infinite: true,
@@ -249,8 +235,34 @@
         slidesToScroll: 3
 
       });
+  </script>
+  <script>
 
+    $(document).ready(function(){
+      //alert('ok ajax');
+      $("#appel_a_projet").on('submit',function(e){
+        e.preventDefault();
 
+        $.ajax({
+          url:$(this).attr('action'),
+          method:$(this).attr(method),
+          data:new formData('');
+        });
+      });
+    });
+     /*$(document).ready(function(){
+       }*/
+       /*function read_more_less(){
+        var dots = document.getElementById('dots');
+        var moretext = document.getElementById('more');
+        var mybtn = document.getElementById('mybtn');
+        if (dots.style.display === 'none') {
+
+        }
+        else{
+          
+        }
+       }*/
   </script>
 </body>
 

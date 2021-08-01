@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\appelAprojet;
+use Illuminate\Support\Facades\Mail;
 
 class AppelaprojetController extends Controller
 {
@@ -51,7 +53,7 @@ class AppelaprojetController extends Controller
             "postnom_responsable_principal10"=>"required|min:2|alpha",
             "phone_responsable_principal10"=>"required|min:2|alpha",
             "email_responsable_principal10"=>"email:rfc,dns",
-            "prenom_associe1"=>"min:2|alpha",
+            /*"prenom_associe1"=>"min:2|alpha",
             "nom_associe1"=>"min:2|alpha",
             "postnom_associe1"=>"min:2|alpha",
             "phone_associe1"=>"min:2|alpha",
@@ -60,11 +62,18 @@ class AppelaprojetController extends Controller
             "nom_associe2"=>"min:2|alpha",
             "postnom_associe2"=>"min:2|alpha",
             "phone_associe2"=>"min:2",
-            "email_associe2"=>"min:2|alpha",
-
-
+            "email_associe2"=>"min:2|alpha",*/
+            "etat_actual_du_projet13"=>"required|min:2|max:600",
+            "interet_en_soumettant14"=>"required|min:2|max:400",
+            "projet_beneficie_de_financement15"=>"required|min:2|max:1200",
+            "projet_pourrait_contribuer16"=>"required|min:2|max:1200",
+            "information_supplementaire23"=>"required|min:2|max:600",
+            "confirm_info"=>"required|in:1",
             //""=>"required|min:2|max:200",
         ]);
+        Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
+            //return redirect()->to(app('url')->previous(). '#rejoindreReseaux')->with("successSend", "Email envoyer avec succée");
+        return back()->with("successSend", "Email envoyer avec succée");
     }
 
     /**

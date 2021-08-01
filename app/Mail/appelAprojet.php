@@ -10,15 +10,15 @@ use Illuminate\Queue\SerializesModels;
 class appelAprojet extends Mailable
 {
     use Queueable, SerializesModels;
-
+     public $details;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($details)
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -28,6 +28,8 @@ class appelAprojet extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        $email = $this->details['email_responsable_principal10'];
+        return $this->from($email,$email)
+                    ->subject($this->details['intitule_projet'])->view('pages.appel-a-projetMailSend');
     }
 }

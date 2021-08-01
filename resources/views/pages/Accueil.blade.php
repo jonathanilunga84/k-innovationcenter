@@ -491,7 +491,7 @@
                     </div>
                     <div class="col-sm-4">                      
                       <label for="email_associe1">E-mail</label>
-                        <input type="email" class="form-control" id="email_associe1" name="email_associe1" />
+                        <input type="text" class="form-control" id="email_associe1" name="email_associe1" />
                         <br/>
                     </div> 
 
@@ -515,7 +515,7 @@
                     <div class="col-sm-4">  
                       <div class="form-group">
                         <label for="email_associe2">E-mail</label>
-                        <input type="email" class="form-control" id="email_associe2" name="email_associe2" />
+                        <input type="text" class="form-control" id="email_associe2" name="email_associe2" />
                       </div>                    
                     </div>                   
                   </div>
@@ -760,27 +760,27 @@
                 <div class="col-sm12 col-md-8 col-lg-8 bg-lightM">
                   <div class="form-group">
                     <label for="etat_actual_du_projet13" class="form-label"><span class="title_input">13.</span>Quel est l’état actuel de réalisation/mise en œuvre/implémentation de votre Projet ?
-                    </label> <span class="text-danger float-end">(0/600)*</span>
+                    </label> <!--span class="text-danger float-end">(0/600)*</span-->
                     <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="etat_actual_du_projet" name="etat_actual_du_projet13" style="height: 100px" maxlength="600"></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
                     <label for="interet_en_soumettant14" class="form-label"><span class="title_input">14.</span>Quel intérêt portez-vous en soumettant votre projet à Kinshasa Innovation Center (KIC) ?</label>
-                    <span class="text-danger float-end">max caratere (0/400)</span> 
-                    <textarea class="form-control" placeholder="" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required></textarea>
+                    <!--span class="text-danger float-end">max caratere (0/400)</span--> 
+                    <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
                     <label for="projet_beneficie_de_financement15" class="form-label"><span class="title_input">15.</span>Votre projet bénéficie-t-il déjà d’un autre soutien ou encadrement (coaching, financement,          etc.) ? Si oui, par quel organisme ?</label> 
-                    <span class="text-danger float-end">max caratere (0/1200)</span>
-                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" style="height: 100px" maxlength="400" required></textarea>
+                    <!--span class="text-danger float-end">max caratere (0/1200)</span-->
+                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" placeholder="nombre de catratre Max (0/400)*" style="height: 100px" maxlength="400" required></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
                     <label for="projet_pourrait_contribuer16" class="form-label"><span class="title_input">16. </span>En quoi votre Projet pourrait-il contribuer à la création de valeurs et/ou d’emplois dans le milieu d’implémentation en particulier et dans la ville de Kinshasa en général ?
                     </label>
-                    <span class="text-danger float-end">max caratere (0/1200)</span> 
-                    <textarea class="form-control" placeholder="" id="Resume_projet_fr" style="height: 100px" maxlength="1200" required=""></textarea>
+                    <!--span class="text-danger float-end">max caratere (0/1200)</span--> 
+                    <textarea class="form-control" placeholder="nombre de catratre Max (0/1200)*" id="projet_pourrait_contribuer16" name="projet_pourrait_contribuer16" style="height: 100px" maxlength="1200" required=""></textarea>
                   </div>
                   <br/>
                   <div class="row">
@@ -878,8 +878,8 @@
                   <div class="form-group">
                     <br/>
                     <label for="" class="form-label"><span class="title_input">23. </span>Avez-vous une information supplémentaire et particulière pouvant soutenir votre candidature ? (En rapport avec les conditions d’éligibilité, votre niveau d’étude...)</label> 
-                    <span class="text-danger float-end">max caratere (0/600)*</span>
-                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" maxlength="600" required ></textarea>
+                    <!--span class="text-danger float-end">max caratere (0/600)*</span-->
+                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" placeholder="text-danger float-end">max caratere (0/600)*" maxlength="600" required ></textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -890,7 +890,19 @@
                     <br/>
                     <p id="text_nb">NB : Associez dans ce formulaire votre portrait photo (haute définition), la copie de votre carte d’identité et votre curriculum vitae (CV).</p>
                     <!--label for="formFileSm" class="form-label">Small file input example</label-->
-                    <input class="form-control form-control-sm" name="document_lie" id="document_lie" type="file">
+                    <div class="">
+                      <span>votre portrait photo</span>
+                      <input class="form-control form-control-sm" name="avatar1" id="document_lie" type="file">
+                    </div>
+                    <br/>
+                    <div class="">
+                      <span> la copie de votre carte d’identité </span>
+                      <input class="form-control form-control-sm" name="carteIdent" id="document_lie" type="file">
+                    </div><br/>
+                    <div class="">
+                      <span>curriculum vitae (CV)</span>
+                      <input class="form-control form-control-sm" name="cv1" id="document_lie" type="file">
+                    </div>
                   </div>
                 </div><!-- end div sectionTree -->
               </section><!-- end sectionTree -->
