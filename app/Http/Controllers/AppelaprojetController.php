@@ -49,6 +49,7 @@ class AppelaprojetController extends Controller
             "nom_responsable_principal10"=>"required|min:2|alpha",
             "prenom_responsable_principal10"=>"required|min:2|alpha",
             "postnom_responsable_principal10"=>"required|min:2|alpha",
+            "phone_responsable_principal10"=>"required|min:2|alpha"
 
             //""=>"required|min:2|max:200",
         ]);
