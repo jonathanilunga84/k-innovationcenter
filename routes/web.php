@@ -32,15 +32,16 @@ Route::group(['middleware' => ['CorsMiddleware']], function(){
 });
 
 
-Route::get('/ppel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
-Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->name('Rejoindre-lereseaux');
+//Route::get('/ppel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
+//Route::get('/rejoindre-lereseaux',[HomeController::class,'rejoindreReseaux'])->name('Rejoindre-lereseaux');
 
 //pour traiter le formulaire et envoyer le contenue du form par mail
+Route::get('/Appel-a-projet-form',[AppelaprojetController::class,'create'])->name('formAppelaprojet');
 Route::post('/Appel-aprojet',[AppelaprojetController::class,'store'])->name('store.Add');
 
+
 //pour traiter le formulaire et envoyer le contenue du form par mail
-Route::get('/contacte',[AppelaprojetController::class,'create'])->name('contactform');
-Route::post('/contactenvoi',[AppelaprojetController::class,'contact'])->name('contact.envoiM');
+//Route::post('/contactenvoi',[AppelaprojetController::class,'contact'])->name('contact.envoiM');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

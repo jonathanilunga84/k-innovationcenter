@@ -36,20 +36,26 @@ class AppelaprojetController extends Controller
      */
     public function store(Request $request)
     {
-        $details = $request->validate([
-            "intitule_projet"=>"required|min:2",
-            "Resume_projet_fr2"=>"required|min:2|max:1600"
+        $details = $request->validate([  
+            "intitule_projet1"=>"required|min:2",
+            "Resume_projet_fr2"=>"required|min:2|max:1600",
+            "email_responsable_principal10"=>"email:rfc,dns", 
+            "cv1"=>"required",
         ]);
-        //var_dump($details);
 
+        //echo "ok". $details['periode_incubation21'];//"confirm_info"=>"required",
+        //var_dump($request->file('cv1'));
+        //var_dump($details['confirm_info']);
+        //'checkbox' =>'accepted'
         /*if(!$details->passes()){
             return response()->json(['status'=>0, 'error'=>$details->errors()->toArray()]);
         }else{
             return response()->json(['status'=>1, 'msg'=>'Le projet est envoyer avec Success']);
         }*/
+        Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
        // Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
             //return redirect()->to(app('url')->previous(). '#rejoindreReseaux')->with("successSend", "Email envoyer avec succée");
-        //return back()->with("successSend", "Email envoyer avec succée");
+        return back()->with("successSend", "Si les errreur en rouge n'est sont pas visible donc les information sont bien envoyer");
     }
 
     /**

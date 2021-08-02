@@ -217,25 +217,8 @@
   <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
   <script src="{{ asset('css/style/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <!-- Template Main JS File -->
+
   <script src="{{ asset('js/js/main.js') }}"></script>
-   <script>
-       $(".regular").slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-
-       $(".center").slick({
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-
-      });
-  </script>
   <script>
 
     $(document).ready(function(){
@@ -279,6 +262,24 @@
           
         }
        }*/
+  </script>
+   <script>
+       $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+
+       $(".center").slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+
+      });
   </script>
 </body>
 

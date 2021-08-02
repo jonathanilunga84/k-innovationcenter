@@ -147,14 +147,14 @@
             </p-->
             <p id="content">
               Vous êtes étudiant(e), entrepreneur, chercheurs ou tout simplement passionné(e) par l'innovation et la création d'entreprise ?
-              <br /> <br />
+              <br /> 
               Voici pour vous l'opportunité de nous soumettre votre projet et ainsi bénéficier d'un accompagnement aussi bien pratique que théorique, qui regroupera notamment les thématiques suivantes: création d'un business plan, propriété intellectuelle, sources de financement, éthique des affaires.
-              <br /> <br />
+              <br />
               Vous bénéficierez d'un accès aux incubateurs, à un espace de travail, des échanges avec les anciens lauréat, participation au programme accelerate 2030  et bien plus encore! N'attendez plus et envoyez-nous votre dossier en cliquant ci-dessous.
             </p>
             <p>
               <p class="appel-a-projet"><a href="{{ asset('css/style/pdf/Eligibilité et charte des participants-1.pdf') }}">Lire la charte des participants et les conditions d'éligibilité</a></p>
-              <a href="{{ route('contactform') }}" id="btn-learn-more" class="btn-learn-more" data-bs-toggle="modalM" data-bs-target="#staticBackdropM">Je postule</a>
+              <a href="{{ route('formAppelaprojet') }}" id="btn-learn-more" class="btn-learn-more" data-bs-toggle="modalM" data-bs-target="#staticBackdropM">Je postule</a>
             </p>
             </div>
           </div> 
