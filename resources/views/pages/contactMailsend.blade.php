@@ -7,8 +7,8 @@
 </head>
 <body>
 	<h3>{{ $details['subject'] }}</h3>
-	<p>{{ $details['name'] }}</p>
-	<p>{{ $details['email'] }}</p> 
-	<p>{{ $details['msg'] }}</p>
+	<h4>{{ $details['name'] }}</h4>
+	<h4>{{ $details['email'] }}</h4> 
+	<h5>{{ $details['msg'] }}</h5>
 </body>
 </html>

@@ -978,6 +978,7 @@ section {
 
 #story-intro #title_appel_projet{
   font-weight: bold;
+  font-size: 28px;
 }
 #story-intro #content_text{
   position: relative;
@@ -1345,6 +1346,9 @@ section {
 .contact-us .php-email-form button[type="submit"]:hover {
   background: #007ed8;
 }
+.noir{
+  background-color: red;
+}
 
 @-webkit-keyframes animate-loading {
   0% {
@@ -1478,4 +1482,7 @@ section {
 }
 px{
   font-family: "Open Sans", sans-serif;
+}
+#formSendContact{
+  margin-top: 100px;
 }

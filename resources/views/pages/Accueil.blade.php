@@ -65,9 +65,6 @@
               <!--span id="mybtn" onclick="read_more_less();">Lire la suite</span-->
                
               </p>
-              <p>
-               . 
-              </p>
   					</div>  					
   				</div>
   			</div>
@@ -140,7 +137,7 @@
           <div id="Appel-aprojetM" class="col-sm-6 text-light text-center">
             <div id="content_text">   
            
-            <h2 id="title_appel_projet">Appel à projet 2021</h2>
+            <h2 id="title_appel_projet">Appel à projet (10 août au 10 septembre 2021)</h2>
             <br />
             <!--p id="content">
               Vous êtes étudiant, finaliste du secondaire, entrepreneur, chercheurs voici l'occasion vous est donnée pour soumettre vos projets et bénéficier d'un accompagnement (acquisition des compétences nécessaires, accès aux incubateurs, accès au financement, espace de travail, participation au programme accelerate 2030 pour l'atteinte des objectifs de développement durable)
@@ -258,6 +255,7 @@
         <div class="section-title">
           <h2 id="rejoindreReseaux">CONTACT</h2>
         </div>
+
         <!--div>
           <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
         </div-->
@@ -299,9 +297,12 @@
 
           <div class="col-lg-6 mt-5 mt-lg-0 text-center fw-bold">
               <!--h6>Joindre le reseaux</h6-->
-            <form action="{{ route('contact.envoi') }}" method="POST" class="btM php-email-form">
+            <form id="formSendContact" action="{{ route('contact.envoi') }}" method="POST" class="btM php-email-form">
               @csrf
               <div class="row">
+                <div class="alert alert-success">
+                  <h3 id="errorMessage"></h3>
+                </div>
                 @if(session()->has('successSend'))
                     <div class="alert alert-success">
                         <h3>{{ session()->get('successSend') }}</h3>
@@ -309,14 +310,15 @@
                 @endif 
                 <div class="col-md-12 form-group">
                   <span>{{ $errors->has('name') }} {{ $errors->first('name') }}</span>
+                  <span class="text-danger error-text name_error"></span>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" value="{{ old('name') }}" required>
                   @error('name')
                     <div class="validate text-danger">{{$message}}</div>
                   @enderror
-                  <div class="validate"></div>
                 </div>
                 <div class="col-md-12 form-group mt-3 mt-md-0">
                   <span>{{ $errors->has('email') }} {{ $errors->first('email') }}</span>
+                  <span class="text-danger error-text email_error"></span>
                   <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" value="{{ old('email') }}" required>
                   @error('email')
                     <div class="validate text-danger">{{$message}}</div>
@@ -325,6 +327,7 @@
               </div>
               <div class="form-group mt-3">
                 <span>{{ $errors->has('subject') }} {{ $errors->first('subject') }}</span>
+                <span class="text-danger error-text subject_error"></span>
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" value="{{ old('subject') }}" required>
                 @error('subject')
                   <div class="validate text-danger">{{$message}}</div>
@@ -332,18 +335,15 @@
               </div>
               <div class="form-group mt-3">
                 <span>{{ $errors->has('msg') }} {{ $errors->first('msg') }}</span>
-                <textarea class="form-control" name="msg" rows="5" placeholder="Message" required>{{ old('msg') }}</textarea>
+                <span class="text-danger error-text msg_error"></span>
+                <textarea class="form-control" name="msg" id="msg" rows="5" placeholder="Message" required>{{ old('msg') }}</textarea>
                 @error('msg')
                   <div class="validate text-danger">{{$message}}</div>
                 @enderror
 
               </div>
-              <!--div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div-->
-              <div class="text-center"><button type="submit">Envoyer Message</button></div>
+             
+              <div class="text-center"><button id="btnContactSend" type="submit">Envoyer Message</button></div>
             </form>
 
           </div>

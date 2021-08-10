@@ -194,4 +194,74 @@
     selector: '.glightbox'
   });
 
-})()
+})();
+
+(function($){
+
+  // Pour le formulaire de contact 
+  $("#formSendContact").on('submit',function(e){
+    e.preventDefault();
+    let name = $('#name').val();
+    let email = $('#email').val();
+    let subject = $('#subject').val();
+    let msg = $('#msg').val();
+    let _token = $('input[type="hidden"]').attr('value'); 
+    let myUrl = $(this).attr('action');
+    let myMethode = $(this).attr('method');
+    //let dt = new FormData(this);
+    //console.log('myMethode '+myMethode);
+    $('#btnContactSend').attr({disabled:true});
+    $('#btnContactSend').css('backgroundColor','black');
+    $('#btnContactSend').html('En cour d\'envoi...');
+    $.ajax({
+      url:myUrl,
+      method:myMethode,
+      data:{
+        _token,
+        name,
+        email,
+        subject,
+        msg
+      },
+      dataType:'json',
+      //processData:false,
+      //contentType:false,
+      beforeSend:function(){
+        //$(document).find('s')
+        console.log('vidange du span');
+        $(document).find('span.error-text').text('');
+      },
+      success:function(data){
+        if(data.status == 0){
+          console.log("my MSG ");
+          console.log(data.error);
+          $.each(data.error, function(prefix, val){
+            $('span.'+prefix+'_error').text(val[0]);
+          });
+          $('#btnContactSend').html('Envoyer Message');
+          $('#btnContactSend').attr('disabled',false);
+          $('#btnContactSend').css('backgroundColor','');
+        }else{
+          $('#formSendContact')[0].reset();
+          console.log(data.messages);
+          alert('le message est bien envoyé');
+          $('#btnContactSend').html('Envoyer Message');
+          $('#btnContactSend').attr('disabled',false);
+          $('#btnContactSend').css('backgroundColor','');
+        }
+      },
+      error:function(error){
+        console.log(error.responseText);
+      }
+    });                
+  });
+
+  // Pour le formulaire d'appel a projet
+  //console.log('console');
+  /*$('#btnContactSend').attr({disabled:true});
+  $('#btnContactSend').addClass('noir');
+  $('#btnContactSend').toggleClass('noir');
+  $('#btnContactSend').css('backgroundColor','black');*/
+
+})(jQuery);
+

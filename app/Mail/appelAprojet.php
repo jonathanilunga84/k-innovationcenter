@@ -33,7 +33,7 @@ class appelAprojet extends Mailable
         echo $veg;*/
        // var_dump(details['email_responsable_principal10']);
         $email = $this->details['email_responsable_principal10'];
-       $mailss = $this->from($email,$email)
+        $mailss = $this->from($email,$email)
                     ->subject($this->details['intitule_projet1'])
                     ->view('pages.appel-a-projetMailSend');
                     //->attach($this->details['cv1']->getClientOriginalName());

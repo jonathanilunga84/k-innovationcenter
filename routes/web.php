@@ -26,10 +26,10 @@ use App\Http\Controllers\AppelaprojetController;
     return view('pages.form-Rejoindre-Les-Reseaux');
 })->name('rejoindre-le-reseaux');*/
 Route::get('/',[HomeController::class,'home'])->name('Home');
-
-Route::group(['middleware' => ['CorsMiddleware']], function(){
+Route::post('/contact',[HomeController::class,'contact'])->name('contact.envoi');
+/*Route::group(['middleware' => ['CorsMiddleware']], function(){
     Route::post('/contact',[HomeController::class,'contact'])->name('contact.envoi');
-});
+});*/
 
 
 //Route::get('/ppel-aprojet',[HomeController::class,'appelaprojet'])->name('Appel-aprojet');
@@ -37,11 +37,12 @@ Route::group(['middleware' => ['CorsMiddleware']], function(){
 
 //pour traiter le formulaire et envoyer le contenue du form par mail
 Route::get('/Appel-a-projet-form',[AppelaprojetController::class,'create'])->name('formAppelaprojet');
+
 Route::post('/Appel-aprojet',[AppelaprojetController::class,'store'])->name('store.Add');
 
+Route::get('/ct',[HomeController::class,'ct'])->name('ct1');
+Route::post('/ctM',[HomeController::class,'ct2'])->name('ct2');
 
-//pour traiter le formulaire et envoyer le contenue du form par mail
-//Route::post('/contactenvoi',[AppelaprojetController::class,'contact'])->name('contact.envoiM');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

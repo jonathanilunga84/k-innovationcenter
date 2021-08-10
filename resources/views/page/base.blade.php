@@ -8,6 +8,7 @@
   <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <!--meta name="csrf-token" content="{{ csrf_token() }}"-->
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -56,151 +57,6 @@
   <!-- End Content -->
 
   <!-- modal Creat Compte -->
-    <!-- Button trigger modal -->
-<!--button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button-->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
-               @csrf
-      <div id="creationCompte" class="modal-header  bg-danger-">
-        <h3 class="modal-title text-center fw-bold" id="exampleModalLabel">CREATION DE COMPTE KIC</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <div class="container">
-         <div class="row">
-          <div class="col-lg-12 mt-5 mt-lg-0">
-
-            <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
-               @csrf
-               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Nom" data-rule="" required autofocus>
-                <div class="validate"></div>
-              </div>
-               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="postnom" id="postnom" placeholder="Postnom" data-rule="">
-                <div class="validate"></div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" data-rule="">
-                <div class="validate"></div>
-              </div>
-               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="" placeholder="Adrese mail" data-rule="" required>
-                <div class="validate"></div>
-              </div>
-               <div class="form-group mt-3">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" data-rule="" required>
-                <div class="validate"></div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirme Mot de passe" data-rule="" required>
-                <div class="validate"></div>
-              </div>
-              
-              <div class="my-3">
-                <!--div class="loading">Loading</div-->
-                <!--div class="error-message"></div-->
-                <!--div class="sent-message">Your message has been sent. Thank you!</div-->
-              </div>
-              <!--div class="text-center"><button type="submit">Envoyer Message</button></div-->
-            
-
-          </div>
-         </div>
-       </div>
-      </div>
-      <div class="modal-footer">
-        <div class="container">
-          <div class="row">
-          <div class="col-sm-6">
-            <!--a data-bs-toggle="modal" data-bs-target="#exampleModal_login">login</a-->
-            <a href="{{ route('login') }}">J'ai déja un Compte</a>
-          </div>
-          <div class="col-sm-6 form-group">
-            <button id="btn_createCompte" type="submit" class="btn btn-primary form-control">Créer Compte KIC</button>
-          </div>
-          </div>
-        </div>
-        <!--button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button-->
-        <!--input id="btn_createCompte" type="submit" class="btn btn-primary" value="Créer Compte KIC" /-->
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-  <!-- End Creat Compte -->
-
-  <!-- Modal -->
-<div class="modal fade" id="exampleModal_login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
-               @csrf
-      <div id="creationCompte" class="modal-header  bg-danger-">
-        <h3 class="modal-title text-center fw-bold" id="exampleModalLabel">CONNEXION AUX KIC</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-       <div class="container">
-         <div class="row">
-          <div class="col-lg-12 mt-5 mt-lg-0">
-
-            <form action="{{ route('register') }}" method="post" role="form" class="php-email-form">
-               @csrf
-               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Nom" data-rule="" required autofocus>
-                <div class="validate"></div>
-              </div>
-               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="postnom" id="postnom" placeholder="Postnom" data-rule="">
-                <div class="validate"></div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prenom" data-rule="">
-                <div class="validate"></div>
-              </div>
-               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="" placeholder="Adrese mail" data-rule="" required>
-                <div class="validate"></div>
-              </div>
-               <div class="form-group mt-3">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" data-rule="" required>
-                <div class="validate"></div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" placeholder="Confirme Mot de passe" data-rule="" required>
-                <div class="validate"></div>
-              </div>
-          </div>
-         </div>
-       </div>
-      </div>
-      <div class="modal-footer">
-        <div class="container">
-          <div class="row">
-          <div class="col-sm-6">
-            <a data-bs-toggle="modal" data-bs-target="#exampleModal_login">login</a>
-            <a href="{{ route('login') }}">J'ai déja un Compte</a>
-          </div>
-          <div class="col-sm-6 form-group">
-            <button id="btn_createCompte" type="submit" class="btn btn-primary form-control">Créer Compte KIC</button>
-          </div>
-          </div>
-        </div>
-        <!--button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button-->
-        <!--input id="btn_createCompte" type="submit" class="btn btn-primary" value="Créer Compte KIC" /-->
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-  <!-- End login -->
 
   <!-- ======= Footer ======= -->
     @include('page.footer')
@@ -209,60 +65,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{{ asset('css/style/vendor/jquery/jQuery3.5.1.min.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <script src="{{ asset('css/style/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('css/style/vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('css/style/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ asset('css/style/vendor/slick-1.8.1/slick/slick.min.js') }}"></script>
-  <script src="{{ asset('css/style/assets/vendor/php-email-form/validate.js') }}"></script>
+  
   <script src="{{ asset('css/style/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <!-- Template Main JS File -->
 
   <script src="{{ asset('js/js/main.js') }}"></script>
-  <script>
-
-    $(document).ready(function(){
-      alert('ok ajax');
-      /*$("#appel_a_projet").on('submit',function(e){
-        e.preventDefault();
-
-        $.ajax({
-          url:$(this).attr('action'),
-          method:$(this).attr(method),
-          data:new formData(this),
-          processData:false,
-          datatype:'json',
-          contenType:false,
-          beforeSend:function(){
-            $(document).find('span.error-text').text('');
-          },
-          success:function(data){
-            if(data.status == 0) {
-
-            }else{
-              console.log(data);
-            }else{
-              $('#main_form')[0].reset();
-              alert(data.msg);
-            }
-          }
-        });
-      });
-    });*/
-     /*$(document).ready(function(){
-       }*/
-       /*function read_more_less(){
-        var dots = document.getElementById('dots');
-        var moretext = document.getElementById('more');
-        var mybtn = document.getElementById('mybtn');
-        if (dots.style.display === 'none') {
-
-        }
-        else{
-          
-        }
-       }*/
-  </script>
    <script>
        $(".regular").slick({
         dots: true,
@@ -280,6 +93,8 @@
         slidesToScroll: 3
 
       });
+  </script>
+  <script>
   </script>
 </body>
 

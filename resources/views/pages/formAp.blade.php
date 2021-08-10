@@ -3,17 +3,11 @@
 @section('title')
     Accueil
 @endsection
-<!--style>
-  #more-{
-    display: none;
-  }
-
-</style-->
 
 @section('contenu')
 	<!-- section formulaire appel a projet  -->
     <!-- Modal -->
-
+      
       <form id="appel_a_projet" action="{{ route('store.Add') }}" method="POST" enctype="multipart/form-data">
         @csrf
       <div class="modal-header">
@@ -24,7 +18,21 @@
         <div class="container-fluid">
           <div class="row justify-content-center bg-danger-">
              <!-- form -->
-      
+              @if(session()->has('successSend'))
+                <div class="alert alert-success">
+                  <h3>{{ session()->get('successSend') }}</h3>
+                </div>                   
+              @endif
+              @if(session()->has('ValidationErrorM'))
+                <div class="alert alert-success">
+                  <h3 class="text-danger">{{ session()->get('ValidationError') }}</h3>
+                </div>                   
+              @endif
+              @if ($errors->any())
+                    <div class="alert alert-danger">
+                         <h3 class="text-danger">Verifier bien les Champs une ou plusier n'est pas bien remplie"</h3>
+                    </div>
+                @endif
               <!-- sectionOne -->
               <section id="sectionOne" class="row justify-content-center sectionOne">
                 <h4 class=""><span class="numerotation_section">I. </span>RENSEIGNEMENTS GENERAUX SUR LE PROJET</h4>
@@ -40,7 +48,7 @@
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr2" class="form-label fw-bold"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
+                    <label for="Resume_projet_fr2" class="form-label fw-boldM"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
                     @error('Resume_projet_fr2')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
@@ -191,7 +199,7 @@
                     <h6><span class="title_input">2)</span></h6>
                     <div class="col-sm-4">                      
                       <label for="prenom_associe2">Prénom</label>
-                        <input type="text" class="form-control" id="prenom_associe2" name="intitule_projet" />
+                        <input type="text" class="form-control" id="prenom_associe2" name="prenom_associe2" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="nom_associe2">Nom</label>
@@ -304,7 +312,7 @@
                           <label class="form-check-label" for="propriete1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="propriete" id="propriete2" value="propriete2">
+                          <input class="form-check-input" type="radio" name="propriete" id="propriete2" value="non">
                           <label class="form-check-label" for="propriete2">NON</label>
                         </div>
                       </div>
@@ -340,7 +348,7 @@
                           <label class="form-check-label" for="developpement1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="developpement" id="developpement2" value="non2">
+                          <input class="form-check-input" type="radio" name="developpement" id="developpement2" value="non">
                           <label class="form-check-label" for="developpement2">NON</label>
                         </div>
                       </div>
@@ -376,7 +384,7 @@
                           <label class="form-check-label" for="responsabilite1">OUI</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="responsabilite" id="responsabilite2" value="option2">
+                          <input class="form-check-input" type="radio" name="responsabilite" id="responsabilite2" value="non">
                           <label class="form-check-label" for="responsabilite2">NON</label>
                         </div>
                       </div>
@@ -472,7 +480,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-8 title-">
+                      
                         <div class="col-sm-8 title-">
                         @error('anglais')
                           <div class="text-danger">{{$message}}</div>
@@ -489,7 +497,7 @@
                           <label class="form-check-label" for="anglais2">NON</label>
                         </div>
                       </div>
-                    </div>
+                    
                 </div><!-- end div sectionTwee -->
               </section><!-- end sectionTwee -->
 
@@ -511,7 +519,7 @@
                     @error('interet_en_soumettant14')
                       <div class="text-danger">{{$message}}</div>
                     @enderror 
-                    <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required>{{old("etat_actual_du_projet13")}}</textarea>
+                    <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required>{{old("interet_en_soumettant14")}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -519,7 +527,7 @@
                     @error('projet_beneficie_de_financement15')
                       <div class="text-danger">{{$message}}</div>
                     @enderror  
-                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" placeholder="nombre de catratre Max (0/400)*" style="height: 100px" maxlength="400" required>{{old("etat_actual_du_projet13")}}</textarea>
+                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" placeholder="nombre de catratre Max (0/400)*" style="height: 100px" maxlength="400" required>{{old("projet_beneficie_de_financement15")}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -563,7 +571,7 @@
                           <label class="form-check-label" for="propriete_intellectuelle1_18">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="propriete_intellectuelle18" id="propriete_intellectuelle2_18" value="option2">
+                          <input class="form-check-input" type="radio" name="propriete_intellectuelle18" id="propriete_intellectuelle2_18" value="non">
                           <label class="form-check-label" for="propriete_intellectuelle2_18">NON</label>
                       </div>
                     </div>
@@ -600,7 +608,7 @@
                           <label class="form-check-label" for="formation_a_distance1_20">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="formation_a_distance20" id="formation_a_distance2_20" value="option2">
+                          <input class="form-check-input" type="radio" name="formation_a_distance20" id="formation_a_distance2_20" value="non">
                           <label class="form-check-label" for="formation_a_distance2_20">NON</label>
                       </div>
                     </div>
@@ -618,7 +626,7 @@
                           <label class="form-check-label" for="periode_incubation1_21">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="periode_incubation21" id="periode_incubation2_21" value="option2">
+                          <input class="form-check-input" type="radio" name="periode_incubation21" id="periode_incubation2_21" value="non">
                           <label class="form-check-label" for="periode_incubation2_21">NON</label>
                       </div>
                     </div>
@@ -632,8 +640,8 @@
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
-                          <input class="form-check-input" type="radio" name="approuve_le_reglement22" id="approuve_le_reglement1_22" value="oui">
-                          <label class="form-check-label" for="approuve_le_reglement1_22">OUI</label>
+                          <input class="form-check-input" type="radio" name="approuve_le_reglement22" id="approuve_le_reglement22" value="oui">
+                          <label class="form-check-label" for="approuve_le_reglement22">OUI</label>
                       </div>
                       <div class="form-check form-check-inline text_radio">
                           <input class="form-check-input" type="radio" name="approuve_le_reglement22" id="approuve_le_reglement2_22" value="oui">
@@ -647,7 +655,7 @@
                     @error('information_supplementaire23')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" placeholder="max caratere (0/600)*" maxlength="600" required >{{old('information_supplementaire23')}}</textarea>
+                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" placeholder="nombre de caractère max (0/600)*" maxlength="600" required >{{old('information_supplementaire23')}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -655,12 +663,12 @@
                       <div class="text-danger">{{$message}}</div>
                     @enderror
 
-                    <input type="checkbox" class="form-check-input" name="confirm_info" id="confirm_info"/>
+                    <input type="checkbox" class="form-check-input" name="confirm_info" id="confirm_info" required />
                     <label for="confirm_info" class="form-label text_confirm">Je confirme que toutes les informations fournies dans ce formulaire sont exactes et véridiques</label> 
                   </div>
                   <div class="form-group">
                     <br/>
-                    <p id="text_nb">NB : Associez dans ce formulaire votre portrait photo (haute définition), la copie de votre carte d’identité et votre curriculum vitae (CV).</p>
+                    <p id="text_nb">NB : Associez dans ce formulaire votre portrait photo (haute définition), et votre curriculum vitae (CV).</p>
                     <!--label for="formFileSm" class="form-label">Small file input example</label-->
                     <!--div class="">
                       <span>votre portrait photo</span>
@@ -672,7 +680,7 @@
                       <input class="form-control form-control-sm" name="carteIdent" id="document_lie" type="file">
                     </div--><!--br/-->
                     <div class="">
-                      <span>curriculum vitae (CV)</span>
+                      <span>curriculum vitae (CV) et portrait photo</span>
                       <input class="form-control form-control-sm" name="cv1[]"  id="document_lie" type="file" accept="image/*.pdf" multiple required />
                     </div>
                   </div>

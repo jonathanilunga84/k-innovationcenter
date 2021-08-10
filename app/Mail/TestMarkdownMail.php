@@ -7,10 +7,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class TestMarkdownMail extends Mailable
 {
     use Queueable, SerializesModels;
-
     public $details;
     /**
      * Create a new message instance.
@@ -29,7 +28,8 @@ class ContactMail extends Mailable
      */
     public function build()
     {   $email = $this->details['email'];
+        $emails = $this->details;
         return $this->from($email,$email)
-                    ->subject($this->details['subject'])->view('pages.contactMailsend');
+                    ->markdown('emails.markdown-test',compact("email"));
     }
 }
