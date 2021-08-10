@@ -300,9 +300,9 @@
             <form id="formSendContact" action="{{ route('contact.envoi') }}" method="POST" class="btM php-email-form">
               @csrf
               <div class="row">
-                <div class="alert alert-success">
+                <!--div class="alert alert-success">
                   <h3 id="errorMessage"></h3>
-                </div>
+                </div-->
                 @if(session()->has('successSend'))
                     <div class="alert alert-success">
                         <h3>{{ session()->get('successSend') }}</h3>
