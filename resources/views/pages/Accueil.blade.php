@@ -331,7 +331,6 @@
                 <div class="col-md-12 form-group">
                   <span>{{ $errors->has('name') }} {{ $errors->first('name') }}</span>
                   <span class="text-danger error-text name_error"></span>
-                  <span id="tp" class="text-danger tooltips">Le Nom est obligatoire et doit avoir au moin 2 caractére</span>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" value="{{ old('name') }}" />
                   @error('name')
                     <div class="validate text-danger">{{$message}}</div>
