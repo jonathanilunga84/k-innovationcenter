@@ -69,14 +69,14 @@
   
   <script src="{{ asset('css/style/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('css/style/vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('css/style/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+ 
   <script src="{{ asset('css/style/vendor/slick-1.8.1/slick/slick.min.js') }}"></script>
   
   <script src="{{ asset('css/style/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <!-- Template Main JS File -->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
   <script src="{{ asset('js/js/main.js') }}"></script>
-   <script>
+  <script>
        $(".regular").slick({
         dots: true,
         infinite: true,
@@ -93,9 +93,7 @@
         slidesToScroll: 3
 
       });
-  </script>
-  <script>
-  </script>
+  </script> 
 </body>
 
 </html>

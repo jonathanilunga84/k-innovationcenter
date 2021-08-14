@@ -96,9 +96,8 @@ class AppelaprojetController extends Controller
 
         //
         if($request->has('confirm_info') ){
-            Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
+            //Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
             return back()->with("successSend", "Votre projet est bien envoyer");
-
         }
            
 

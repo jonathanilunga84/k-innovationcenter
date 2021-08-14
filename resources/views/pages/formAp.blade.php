@@ -11,8 +11,14 @@
       <form id="appel_a_projet" action="{{ route('store.Add') }}" method="POST" enctype="multipart/form-data">
         @csrf
       <div class="modal-header">
-        <h3 class="modal-title fw-bold title_appel_aprojet" id="staticBackdropLabel">FORMULAIRE DE SOUMISSION DE PROJET EDITION 2021</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="container justify-content-center bg-danger-">
+          <div class="row bg-light-">
+            <div class="col-sm-12 text-center">
+              <h3 class="modal-title fw-bold title_appel_aprojet" id="staticBackdropLabel">FORMULAIRE DE SOUMISSION DE PROJET EDITION 2021</h3>
+            </div>
+          </div>
+        </div>
+        <!--button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button-->
       </div>
       <div class="modal-body">
         <div class="container-fluid">
@@ -42,7 +48,7 @@
                     @error('intitule_projet1')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <input type="text" class="form-control" id="intitule_projet1" name="intitule_projet1" minlength="2" value="{{ old('intitule_projet1') }}" required/>
+                    <input type="text" class="form-control" id="intitule_projet1" name="intitule_projet1" minlength="2" value="{{ old('intitule_projet1') }}" />
                     <!--div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div-->
                     <span class="text-danger error-text intitule_projet1-error"></span>
                   </div>
@@ -698,7 +704,7 @@
             </div>
             <div class="col-sm-8 text-center">
 
-              <button type="submit" class="btn btn-primary w-100 fw-bold">SOUMETTRE</button>
+              <button id="appel_A_projet" type="submit" class="btn btn-primary w-100 fw-bold">SOUMETTRE</button>
             </div>
           </div>        
         </div>

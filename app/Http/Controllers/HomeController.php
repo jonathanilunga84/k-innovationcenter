@@ -56,36 +56,32 @@ class HomeController extends Controller
     }
 
     public function contact (Request $request){
-         $validator = validator::make($request->all(),[
+        $validator = validator::make($request->all(),[
             "name"=>"required|min:2",
-            "email"=>"email:rfc,dns",
+            "email"=>"required|email:rfc,dns",
             "subject"=>"required|min:2",
             "msg"=>"required|min:2", 
-        ]); 
-        
-        //Mail::to("jonathandoc411@gmail.com")->send(new ContactMail($details));
-        /*Mail::to("info@k-innovationcenter.com")->send(new ContactMail($details));
-        Mail::to("info@ccsc.ch")->send(new ContactMail($details));*/
+        ]);                 
         //return back()->with("successSend", "Email envoyer avec succée");
         //return redirect()->to(app('url')->previous(). '#rejoindreReseaux')->with("successSend", "Email envoyer avec succée");
         if($validator->fails()){ //passes
             /*return response()->json(['status'=>0, 'error'=>$validator->errors()->toArray()]);
             return back()->with("errorSend", "Error renvoyer Echec");*/
             /*return back()->withErrors($validator)
-                        ->withInput();*/ //errors()->toArray()
+                        ->withInput();*/ //errors()->toArray() my num airtel 097-11-52-092 / *1023*15#
             return response()->json(['status'=>0, 'error'=>$validator->messages()]);
         }
         else{
             $details = $request->all();
             //return response()->json(['status'=>1, 'message'=>'Email envoyé avec succée']);
             //return back()->with("successSend", "Email envoyer avec succée");
-            Mail::to("jonathandoc411@gmail.com")->send(new ContactMail($details));
+            Mail::to("kicprojet21@gmail.com")->send(new ContactMail($details));
+            /*Mail::to("info@k-innovationcenter.com")->send(new ContactMail($details));
+            Mail::to("info@ccsc.ch")->send(new ContactMail($details));*/
             //Mail::to("jonathandoc411@gmail.com")->send(new TestMarkdownMail($details));
                      
             return response()->json(['status'=>1, 'messages'=>'Email envoyé avec succée']);
         }
-       
-
     }
 
 }

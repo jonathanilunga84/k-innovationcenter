@@ -1346,6 +1346,21 @@ section {
 .contact-us .php-email-form button[type="submit"]:hover {
   background: #007ed8;
 }
+.contact-us .tooltips{
+  display: none;
+}
+
+#formSendContact .error{
+  color: red;
+  font-weight: 700;
+  display: block;
+  font-size: 14;
+}
+#formSendContact .form-control.error{
+  border-color: red;
+  padding: .375rem .75rem;
+}
+
 .noir{
   background-color: red;
 }
@@ -1367,6 +1382,21 @@ section {
     transform: rotate(360deg);
   }
 }
+
+/*--------------------------------------------------------------
+# Form Appel a projet
+--------------------------------------------------------------*/
+#appel_a_projet{background-colorM: red;}
+#appel_a_projet input, #appel_a_projet textarea{
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+#appel_a_projet input:focus, #appel_a_projet textarea:focus {
+  border-color: #006fbe;
+  border-colorM: red;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -1441,6 +1471,9 @@ section {
 /*--------------------------
 #appel_a_projet
 ----------------------------*/
+#appel_a_projet #staticBackdropLabel{
+  margin-top: 80px;
+}
 .modal-content{
   background-color:;
 }
@@ -1451,7 +1484,6 @@ section {
 #staticBackdrop sectionOne{
  
 }
-
 #staticBackdrop section h4{
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -1482,7 +1514,4 @@ section {
 }
 px{
   font-family: "Open Sans", sans-serif;
-}
-#formSendContact{
-  margin-top: 100px;
 }

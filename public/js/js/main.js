@@ -196,18 +196,76 @@
 
 })();
 
-(function($){
+(function($){ 
+
+  if($("#formSendContact").length > 0) {    
+    $("#formSendContact").validate({
+      rules : {
+        name : {
+          required : true,
+          minlength : 2
+        },
+        email : {
+          required : true,
+          maxlength : 50,
+          email : true 
+        },
+        subject : {
+          required : true,
+          minlength : 2,
+          maxlength : 200,
+        },
+        msg : {
+          required : true,
+          minlength: 2,
+          maxlength: 1000
+        }
+      },
+      messages : {
+        name : {
+          required : 'Le Nom est Obligatoire',
+          minlength : 'Le Nom doit avoir au minimun 2 caractère'
+        },
+        email : {
+          required : 'Le Mail est Obligatoire',
+          maxlength : 'Le Mail doit avoir au maximun 50 caractère',
+          email : 'entrer un Mail valide'
+        },
+        subject : {
+          required : 'Le sujet est Obligatoire',
+          minlength : 'Le sujet doit avoir au minimun 2 caractère',
+          maxlength : 'Le sujet doit avoir au maximun 200 caractère'
+        },
+        msg : {
+          required : 'Le Message est Obligatoire',
+          minlength: 'Le Message doit avoir au minimun 2 caractère',
+          maxlength: 'Le Message doit avoir au maximun 200 caractère'
+        }
+      },
+      submitHandler: function(form){
 
   // Pour le formulaire de contact 
-  $("#formSendContact").on('submit',function(e){
-    e.preventDefault();
+  /*$("#formSendContact").on('submit',function(e){
+    e.preventDefault();*/
     let name = $('#name').val();
     let email = $('#email').val();
     let subject = $('#subject').val();
     let msg = $('#msg').val();
     let _token = $('input[type="hidden"]').attr('value'); 
-    let myUrl = $(this).attr('action');
-    let myMethode = $(this).attr('method');
+    //let myUrl = $(this).attr('action');
+    //let myMethode = $(this).attr('method');
+    let myUrl = $("#formSendContact").attr('action');
+    let myMethode = $("#formSendContact").attr('method');
+
+    /*if (name==="") {
+      alert('remplire le nom');
+      document.getElementById('tp').style.display='block';
+      //$('#name').style.display='block';
+      $('#name').focus();
+      return false;
+    }*/
+  
+
     //let dt = new FormData(this);
     //console.log('myMethode '+myMethode);
     $('#btnContactSend').attr({disabled:true});
@@ -228,15 +286,17 @@
       //contentType:false,
       beforeSend:function(){
         //$(document).find('s')
-        console.log('vidange du span');
+        //console.log('vidange du span');
         $(document).find('span.error-text').text('');
       },
       success:function(data){
         if(data.status == 0){
-          console.log("my MSG ");
           console.log(data.error);
+          
           $.each(data.error, function(prefix, val){
+            console.log("var prefix "+prefix+" ::valeur "+val);
             $('span.'+prefix+'_error').text(val[0]);
+
           });
           $('#btnContactSend').html('Envoyer Message');
           $('#btnContactSend').attr('disabled',false);
@@ -254,9 +314,18 @@
         console.log(error.responseText);
       }
     });                
-  });
+  //});//fin ajax
+
+  }
+    });
+    }
 
   // Pour le formulaire d'appel a projet
+  $("#appel_A_projet").on('click',function(){
+    //alert('appel a ok');
+    $('#appel_A_projet').html('En cour d\'envoi...');
+  });
+  
   //console.log('console');
   /*$('#btnContactSend').attr({disabled:true});
   $('#btnContactSend').addClass('noir');
