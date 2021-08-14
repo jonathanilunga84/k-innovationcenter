@@ -339,7 +339,7 @@
                 <div class="col-md-12 form-group mt-3 mt-md-0">
                   <span>{{ $errors->has('email') }} {{ $errors->first('email') }}</span>
                   <span class="text-danger error-text email_error"></span>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" value="{{ old('email') }}" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" value="{{ old('email') }}"/>
                   @error('email')
                     <div class="validate text-danger">{{$message}}</div>
                   @enderror
@@ -348,7 +348,7 @@
               <div class="form-group mt-3">
                 <span>{{ $errors->has('subject') }} {{ $errors->first('subject') }}</span>
                 <span class="text-danger error-text subject_error"></span>
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" value="{{ old('subject') }}" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:4" value="{{ old('subject') }}" />
                 @error('subject')
                   <div class="validate text-danger">{{$message}}</div>
                 @enderror
@@ -356,7 +356,7 @@
               <div class="form-group mt-3">
                 <span>{{ $errors->has('msg') }} {{ $errors->first('msg') }}</span>
                 <span class="text-danger error-text msg_error"></span>
-                <textarea class="form-control" name="msg" id="msg" rows="5" placeholder="Message" required>{{ old('msg') }}</textarea>
+                <textarea class="form-control" name="msg" id="msg" rows="5" placeholder="Message">{{ old('msg') }}</textarea>
                 @error('msg')
                   <div class="validate text-danger">{{$message}}</div>
                 @enderror
