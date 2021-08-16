@@ -1474,15 +1474,23 @@ section {
 #appel_a_projet #staticBackdropLabel{
   margin-top: 80px;
 }
+#appel_a_projet .error{
+  color: red;
+  font-weight: 700;
+  display: block;
+  font-size: 14;
+}
+#appel_a_projet .form-control.error{
+  border-color: red;
+  padding: .375rem .75rem;
+}
+
 .modal-content{
   background-color:;
 }
 #staticBackdrop .title_appel_aprojet{
   color-: #C0C0C0;
   font-family: "Raleway", sans-serif;
-}
-#staticBackdrop sectionOne{
- 
 }
 #staticBackdrop section h4{
   font-family: "Raleway", sans-serif;
@@ -1510,7 +1518,16 @@ section {
 }
 #staticBackdrop h6{
   font-weight: bold;
-
+}
+#formSendContact .error{
+  color: red;
+  font-weight: 700;
+  display: block;
+  font-size: 14;
+}
+#formSendContact .form-control.error{
+  border-color: red;
+  padding: .375rem .75rem;
 }
 px{
   font-family: "Open Sans", sans-serif;

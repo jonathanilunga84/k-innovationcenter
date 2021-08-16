@@ -40,7 +40,7 @@ class HomeController extends Controller
             $details = $request->all();
             //return response()->json(['status'=>1, 'message'=>'Email envoyé avec succée']);
             //return back()->with("successSend", "Email envoyer avec succée");
-            Mail::to("jonathandoc411@gmail.com")->send(new ContactMail($details));
+            ///Mail::to("jonathandoc411@gmail.com")->send(new ContactMail($details));
             //Mail::to("jonathandoc411@gmail.com")->send(new TestMarkdownMail($details));
                      
             return response()->json(['status'=>1, 'messages'=>'Email envoyé avec succée']);

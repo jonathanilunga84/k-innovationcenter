@@ -48,29 +48,29 @@
                     @error('intitule_projet1')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
+                    <span class="text-danger error-text intitule_projet1_error"></span>
                     <input type="text" class="form-control" id="intitule_projet1" name="intitule_projet1" minlength="2" value="{{ old('intitule_projet1') }}" />
                     <!--div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div-->
                     <span class="text-danger error-text intitule_projet1-error"></span>
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Resume_projet_fr2" class="form-label fw-boldM"><span class="title_input">2.</span>Résumé du rojet <!--span>max caratere (0/1200)</span--></label> 
+                    <label for="Resume_projet_fr2" class="form-label fw-boldM"><span class="title_input">2.</span>Résumé du projet <!--span>max caratere (0/1200)</span--></label> 
                     @error('Resume_projet_fr2')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <p class=""><span class="float-left"><strong>-</strong> En français</span> <!--span class="float-end text-danger">(0/1600)*</span--></p>
+                    <span class="text-danger error-text Resume_projet_fr2_error"></span>
+                    <p class=""><span class="float-left"><strong>-</strong> En français</span></p>
                     <textarea class="form-control" name="Resume_projet_fr2" id="Resume_projet_fr2" placeholder="nombre de caractère max 1600" style="height: 100px" maxlength="1600">{{ old('Resume_projet_fr2') }}</textarea>
-                    <span id="g" class="form-text"></span>
                   </div>
                   <div class="form-group">
-                    <!--label for="Resume_projet_us" class="form-label"><span class="title_input">.</span>Résumé du rojet <span>max caratere (0/1200)</span><br/> <span>- </span> En Anglais</label--> 
                     <p class="bg-successM">
-                      <span class="float-left"><strong>-</strong> En Anglais</span> <!--span class="float-end text-danger">(0/1600)*
-                      </span-->
+                      <span class="float-left"><strong>-</strong> En Anglais</span>
                     </p>
-                     @error('Resume_projet_us2')
+                    @error('Resume_projet_us2')
                       <div class="text-danger">{{$message}}ddd</div>
                     @enderror
+                    <span class="text-danger error-text Resume_projet_us2_error"></span>
                     <textarea class="form-control" placeholder="nombre de caractère max 1600" name="Resume_projet_us2" id="Resume_projet_us2" style="height: 100px" maxlength="1600">{{ old('Resume_projet_us2') }}</textarea>
                   </div>
                   <div class="form-group">
@@ -79,7 +79,8 @@
                     @error('secteur_projet3')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" name="secteur_projet3" id="secteur_projet3" style="height: 100px" placeholder="nombre de caractère max 1200" maxlength="1200" required>{{ old('secteur_projet3') }}</textarea>
+                    <span class="text-danger error-text secteur_projet3_error"></span>
+                    <textarea class="form-control" name="secteur_projet3" id="secteur_projet3" style="height: 100px" placeholder="nombre de caractère max 1200" maxlength="1200">{{ old('secteur_projet3') }}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -88,8 +89,8 @@
                     @error('Localisation_projet4')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <!--span class="text-danger float-end"> (0/200)*</span-->
-                    <textarea class="form-control" name="Localisation_projet4" id="Localisation_projet4" style="height: 100px" placeholder="nombre de caractère max 200*" maxlength="200" required>{{ old('Localisation_projet4') }}</textarea>
+                    <span class="text-danger error-text Localisation_projet4_error"></span>
+                    <textarea class="form-control" name="Localisation_projet4" id="Localisation_projet4" style="height: 100px" placeholder="nombre de caractère max 200*" maxlength="200">{{ old('Localisation_projet4') }}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -97,17 +98,19 @@
                     @error('Duree_projet5')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <input type="text" class="form-control" id="Duree_projet5" name="Duree_projet5" placeholder="nombre de caractère max 200*" maxlength="200" value="{{ old('Duree_projet5') }}" required />
+                    <span class="text-danger error-text Duree_projet5_error"></span>
+                    <input type="text" class="form-control" id="Duree_projet5" name="Duree_projet5" placeholder="nombre de caractère max 200*" maxlength="200" value="{{ old('Duree_projet5') }}" />
                   </div>
                   <div class="form-group">
                     <br/>
-                    <label for="Financement_projet6" class="form-label"><span class="title_input">6.
-                    </span>Financement du Projet (éventuellement) 
+                    <label for="Financement_projet6" class="form-label">
+                      <span class="title_input">6.</span>Financement du Projet (éventuellement) 
                     </label> 
                     @error('Financement_projet6')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" placeholder="nombre de caractère max 600" id="Financement_projet6" name="Financement_projet6" style="height: 100px" maxlength="600" required>{{ old('Financement_projet6') }}</textarea>
+                    <span class="text-danger error-text Financement_projet6_error"></span>
+                    <textarea class="form-control" placeholder="nombre de caractère max 600" id="Financement_projet6" name="Financement_projet6" style="height: 100px" maxlength="600">{{ old('Financement_projet6') }}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -115,7 +118,8 @@
                     @error('Description_projet7')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" name="Description_projet7" id="Description_projet7" style="height: 100px" placeholder="nombre de caractère max 1600" maxlength="1600" required>{{ old('Description_projet7') }}</textarea>
+                    <span class="text-danger error-text Description_projet7_error"></span>
+                    <textarea class="form-control" name="Description_projet7" id="Description_projet7" style="height: 100px" placeholder="nombre de caractère max 1600" maxlength="1600">{{ old('Description_projet7') }}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -123,7 +127,8 @@
                     @error('Objectifs_projet8')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" name="Objectifs_projet8" id="Objectifs_projet8" cols="30" rows="10" placeholder="nombre de caractère max 800" style="height: 100px" maxlength="800" required>{{ old('Objectifs_projet8') }}</textarea>
+                    <span class="text-danger error-text Objectifs_projet8_error"></span>
+                    <textarea class="form-control" name="Objectifs_projet8" id="Objectifs_projet8" cols="30" rows="10" placeholder="nombre de caractère max 800" style="height: 100px" maxlength="800">{{ old('Objectifs_projet8') }}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -131,7 +136,8 @@
                     @error('Objectifs_spécifiques_projet9')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" name="Objectifs_spécifiques_projet9" id="Objectifs_spécifiques_projet8" style="height: 100px" placeholder="nombre de caractère max 600" maxlength="600" required>{{ old('Objectifs_spécifiques_projet9') }}</textarea>
+                    <span class="text-danger error-text Objectifs_spécifiques_projet9_error"></span>
+                    <textarea class="form-control" name="Objectifs_spécifiques_projet9" id="Objectifs_spécifiques_projet9" style="height: 100px" placeholder="nombre de caractère max 600" maxlength="600">{{ old('Objectifs_spécifiques_projet9') }}</textarea>
                   </div>
                   <br/>
                   <div class="row">
@@ -142,7 +148,8 @@
                         @error('prenom_responsable_principal10')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
-                        <input type="text" class="form-control" id="prenom_responsable_principal10" name="prenom_responsable_principal10" placeholder="Obligatoire" value="{{ old('prenom_responsable_principal10') }}" required/>
+                        <span class="text-danger error-text prenom_responsable_principal10_error"></span>
+                        <input type="text" class="form-control" id="prenom_responsable_principal10" name="prenom_responsable_principal10" placeholder="Obligatoire" value="{{ old('prenom_responsable_principal10') }}" />
                       </div>                    
                     </div>
                     <div class="col-sm-4">                      
@@ -150,14 +157,16 @@
                         @error('nom_responsable_principal10')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
-                        <input type="text" class="form-control" id="nom_responsable_principal10" name="nom_responsable_principal10" value="{{ old('nom_responsable_principal10') }}"  required />
+                        <span class="text-danger error-text nom_responsable_principal10_error"></span>
+                        <input type="text" class="form-control" id="nom_responsable_principal10" name="nom_responsable_principal10" value="{{ old('nom_responsable_principal10') }}" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="postnom_responsable_principal10">Postnom</label>
-                        @error('postnom_responsable_principal10')
-                          <div class="text-danger">{{$message}}</div>
-                        @enderror
-                      <input type="text" class="form-control" id="postnom_responsable_principal10" name="postnom_responsable_principal10" value="{{ old('postnom_responsable_principal10') }}" required />
+                      @error('postnom_responsable_principal10')
+                        <div class="text-danger">{{$message}}</div>
+                      @enderror
+                      <span class="text-danger error-text postnom_responsable_principal10_error"></span>
+                      <input type="text" class="form-control" id="postnom_responsable_principal10" name="postnom_responsable_principal10" value="{{ old('postnom_responsable_principal10') }}" />
                     </div>
                     <div class="col-sm-4"> 
                       <div class="form-group">
@@ -165,7 +174,8 @@
                         @error('phone_responsable_principal10')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
-                        <input type="text" class="form-control" id="intitule_projet10" name="phone_responsable_principal10" value="{{ old('phone_responsable_principal10') }}" required />
+                        <span class="text-danger error-text phone_responsable_principal10_error"></span>
+                        <input type="text" class="form-control" id="phone_responsable_principal10" name="phone_responsable_principal10" value="{{ old('phone_responsable_principal10') }}"/>
                       </div>                      
                     </div>
                     <div class="col-sm-4">                      
@@ -173,7 +183,8 @@
                         @error('email_responsable_principal10')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
-                        <input type="email" class="form-control" id="emil_responsable_principal10" name="email_responsable_principal10" value="{{ old('email_responsable_principal10') }}" required />
+                        <span class="text-danger error-text email_responsable_principal10_error"></span>
+                        <input type="email" class="form-control" id="email_responsable_principal10" name="email_responsable_principal10" value="{{ old('email_responsable_principal10') }}" />
                     </div> 
                   </div>
                   <br/>
@@ -182,46 +193,56 @@
                     <h6><span class="title_input">1)</span></h6>
                     <div class="col-sm-4">                      
                       <label for="prenom_associe1">Prénom</label>
-                        <input type="text" class="form-control" id="prenom_associe1" name="prenom_associe1" />
+                      <span class="text-danger error-text prenom_associe1_error"></span>
+                      <input type="text" class="form-control" id="prenom_associe1" name="prenom_associe1" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="nom_associe1">Nom</label>
-                        <input type="text" class="form-control" id="nom_associe1" name="nom_associe1" />
+                      <span class="text-danger error-text nom_associe1_error"></span>
+                      <input type="text" class="form-control" id="nom_associe1" name="nom_associe1" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="postnom_associe1">Postnom</label>
+                      <span class="text-danger error-text postnom_associe1_error"></span>
                       <input type="text" class="form-control" id="postnom_associe1" name="postnom_associe1" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="phone_associe1">Téléphone</label>
-                        <input type="text" class="form-control" id="phone_associe1" name="phone_associe1" />
+                      <span class="text-danger error-text phone_associe1_error"></span>
+                      <input type="text" class="form-control" id="phone_associe1" name="phone_associe1" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="email_associe1">E-mail</label>
-                        <input type="text" class="form-control" id="email_associe1" name="email_associe1" />
-                        <br/>
+                      <span class="text-danger error-text email_associe1_error"></span>
+                      <input type="text" class="form-control" id="email_associe1" name="email_associe1" />
+                      <br/>
                     </div> 
 
                     <h6><span class="title_input">2)</span></h6>
                     <div class="col-sm-4">                      
                       <label for="prenom_associe2">Prénom</label>
-                        <input type="text" class="form-control" id="prenom_associe2" name="prenom_associe2" />
+                      <span class="text-danger error-text prenom_associe2_error"></span>
+                      <input type="text" class="form-control" id="prenom_associe2" name="prenom_associe2" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="nom_associe2">Nom</label>
-                        <input type="text" class="form-control" id="nom_associe2" name="nom_associe2" />
+                      <span class="text-danger error-text nom_associe2_error"></span>
+                      <input type="text" class="form-control" id="nom_associe2" name="nom_associe2" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="postnom_associe2">Postnom</label>
+                      <span class="text-danger error-text postnom_associe2_error"></span>
                       <input type="text" class="form-control" id="postnom_associe2" name="postnom_associe2" />
                     </div>
                     <div class="col-sm-4">                      
                       <label for="phone_associe2">Téléphone</label>
-                        <input type="text" class="form-control" id="phone_associe2" name="phone_associe2" />
+                      <span class="text-danger error-text phone_associe2_error"></span>
+                      <input type="text" class="form-control" id="phone_associe2" name="phone_associe2" />
                     </div>
                     <div class="col-sm-4">  
                       <div class="form-group">
                         <label for="email_associe2">E-mail</label>
+                        <span class="text-danger error-text email_associe2_error"></span>
                         <input type="text" class="form-control" id="email_associe2" name="email_associe2" />
                       </div>                    
                     </div>                   
@@ -238,6 +259,7 @@
                         @error('Business_plan')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text Business_plan_error"></span>
                         <p>Business plan</p>
                       </div>
                       <div class="col-sm-4">
@@ -256,6 +278,7 @@
                         @error('Leadership')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text Leadership_error"></span>
                         <p>Leadership entrepreneurial</p>
                       </div>
                       <div class="col-sm-4">
@@ -274,6 +297,7 @@
                         @error('Processus')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text Processus_error"></span>
                         <p>Processus d’élaboration d’un projet entrepreneurial</p>
                       </div>
                       <div class="col-sm-4">
@@ -292,6 +316,7 @@
                         @error('Creation')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text Creation_error"></span>
                         <p>Création d’entreprise en RD Congo</p>
                       </div>
                       <div class="col-sm-4">
@@ -310,6 +335,7 @@
                         @error('propriete')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text propriete_error"></span>
                         <p>Propriété intellectuelle, innovation et transfert de technologie</p>
                       </div>
                       <div class="col-sm-4">
@@ -329,6 +355,7 @@
                         @error('analyse')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text analyse_error"></span>
                       </div>
                       <div class="col-sm-4">
                         <div class="form-check form-check-inline">
@@ -346,6 +373,7 @@
                         @error('developpement')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text developpement_error"></span>
                         <p>Développement de la productivité et de la compétitivité</p>
                       </div>
                       <div class="col-sm-4">
@@ -364,6 +392,7 @@
                         @error('marketing')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text marketing_error"></span>
                         <p>Marketing digital et usage des réseaux sociaux</p>
                       </div>
                       <div class="col-sm-4">
@@ -382,6 +411,7 @@
                         @error('responsabilite')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text responsabilite_error"></span>
                         <p>Responsabilité de l’entrepreneur face à la réussite et à l’échec</p>
                       </div>
                       <div class="col-sm-4">
@@ -400,6 +430,7 @@
                         @error('ethique')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text ethique_error"></span>
                         <p>Ethique des affaires</p>
                       </div>
                       <div class="col-sm-4">
@@ -418,6 +449,7 @@
                         @error('sources')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text sources_error"></span>
                         <p>Sources de financement d’un projet/une entreprise</p>
                       </div>
                       <div class="col-sm-4">
@@ -436,6 +468,7 @@
                         @error('comptabilite')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text comptabilite_error"></span>
                         <p>Comptabilité et planification financière</p>
                       </div>
                       <div class="col-sm-4">
@@ -454,6 +487,7 @@
                         @error('elementaires')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text elementaires_error"></span>
                         <p>Elémentaires du droit des affaires (Ohada)</p>
                       </div>
                       <div class="col-sm-4">
@@ -472,6 +506,7 @@
                         @error('pitch')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text pitch_error"></span>
                         <p>Pitch d’un projet entrepreneurial</p>
                       </div>
                       <div class="col-sm-4">
@@ -491,6 +526,7 @@
                         @error('anglais')
                           <div class="text-danger">{{$message}}</div>
                         @enderror
+                        <span class="text-danger error-text anglais_error"></span>
                         <p>Anglais des affaires</p>
                       </div>
                       <div class="col-sm-4">
@@ -517,7 +553,8 @@
                     @error('etat_actual_du_projet13')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" placeholder="nombre de caratére Max (0/600)*" id="etat_actual_du_projet" name="etat_actual_du_projet13" style="height: 100px" maxlength="600">{{ old("etat_actual_du_projet13")}}</textarea>
+                    <span class="text-danger error-text etat_actual_du_projet13_error"></span>
+                    <textarea class="form-control" placeholder="nombre de caratére Max (0/600)*" id="etat_actual_du_projet13" name="etat_actual_du_projet13" style="height: 100px" maxlength="600">{{ old("etat_actual_du_projet13")}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -525,7 +562,8 @@
                     @error('interet_en_soumettant14')
                       <div class="text-danger">{{$message}}</div>
                     @enderror 
-                    <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400" required>{{old("interet_en_soumettant14")}}</textarea>
+                    <span class="text-danger error-text interet_en_soumettant14_error"></span>
+                    <textarea class="form-control" placeholder="nombre de catratre Max (0/600)*" id="interet_en_soumettant14" name="interet_en_soumettant14" interet_en_soumettant14style="height: 100px" maxlength="400">{{old("interet_en_soumettant14")}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -533,7 +571,8 @@
                     @error('projet_beneficie_de_financement15')
                       <div class="text-danger">{{$message}}</div>
                     @enderror  
-                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" placeholder="nombre de catratre Max (0/400)*" style="height: 100px" maxlength="400" required>{{old("projet_beneficie_de_financement15")}}</textarea>
+                    <span class="text-danger error-text projet_beneficie_de_financement15_error"></span>
+                    <textarea class="form-control" name="projet_beneficie_de_financement15" id="projet_beneficie_de_financement15" placeholder="nombre de catratre Max (0/400)*" style="height: 100px" maxlength="400">{{old("projet_beneficie_de_financement15")}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
@@ -542,15 +581,17 @@
                     @error('projet_pourrait_contribuer16')
                       <div class="text-danger">{{$message}}</div>
                     @enderror  
-                    <textarea class="form-control" placeholder="nombre de catratre Max (0/1200)*" id="projet_pourrait_contribuer16" name="projet_pourrait_contribuer16" style="height: 100px" maxlength="1200" required="">{{old("etat_actual_du_projet13")}}</textarea>
+                    <span class="text-danger error-text projet_pourrait_contribuer16_error"></span>
+                    <textarea class="form-control" placeholder="nombre de catratre Max (0/1200)*" id="projet_pourrait_contribuer16" name="projet_pourrait_contribuer16" style="height: 100px" maxlength="1200">{{old("projet_pourrait_contribuer16")}}</textarea>
                   </div>
                   <br/>
                   <div class="row">
                     <div id="title_radio" class="col-sm-8 title_radio">
-                    @error('projet_pourrait_contribuer16')
-                      <div class="text-danger">{{$message}}</div>
-                    @enderror  
-                        <p><span class="title_input">17. </span> Etes-vous le(la) concepteur(trice) du Projet ci-haut présenté ?</p>
+                      @error('concepteur_du_projet17')
+                        <div class="text-danger">{{$message}}</div>
+                      @enderror  
+                      <span class="text-danger error-text concepteur_du_projet17_error"></span>
+                      <p><span class="title_input">17. </span> Etes-vous le(la) concepteur(trice) du Projet ci-haut présenté ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
@@ -566,10 +607,11 @@
                    
                   <div class="row">
                     <div id="title_radio" class="col-sm-8 title_radio">
-                    @error('propriete_intellectuelle18')
-                      <div class="text-danger">{{$message}}</div>
-                    @enderror
-                        <p><span class="title_input">18. </span> Détiendrez-vous TOUS les droits de propriété intellectuelle liés au Projet présenté ?</p>
+                      @error('propriete_intellectuelle18')
+                        <div class="text-danger">{{$message}}</div>
+                      @enderror
+                      <span class="text-danger error-text propriete_intellectuelle18_error"></span>
+                      <p><span class="title_input">18. </span> Détiendrez-vous TOUS les droits de propriété intellectuelle liés au Projet présenté ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
@@ -587,7 +629,8 @@
                       @error('investir_en_temps19')
                         <div class="text-danger">{{$message}}</div>
                       @enderror
-                        <p><span class="title_input">19. </span> Seriez-vous disposé(e) à vous investir en temps et financièrement pour la participation sans paiement à TOUTES les sessions d’incubation organisées par le KIC (4 heures par semaines
+                      <span class="text-danger error-text investir_en_temps19_error"></span>
+                      <p><span class="title_input">19. </span> Seriez-vous disposé(e) à vous investir en temps et financièrement pour la participation sans paiement à TOUTES les sessions d’incubation organisées par le KIC (4 heures par semaines
                         durant 5 mois) ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
@@ -606,7 +649,8 @@
                       @error('formation_a_distance20')
                         <div class="text-danger">{{$message}}</div>
                       @enderror
-                        <p><span class="title_input">20. </span> Seriez-vous disposé(e) à suivre certains modules de formation à distance, en ligne avec votre propre équipement ?</p>
+                      <span class="text-danger error-text formation_a_distance20_error"></span>
+                      <p><span class="title_input">20. </span> Seriez-vous disposé(e) à suivre certains modules de formation à distance, en ligne avec votre propre équipement ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
@@ -624,7 +668,8 @@
                     @error('periode_incubation21')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                        <p><span class="title_input">21. </span> A l’issue de la période d’incubation, ACCEPTERIEZ-VOUS que votre Projet apparaisse dans les pages internet de KIC et éventuellement de ses partenaires ?</p>
+                    <span class="text-danger error-text periode_incubation21_error"></span>
+                    <p><span class="title_input">21. </span> A l’issue de la période d’incubation, ACCEPTERIEZ-VOUS que votre Projet apparaisse dans les pages internet de KIC et éventuellement de ses partenaires ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
@@ -639,10 +684,11 @@
                   </div>
                   <div class="row">
                     <div id="title_radio" class="col-sm-8 title_radio">
-                    @error('approuve_le_reglement22')
-                      <div class="text-danger">{{$message}}</div>
-                    @enderror
-                        <p><span class="title_input">22. </span> Avez-vous lu et approuvez-vous le règlement du programme KIC ?</p>
+                      @error('approuve_le_reglement22')
+                        <div class="text-danger">{{$message}}</div>
+                      @enderror
+                      <span class="text-danger error-text approuve_le_reglement22_error"></span>
+                      <p><span class="title_input">22. </span> Avez-vous lu et approuvez-vous le règlement du programme KIC ?</p>
                     </div>
                     <div class="col-sm-4 buttom_radio">
                       <div class="form-check form-check-inline text_radio">
@@ -661,15 +707,16 @@
                     @error('information_supplementaire23')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" placeholder="nombre de caractère max (0/600)*" maxlength="600" required >{{old('information_supplementaire23')}}</textarea>
+                    <span class="text-danger error-text information_supplementaire23_error"></span>
+                    <textarea class="form-control" name="information_supplementaire23" id="information_supplementaire23" style="height: 100px" placeholder="nombre de caractère max (0/600)*" maxlength="600">{{old('information_supplementaire23')}}</textarea>
                   </div>
                   <div class="form-group">
                     <br/>
                     @error('confirm_info')
                       <div class="text-danger">{{$message}}</div>
                     @enderror
-
-                    <input type="checkbox" class="form-check-input" name="confirm_info" id="confirm_info" required />
+                    <span class="text-danger error-text confirm_info_error"></span>
+                    <input type="checkbox" class="form-check-input" name="confirm_info" id="confirm_info" />
                     <label for="confirm_info" class="form-label text_confirm">Je confirme que toutes les informations fournies dans ce formulaire sont exactes et véridiques</label> 
                   </div>
                   <div class="form-group">
@@ -687,7 +734,8 @@
                     </div--><!--br/-->
                     <div class="">
                       <span>curriculum vitae (CV) et portrait photo</span>
-                      <input class="form-control form-control-sm" name="cv1[]"  id="document_lie" type="file" accept="image/*.pdf" multiple required />
+                      <p><span class="text-danger error-text cv1_error"></span></p>
+                      <input class="form-control form-control-sm" name="cv1[]"  id="cv1" type="file" accept="image/*.pdf" multiple required />
                     </div>
                   </div>
                 </div><!-- end div sectionTree -->
@@ -704,7 +752,7 @@
             </div>
             <div class="col-sm-8 text-center">
 
-              <button id="appel_A_projet" type="submit" class="btn btn-primary w-100 fw-bold">SOUMETTRE</button>
+              <button id="btnappel_A_projet" type="submit" class="btn btn-primary w-100 fw-bold">SOUMETTRE</button>
             </div>
           </div>        
         </div>

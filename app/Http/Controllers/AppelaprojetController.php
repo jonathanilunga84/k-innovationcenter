@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\Mail\appelAprojet;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,12 +37,11 @@ class AppelaprojetController extends Controller
      */
     public function store(Request $request)
     {
-        //$validation 
-        $details = $request->validate([  
+        $validator = validator::make($request->all(),[
             "intitule_projet1"=>"required|min:2",
             "Resume_projet_fr2"=>"required|min:2|max:1600",
             "Resume_projet_us2"=>"required|min:2|max:1600",
-            "email_responsable_principal10"=>"email:rfc,dns", 
+            'email_responsable_principal10' => 'required|email:rfc,dns', 
             "confirm_info"=> "required",
             "secteur_projet3"=>"required|min:2|max:1200",
             "Localisation_projet4"=>"required|min:2|max:200",
@@ -91,33 +91,20 @@ class AppelaprojetController extends Controller
             'periode_incubation21'=> 'required|in:oui,non',
             'approuve_le_reglement22'=> 'required|in:oui,non',
             "cv1"=>"required",
-
-        ]);
-
-        //
-        if($request->has('confirm_info') ){
-            //Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
-            return back()->with("successSend", "Votre projet est bien envoyer");
+            "confirm_info"=>"required"
+        ]);                 
+        if($validator->fails()){ //passes
+            return response()->json(['status'=>0, 'error'=>$validator->messages()]);
         }
-           
-
-      
-        //"cv1"=>"required",
-        //echo "ok". $details['periode_incubation21'];//"confirm_info"=>"required",
-        //var_dump($request->file('cv1'));
-        //var_dump($details['confirm_info']);
-        //'checkbox' =>'accepted'
-        /*if(!$details->passes()){
-            return response()->json(['status'=>0, 'error'=>$details->errors()->toArray()]);
-        }else{
-            return response()->json(['status'=>1, 'msg'=>'Le projet est envoyer avec Success']);
-        }*/
-        ///Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
-       // Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
-            //return redirect()->to(app('url')->previous(). '#rejoindreReseaux')->with("successSend", "Email envoyer avec succée");
-      /* return back()->with("successSend", "Si les errreur en rouge n'est sont pas visible donc les information sont bien envoyer");*/
-
-      return back()->with("ValidationError", "Verifier bien les Champs une ou plusier n'est pas bien remplie");
+        else{
+            if($request->has('confirm_info')) {
+                $details = $request->all();
+                //Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
+                return response()->json(['status'=>1, 'messages'=>'Votre projet est bien envoyer']);
+            }else{
+                return response()->json(['status'=>3, 'confirm_info'=>'confirmez que toutes les informations fournies est vrai']);
+            }            
+        }
     }
 
     /**
@@ -164,4 +151,6 @@ class AppelaprojetController extends Controller
     {
         //
     }
+
+    
 }
