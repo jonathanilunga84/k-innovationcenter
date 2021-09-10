@@ -11,7 +11,7 @@ stor/**
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-}
+} 
 
 a {
   color: #006fbe;
@@ -72,8 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo {
-  font-size-: 28px;
-  font-size: 20px;
+  font-size: 14px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -86,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 100px;
 }
 
 /*--------------------------------------------------------------
@@ -474,7 +473,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .section-bg {
@@ -583,22 +582,27 @@ section {
 #video_page{
   margin-top: 50px;
 }
+@media (max-width: 414px) {
+  #video_page{
+  margin-top: 0;
+}
+}
+
 
 /*--------------------------------------------------------------
 # section equipe-de-gestion
 --------------------------------------------------------------*/
-#equipe-de-gestion {
-  background-color-: #7B7796;
-}
-
+section {
+    padding: 20px 0;
+  }
 /*{
       box-sizing: border-box;
     }*/
 
-    .slider {
+    /*.slider {
         width: 100%;
         margin-: 100px auto;
-    }
+    }*/
 
     /*.slick-slide {
       margin: 0px 20px;
@@ -608,7 +612,7 @@ section {
       width: 100%;
     }*/
 
-    .slick-prev:before,
+.slick-prev:before,
     .slick-next:before {
       color--: black;
       color: #262626;
@@ -627,7 +631,6 @@ section {
     .slick-current {
       opacity: 1;
     }
-
 #equipe-de-gestion .single-box .img-text{
   width: 100%;
   height: 150px;
@@ -962,9 +965,11 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Story Intro
+# Story Intro bienvenue_kic
 --------------------------------------------------------------*/
-
+.bienvenue_kic #section-title1{
+  margin-top: 15px;
+}
 
 #story-intro .story-intro-ligne{
   background-: #006fbe;
@@ -1498,7 +1503,6 @@ section {
   font-size: 15px;
 }
 #staticBackdrop .numerotation_section{
-  color: ;
   font-weight: bolder;
   font-size: 25px;
   color-: red;

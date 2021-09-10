@@ -13,28 +13,24 @@
 			      <img src="{{ asset('images/slide/laptop.jpg') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
 			        <h5></h5>
-			        <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
 			        <p></p>
 			      </div>
 			    </div>
           <div class="carousel-item">
             <img src="{{ asset('images/slide/light-bulb-3104355.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5></h5>
-              
+              <h5></h5>              
               <p></p>
             </div>
           </div>
 			    <div class="carousel-item">
 			      <img src="{{ asset('images/slide/KIC IMAGEA-min.png') }}" class="d-block w-100" alt="...">
 			      <div class="carousel-caption d-none d-md-block">
-			        <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
 			      </div>
 			    </div>
           <div class="carousel-item">
             <img src="{{ asset('images/slide/APPEL A PROJET 2021 2-min.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <!--h3 class="fw-bold">Formation, Incubation et Maturation des projets des jeunes étudiants et chercheurs en millieu Universitaire.</h3-->
             </div>
           </div>
 			   
@@ -51,12 +47,12 @@
   </section><!-- End Hero -->
 
   <main id="main">
-  	<section id="welcome" class="welcome">
+  	<section id="welcome" class="welcome bienvenue_kic">
   		<div class="container">
   			<div class="row text-center">
   				<div class="col-sm-12">
   					<div class="section-title">
-  						<h2>Bienvenue à Kinshasa Innovation Center</h2>
+  						<h2 id="section-title1">Bienvenue à Kinshasa Innovation Center</h2>
   						<p>Kinshasa Innovation Center (KIC) est une initiative de la Chambre de commerce Suisse- RD Congo (CCSC) en partenariat avec les universités de Genève et de Kinshasa. Il a pour but de promouvoir les jeunes entrepreneurs Congolais en les accompagnant avec des outils utiles et indispensables à la création d’entreprise. L’approche envisagée est l’apprentissage et la mise en situation de cas pratiques avec l’assistance des mentors et chefs d’entreprises expérimentés. <!--span id="" class="dots">...</span-->
 
               <span id="more" class="">
@@ -98,15 +94,11 @@
   			</div>
   			<div id="video_page" class="row justify-content-center">
   				<div class="col-sm-12 ratio ratio-21x9 col-lg-8 text-center">
-  					<!--iframe src="https://www.youtube.com/embed/EK3doKUWuI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-  						
-  					</iframe-->
             <iframe src="https://www.youtube-nocookie.com/embed/EK3doKUWuI0?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
   				</div>
   			</div>
   		</div>
-  	</section>
-        
+  	</section>        
    
   	<section id="story-intro" class="story-intro">
   		<div id="Appel-aprojet" class="container-fluid">
@@ -139,9 +131,6 @@
            
             <h2 id="title_appel_projet">Appel à projet (10 août au 10 septembre 2021)</h2>
             <br />
-            <!--p id="content">
-              Vous êtes étudiant, finaliste du secondaire, entrepreneur, chercheurs voici l'occasion vous est donnée pour soumettre vos projets et bénéficier d'un accompagnement (acquisition des compétences nécessaires, accès aux incubateurs, accès au financement, espace de travail, participation au programme accelerate 2030 pour l'atteinte des objectifs de développement durable)
-            </p-->
             <p id="content">
               Vous êtes étudiant(e), entrepreneur, chercheurs ou tout simplement passionné(e) par l'innovation et la création d'entreprise ?
               <br /> 
@@ -158,6 +147,7 @@
          </div>
   	</section>
 
+    <!-- Section Equipe de Gestion -->
     <section id="equipe-de-gestion" class="equipe-de-gestion bg-danger-">
       <div class="container">
         <div class="section-title">
@@ -176,7 +166,8 @@
               </div>
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/sacre.jpeg') }}" class="w-100"></div>
+                  <div class="img-area">
+                    <img src="{{ asset('images/equipe/sacre.jpeg') }}" class="w-100"></div>
                   <div class="img-text">
                     <h5>Mr Sacré MBUMINA Benoît</h5>
                     <p>Responsable Mentorat</p>
@@ -185,7 +176,9 @@
               </div>
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
-                    <div class="img-area"><img src="{{ asset('images/equipe/Mme-Giselle-Van-Muller.png') }}" class="w-100"></div>
+                    <div class="img-area">
+                      <img src="{{ asset('images/equipe/Mme-Giselle-Van-Muller.png') }}" class="w-100">
+                    </div>
                     <div class="img-text">
                       <h5>Mme Giselle Van Muller</h5>
                       <p>Responsable communication</p>
@@ -194,7 +187,9 @@
               </div>
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/Dr-Richard-MUKUNJI.png') }}" class="w-100"></div>
+                  <div class="img-area">
+                    <img src="{{ asset('images/equipe/Dr-Richard-MUKUNJI.png') }}" class="w-100">
+                  </div>
                     <div class="img-text">
                       <h5>Dr Richard MUKUNDJI</h5>
                       <p>Coordonnateur</p>
@@ -203,17 +198,20 @@
               </div>
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/Professeur-Crispin-MULAJI.png') }}" class="w-100"></div>
+                  <div class="img-area">
+                    <img src="{{ asset('images/equipe/Professeur-Crispin-MULAJI.png') }}" class="w-100">
+                  </div>
                     <div class="img-text">
                       <h5>Professeur Crispin MULAJI</h5>
                       <p>Point focal partenariat UNIGE - UNIKIN</p>
                     </div>
                 </div>              
               </div>
-
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/Felly_Lukunga_Ngomba.png') }}" class="w-100"></div>
+                  <div class="img-area">
+                    <img src="{{ asset('images/equipe/Felly_Lukunga_Ngomba.png') }}" class="w-100">
+                  </div>
                     <div class="img-text">
                       <h5>Mr Felly Lukunga Ngomba</h5>
                       <p>Relations universités et institutions académiques</p>
@@ -222,14 +220,16 @@
               </div>
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/Mikobi_Cleophas.png') }}" class="w-100"></div>
+                  <div class="img-area">
+                    <img src="{{ asset('images/equipe/Mikobi_Cleophas.png') }}" class="w-100">
+                  </div>
                     <div class="img-text">
-                      <h5>Mr Mikobi Cleophas</h5>
+                      <h5>Mr CLEOPHAS MIKOBI MALESHELA</h5>
                       <p>Responsable incubation</p>
                     </div>
                 </div>              
               </div>
-
+              
             </div>
           </div>
       </div>
@@ -241,9 +241,7 @@
 
         <div class="section-title">
           <h2>Cliquez sur le logo et découvrez nos partenaires</h2>
-          <!--p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p-->
         </div>
-
         <div class="recent-photos-slider swiper-container">
           <div class="swiper-wrapper align-items-center">
             <div class="swiper-slide"><a href="https://www.ccsc.ch" class="glightbox Chambre de commerce"><img src="{{ asset('images/partainers/1-ccsc.webp') }}" class="img-fluid-" height="80" alt=""></a>
@@ -275,11 +273,6 @@
         <div class="section-title">
           <h2 id="rejoindreReseaux">CONTACT</h2>
         </div>
-
-        <!--div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-        </div-->
-
         <div class="row mt-5">
 
           <div class="col-lg-6">
@@ -287,7 +280,6 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <!--p>A108 Adam Street, New York, NY 535022</p-->
                 <p>Université de Kinshasa</p>
                 <p>Faculté des Sciences, Local A26</p>
                 <p>B.P.190,Kinshasa XI</p>
@@ -297,17 +289,13 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <!--p>info@example.com</p-->
                 <p>Pour les informations générales: info@ccsc.ch </p>
                 <p>Concernant la technique : info@k-innovationcenter.com</p>
-                <!--p>info@ccsc.ch / Richard.mukundji@ccsc.ch / crispin.mulaji@unikin.ac.cd</p-->
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <!--p>+1 5589 55488 55s</p-->
-                <!--p>+243 820 656 983 / +41 778 150 566 / +243 973 562 348</p-->
                 <p>+41 778 150 556 / +243 820 656 983</p>
               </div>
 
@@ -316,13 +304,12 @@
           </div>
 
           <div class="col-lg-6 mt-5 mt-lg-0 text-center fw-bold">
-              <!--h6>Joindre le reseaux</h6-->
             <form id="formSendContact" action="{{ route('contact.envoi') }}" method="POST" class="btM php-email-form">
               @csrf
               <div class="row">
-                <!--div>
+                <div>
                   <h3 id="errorMessage" class="alert alert-success"></h3>
-                </div-->
+                </div>
                 @if(session()->has('successSend'))
                     <div class="alert alert-success">
                         <h3>{{ session()->get('successSend') }}</h3>

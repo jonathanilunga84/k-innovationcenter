@@ -99,8 +99,10 @@ class AppelaprojetController extends Controller
         else{
             if($request->has('confirm_info')) {
                 $details = $request->all();
-                //Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
-                return response()->json(['status'=>1, 'messages'=>'Votre projet est bien envoyer']);
+                Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
+                return response()->json(['status'=>1, 'Messages'=>'Votre projet est bien envoyer11111']);
+                //var_dump($request->cv1);
+                //dd();
             }else{
                 return response()->json(['status'=>3, 'confirm_info'=>'confirmez que toutes les informations fournies est vrai']);
             }            
@@ -150,6 +152,11 @@ class AppelaprojetController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function post1(Request $request){
+       return response()->json(['status'=>1, 'Messages'=>'Votre projet est bien envoyer11111', 'dts'=>$request->myname]);
+       // dd($request->all);
     }
 
     

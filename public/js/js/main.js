@@ -303,15 +303,16 @@
       error:function(error){
         console.log(error.responseText);
       }
-    });                
+    }); //fin ajax contact           
   //});//fin ajax
 
-  }
-    });//fin validate
-    //}
+  } //end fin submitHandler
 
-  // Pour le formulaire d'appel a projet
-  //if($("#appel_A_projet").length > 0) {
+});//fin validate contact
+
+    // Pour le formulaire d'appel a projet
+
+    //if($("#appel_A_projet").length > 0) {
     $("#appel_a_projet").validate({
       rules : {
         intitule_projet1 : {
@@ -710,6 +711,7 @@
         }
       },
       submitHandler: function(form) {
+        var form_data = new FormData();
         let intitule_projet1 = $('#intitule_projet1').val();
         let Resume_projet_fr2 = $('#Resume_projet_fr2').val();
         let Resume_projet_us2 = $('#Resume_projet_us2').val();
@@ -766,7 +768,16 @@
         let approuve_le_reglement22 = $("input[name='approuve_le_reglement22']:checked").val();
         let information_supplementaire23 = $('#information_supplementaire23').val();
         let confirm_info = $('#confirm_info').val();
-        let cv1 = $('#cv1').val();
+        //Upload file
+        var countFiles = document.getElementById('cv1').files.length;
+        //var form_data = new FormData();
+        for (var i = 0; i < countFiles ; i++) {
+          form_data.append("cv1[]", document.getElementById('cv1').files[i]);
+        }
+
+        //let cv1 = $('#cv1');//[0].files;//.val();
+        //let cv1 = $("input[type='file']")[0];//.val();
+
         let _token = $('input[type="hidden"]').attr('value');
         let myUrl = $("#appel_a_projet").attr('action');
         let myMethode = $("#appel_a_projet").attr('method');
@@ -830,14 +841,13 @@
             periode_incubation21,
             approuve_le_reglement22,
             information_supplementaire23,
-            cv1,
+            form_data,
             confirm_info,
-            myUrl,
-            myMethode,
           },
           dataType:'json',
-          //processData:false,
           //contentType:false,
+          //cache: false
+          //processData:false,         
           beforeSend:function(){
             //$(document).find('s')
             //console.log('vidange du span');
@@ -845,33 +855,99 @@
           },
           success:function(data){
             if(data.status == 0){
+              console.log(cv1.length);
+              console.log("L'un de champs n'est pas bien rempli");
               console.log(data.error);              
               $.each(data.error, function(prefix, val){
                 console.log("var prefix "+prefix+" ::valeur "+val);
                 //console.log("VALEUR CHAMP "+ Objectifs_spécifiques_projet9);
-                console.log("VALEUR CHAMP Radio "+ email_responsable_principal10);
+                console.log("VALEUR CHAMP Radio  L'un de champs n'est pas bien rempli "+ cv1);
                 $('span.'+prefix+'_error').text(val[0]);
-
               });
-              $('#btnappel_A_projet').html('Votre projet est bien envoyer');
+              $('#btnappel_A_projet').html('L\'un de champs n\'est pas bien rempli');
               $('#btnappel_A_projet').attr('disabled',false);
               $('#btnappel_A_projet').css('backgroundColor','');
             }else{
-              $('#appel_a_projet')[0].reset();
-              console.log(data.messages);
-              alert('Votre projet est bien envoyer');
-              $('#btnappel_A_projet').html('Votre projet est bien envoyer');
-              $('#btnappel_A_projet').attr('disabled',false);
-              $('#btnappel_A_projet').css('backgroundColor','');
+              if (data.status == 1) {
+                $('#appel_a_projet')[0].reset();
+                console.log(data.Messages);
+                console.log(cv1.length);
+                console.log("VALEUR CHAMP Radio "+ cv1);
+                //alert('Votre projet est bien envoyer');
+                $('#btnappel_A_projet').html('Votre projet est bien envoyer');
+                $('#btnappel_A_projet').attr('disabled',false);
+                $('#btnappel_A_projet').css('backgroundColor','');
+              }
+              else if (data.status == 3) {
+                alert('confirmez que toutes les informations fournies est vrai');
+              }else{
+                alert("le présent formulaire est mal rempli contacter l\'admin");
+              }          
             }
           },
           error:function(error){
+            console.log("Error sur le Server contacter L'admin");
+            console.log(countFiles);
+            //console.log(cv1.length);
             console.log(error.responseText);
+            alert("Error sur le Server contacter L'admin");
+            $('#btnappel_A_projet').attr('disabled',false);
+            $('#btnappel_A_projet').html('SOUMETTRE');
           }
         });   
         //return true;
       }
     });
   //}
+
+  //});//fin validate
+    //}  
+
+    //essaie lien post1
+    $("#formPost1").on('submit', function(e){
+        e.preventDefault();
+        //var mytbphoto = [];
+        myform = document.getElementById('fromUpload');
+        countAvatar = document.getElementById('avatar').files.length;
+        var form_data = new FormData();
+          form_data.append("myname",$('#myname').val());
+          form_data.append("_token",$('input[type="hidden"]').attr('value'));
+        for (var i = 0; i < countAvatar ; i++) {
+          form_data.append("avatar[]", document.getElementById('avatar').files[i]);
+        }
+        //form_data.append("name1",$('#name1').val());
+        let _token = $('input[type="hidden"]').attr('value');
+        let myUrl = $("#formPost1").attr('action');
+        let myMethode = $("#formPost1").attr('method');
+         $.ajax({
+            url: myUrl, // La ressource ciblée
+            method: myMethode, // Le type de la requête HTTP.
+            data: form_data,
+            dataType:'json',
+            contentType: false, 
+            //cache: false , 
+            processData: false ,
+            success : function(data){
+              console.log('SUCCESS');
+              console.log(data.Messages);
+              console.log(data.dts);
+              //console.log(result + '-'+ status);
+              console.log(form_data.get("myname"));
+              console.log(form_data.get("_token"));
+             // console.log(form_data.get("avatar"));
+             /*$.each(data.dts, function(index, val1){
+                console.log(index);
+             });*/
+              
+             },
+            error : function(result, status, erreur){
+              console.log('ERROR')
+              console.log(form_data.get("myname"));
+              console.log(form_data.get("_token"));
+              console.log(form_data);
+              console.log(result + '-'+ status);
+             }
+          });
+      });//end post1
 })(jQuery);
 

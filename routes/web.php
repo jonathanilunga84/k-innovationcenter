@@ -40,8 +40,11 @@ Route::get('/Appel-a-projet-form',[AppelaprojetController::class,'create'])->nam
 
 Route::post('/Appel-aprojet',[AppelaprojetController::class,'store'])->name('store.Add');
 
-Route::get('/ct',[HomeController::class,'ct'])->name('ct1');
-Route::post('/ctM',[HomeController::class,'ct2'])->name('ct2');
+//Route::get('/ct',[HomeController::class,'ct'])->name('ct1');
+Route::get('get1', function () {
+    return view('pages.appel-a-projet');
+});
+Route::post('/post1',[AppelaprojetController::class,'post1'])->name('post1');
 
 
 Route::get('/dashboard', function () {

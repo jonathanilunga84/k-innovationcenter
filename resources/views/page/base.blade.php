@@ -11,8 +11,8 @@
   <!--meta name="csrf-token" content="{{ csrf_token() }}"-->
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -60,7 +60,7 @@
 
   <!-- ======= Footer ======= -->
     @include('page.footer')
-  <!-- End Footer -->
+  <!-- End Footer .center -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -90,8 +90,21 @@
         autoplay: true,
         centerMode: true,
         slidesToShow: 3,
-        slidesToScroll: 3
-
+        //variableWidth: true,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              //arrows: false,
+              //centerMode: true
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          }
+        ]
       });
   </script> 
 </body>
