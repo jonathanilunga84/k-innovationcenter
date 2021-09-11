@@ -33,6 +33,11 @@
             <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
+          <div class="carousel-item">
+            <img src="{{ asset('images/slide/Slide-5.png') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
 			   
 			  </div>
 			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -103,19 +108,25 @@
   	<section id="story-intro" class="story-intro">
   		<div id="Appel-aprojet" class="container-fluid">
   	     <div class="row story-intro-ligne">
-          <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 order-lg-22">
-             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{ asset('images/Appel-a-projets-1.jpg') }}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ asset('images/Appel-a-projet-4.png') }}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ asset('images/Appel-a-projets-3.jpg') }}" class="d-block w-100" alt="...">
-    </div>
-  </div>
+            <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 order-lg-22">
+               <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{ asset('images/Appel-a-projets-1.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ asset('images/Appel-a-projet-7.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ asset('images/Appel-a-projets-3.jpg') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ asset('images/Appel-a-projets5-.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ asset('images/Appel-a-projets-6.jpg.png') }}" class="d-block w-100" alt="...">
+            </div>
+          </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -129,7 +140,8 @@
           <div id="Appel-aprojetM" class="col-sm-6 text-light text-center">
             <div id="content_text">   
            
-            <h2 id="title_appel_projet">Appel à projet (10 août au 10 septembre 2021)</h2>
+            <!--h2 id="title_appel_projet">Appel à projet (10 août au 10 septembre 2021)</h2-->
+            <h2 id="title_appel_projet">Appel à projet (Fin soumission 30 septembre 2021)</h2>
             <br />
             <p id="content">
               Vous êtes étudiant(e), entrepreneur, chercheurs ou tout simplement passionné(e) par l'innovation et la création d'entreprise ?
