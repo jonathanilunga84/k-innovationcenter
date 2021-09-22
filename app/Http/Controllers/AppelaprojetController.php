@@ -100,7 +100,7 @@ class AppelaprojetController extends Controller
             if($request->has('confirm_info')) {
                 $details = $request->all();
                 Mail::to("jonathandoc411@gmail.com")->send(new appelAprojet($details));
-                return response()->json(['status'=>1, 'Messages'=>'Votre projet est bien envoyer11111']);
+                return response()->json(['status'=>1, 'Messages'=>'Votre projet est bien envoyer']);
                 //var_dump($request->cv1);
                 //dd();
             }else{

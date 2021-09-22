@@ -12,6 +12,7 @@
         <ul>
           <li><a class="active" href="{{ route('Home')}}">ACCUEIL</a></li>
           <li><a href="/#Appel-aprojet">APPEL A PROJET 2021</a></li>
+          <li><a href="https://ishangostartupscenter.com">STARTUPS CENTER</a></li>
           <!--li><a href="quiSommesNous.php">QUI SOMME NOUS</a></li-->
           <!--li><a href="">EDITIONS</a></li-->
           <li class="dropdown"><a href="#"><span>EDITIONS</span> <i class="bi bi-chevron-down"></i></a>

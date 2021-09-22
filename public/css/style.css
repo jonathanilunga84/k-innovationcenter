@@ -584,9 +584,18 @@ section {
 }
 @media (max-width: 414px) {
   #video_page{
-  margin-top: 0;
+    margin-top: 0;
+  }
 }
+
+/*--------------------------------------------------------------
+# section Ishango
+*/
+
+#Ishango{
+  background-color: #F6F8F9;
 }
+
 
 
 /*--------------------------------------------------------------

@@ -1,7 +1,7 @@
 @extends('page.base')
 
 @section('title')
-    Accueil
+    Accueil 
 @endsection
 
 @section('contenu')
@@ -158,6 +158,24 @@
           </div> 
          </div>
   	</section>
+    <section id="Ishango" class="Ishango bg-dangerM">
+      <div class="container">
+        <div class="row text-center h-100 align-items-center">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <p class="fw-bold">
+              Soumettez aussi à ISHANGO STARTUPS CENTER
+            </p>
+            <p>
+              <a href="https://ishangostartupscenter.com/concours.php" class="btn-learn-more">Soumettre</a>
+            </p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <img src="{{ asset('images/ISHANGO2021-09-22-520.png') }}" class="img-fluid" alt="Image Startups ISHANGO" />
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Section Equipe de Gestion -->
     <section id="equipe-de-gestion" class="equipe-de-gestion bg-danger-">
