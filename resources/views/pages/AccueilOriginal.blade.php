@@ -61,7 +61,7 @@
   						<p>Kinshasa Innovation Center (KIC) est une initiative de la Chambre de commerce Suisse- RD Congo (CCSC) en partenariat avec les universités de Genève et de Kinshasa. Il a pour but de promouvoir les jeunes entrepreneurs Congolais en les accompagnant avec des outils utiles et indispensables à la création d’entreprise. L’approche envisagée est l’apprentissage et la mise en situation de cas pratiques avec l’assistance des mentors et chefs d’entreprises expérimentés. <!--span id="" class="dots">...</span-->
 
               <span id="more" class="">
-                Pour cette nouvelle édition, nous avons le plaisir de renouveler notre partenariat avec l'Organisation Mondiale de la Propriété Intellectuelle (OMPI) qui oeuvre pour l' investissement dans la recherche & développement, l'innovation, la création et la production culturelle. Nous sommes également heureux de compter l'agence nationale de déveppement de l'entrepreneuriat Congolais (ANADEC) comme nouveau partenaire du KIC.
+                Pour cette nouvelle édition, nous avons le plaisir de renouveler notre partenariat avec l'Organisation Mondiale de la Propriété Intellectuelle (OMPI) qui oeuvre pour l' investissement dans la recherche & développement, l'innovation, la création et la production culturelle. Nous sommes également heureux de compter l' Office de Promotion des Petites et Moyennes Entreprises Congolaises (OPEC) comme nouveau partenaire du KIC
               </span>
               <!--span id="mybtn" onclick="read_more_less();">Lire la suite</span-->
                
@@ -105,8 +105,7 @@
   		</div>
   	</section>        
    
-    <!-- Section appel a projet -->
-  	<!-- <section id="story-intro" class="story-intro">
+  	<section id="story-intro" class="story-intro">
   		<div id="Appel-aprojet" class="container-fluid">
   	     <div class="row story-intro-ligne">
             <div id="Coluumn_carousel" class="col-sm-6 col-lg-6 Oorder-1 order-lg-22">
@@ -140,10 +139,9 @@
           </div>
           <div id="Appel-aprojetM" class="col-sm-6 text-light text-center">
             <div id="content_text">   
-            -->
+           
             <!--h2 id="title_appel_projet">Appel à projet (10 août au 10 septembre 2021)</h2-->
-
-            <!-- <h2 id="title_appel_projet">Appel à projet (Fin soumission 30 septembre 2021)</h2>
+            <h2 id="title_appel_projet">Appel à projet (Fin soumission 30 septembre 2021)</h2>
             <br />
             <p id="content">
               Vous êtes étudiant(e), entrepreneur, chercheurs ou tout simplement passionné(e) par l'innovation et la création d'entreprise ?
@@ -155,18 +153,17 @@
             <p>
               <p class="appel-a-projet"><a href="{{ asset('css/style/pdf/Eligibilité et charte des participants-1.pdf') }}">
                 Lire la charte des participants et les conditions d'éligibilité</a>
-              </p> -->
-              <!-- a href="{{ route('formAppelaprojet') }}" id="btn-learn-more" class="btn-learn-more" data-bs-toggle="modalM" data-bs-target="#staticBackdropM">Je postule</a -->
-              <!-- <p>
+              </p>
+              <!-- a href="{{ route('formAppelaprojet') }}" id="btn-learn-more" class="btn-learn-more" data-bs-toggle="modalM" data-bs-target="#staticBackdropM">Je postule</a-->
+              <p>
                 <a href="#" id="btn-learn-more" class="btn-learn-more" data-bs-toggle="modalM" data-bs-target="#staticBackdropM">Dépôt des candidatures clôturé </a>
               </p>
             </p>
             </div>
           </div> 
          </div>
-  	</section> --> <!-- End Section appel a projet -->
-
-    <!-- section id="Ishango" class="Ishango bg-dangerM">
+  	</section>
+    <section id="Ishango" class="Ishango bg-dangerM">
       <div class="container">
         <div class="row text-center h-100 align-items-center">
           <div class="col-sm-6 col-md-6 col-lg-6">
@@ -182,17 +179,8 @@
           </div>
         </div>
       </div>
-    </section -->
+    </section>
 
-    <!-- div id="SectionAfficheFinProjet" class="container bg-dangerM">
-      <div class="">
-        <div class="row justify-content-center bg-dangerM">
-          <div class="col-sm-10 col-md-12 col-lg-12 text-center">
-            <img src="{{ asset('images/PeriodeAnalyse2021-10-06 at 06.38.20.jpeg') }}" class="img-fluid" alt="Image sur PERIODE D'ANALYSE">
-          </div>      
-        </div>
-      </div>
-    </div -->
 
     <!-- Section Equipe de Gestion -->
     <section id="equipe-de-gestion" class="equipe-de-gestion bg-danger-">
@@ -202,33 +190,13 @@
         </div>
           <div class="row">
             <div class="center slider">
-              <!-- div class="col-sm-12 col-md-3 col-lg-2 bg-danger-">
+              <div class="col-sm-12 col-md-3 col-lg-2 bg-danger-">
                 <div class="single-box">
                   <div class="img-area"><img src="{{ asset('images/equipe/Dr-Gauthier-KALONJI.jpg') }}" class="w-100"></div>
                   <div class="img-text">
                     <h5>Dr Gauthier KALONJI</h5>
                     <p>Responsable formation</p>
                 </div>
-                </div>
-              </div on dit de supprimer Gauthier kalonji du projet -->
-
-              <!-- a la place de Gauthier kalonji on a rajouté Michel Canei  -->
-              <div class="col-sm-12 col-md-3 col-lg-2 bg-danger-">
-                <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/Michel-Canei.jpg') }}" class="w-100"></div>
-                  <div class="img-text">
-                    <h5>Michel Canei</h5>
-                    <p>Responsable formation</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-3 col-lg-2 bg-danger-">
-                <div class="single-box">
-                  <div class="img-area"><img src="{{ asset('images/equipe/Marie-helene.jpg') }}" class="w-100"></div>
-                  <div class="img-text">
-                    <h5>Marie-Héléne Pingoud</h5>
-                    <p>Responsable coaching</p>
-                  </div>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 col-lg-2">
@@ -237,21 +205,7 @@
                     <img src="{{ asset('images/equipe/sacre.jpeg') }}" class="w-100"></div>
                   <div class="img-text">
                     <h5>Mr Sacré MBUMINA Benoît</h5>
-                    <!-- p>Mentor</p -->
                     <p>Responsable Mentorat</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-12 col-md-3 col-lg-2">
-                <div class="single-box">
-                  <div class="img-area">
-                    <img src="{{ asset('images/equipe/Joël-KABUYA.png') }}" class="w-100" alt="Joël KABUYA"></div>
-                  <div class="img-text">
-                    <br/>
-                    <h5>Mr Joël KABUYA</h5>
-                    <!-- p>Mentor</p -->
-                    <p>Secrétaire permanent</p>
                   </div>
                 </div>
               </div>
@@ -329,18 +283,9 @@
             </div>
             <div class="swiper-slide"><a href="https://www.unige.ch/" class="glightbox"><img src="{{ asset( 'images/partainers/1280px-Université_de_Genève_(logo).svg.png') }}" class="img-fluid-" height="50" alt="Université de Genève"></a>
             </div>
-            <!-- div class="swiper-slide"><a href="https://www.opec.cd" class="glightbox"><img src="{{ asset( 'images/partainers/3-opec.png') }}" class="img-fluid-" height="80"  alt="OPEC"></a>
-            </div -->
-            <div class="swiper-slide"><a href="https://www.opec.cd" class="glightbox"><img src="{{ asset( 'images/partainers/Anadec-20220108-WA0001.jpg') }}" class="img-fluid-" height="80"  alt="Anadec"></a>
+            <div class="swiper-slide"><a href="https://www.opec.cd" class="glightbox"><img src="{{ asset( 'images/partainers/3-opec.png') }}" class="img-fluid-" height="80"  alt="OPEC"></a>
             </div>
             <div class="swiper-slide"><a href="https://www.yeccolapp.education" class="glightbox"><img src="{{ asset('images/partainers/4-LOGO-YECOLAPP.jpg') }}" class="img-fluid" alt="yeccolapp education"></a>
-            </div>
-            <div class="swiper-slide"><a href="https://www.african-venture.com" class="glightbox"><img src="{{ asset( 'images/partainers/African-venture-20220108-WA0002.jpg') }}" class="img-fluid-" height="80"  alt="African venture"></a>
-            </div>
-
-            <div class="swiper-slide"><a href="https://www.reformaf.org/" class="glightbox"><img src="{{ asset( 'images/partainers/Logo REFORMAF(1) 27.05.png') }}" class="img-fluid-" height="80"  alt="African venture"></a>
-            </div>
-            <div class="swiper-slide"><a href="https://www.ficeclub.com/" class="glightbox"><img src="{{ asset( 'images/partainers/ficeclub.jpeg') }}" class="img-fluid-" height="80"  alt="https://www.ficeclub.com"></a>
             </div>
             <div class="swiper-slide"><a href="https://www.unikin.ac.cd/" class="glightbox"><img src="{{ asset('images/partainers/5-Univeristé_de_Kinshasa_Blason.svg.png') }}" class="img-fluid-" height="80" alt="Université de Kinshasa"></a>
             </div>
