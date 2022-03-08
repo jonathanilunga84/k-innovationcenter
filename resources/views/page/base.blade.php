@@ -85,7 +85,7 @@
       });
 
        $(".center").slick({
-        dots: true,
+        /*dots: true,*/
         infinite: true,
         autoplay: true,
         centerMode: true,

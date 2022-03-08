@@ -452,6 +452,7 @@ h1, h2, h3, h4, h5, h6 {
   #hero .carousel-control-prev, #hero .carousel-control-next {
     width: 5%;
   }
+  .Hero-mg-top{ margin-top: 75px; }
 }
 @media (max-width: 500px) {
   #hero {
@@ -1409,6 +1410,10 @@ section {
 #appel_a_projet input:focus, #appel_a_projet textarea:focus {
   border-color: #006fbe;
   border-colorM: red;
+}
+
+.affiche-image{
+  background-color: #1d284b;
 }
 
 

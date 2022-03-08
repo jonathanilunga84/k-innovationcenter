@@ -16,6 +16,11 @@
 			        <p></p>
 			      </div>
 			    </div>
+          <div class="carousel-item Hero-mg-top">
+            <img src="{{ asset('images/Banderole.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
           <div class="carousel-item">
             <img src="{{ asset('images/slide/light-bulb-3104355.jpg') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
@@ -37,8 +42,7 @@
             <img src="{{ asset('images/slide/Slide-5.png') }}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
             </div>
-          </div>
-			   
+          </div>			   
 			  </div>
 			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -194,6 +198,13 @@
       </div>
     </div -->
 
+    <!-- Section affiche -->
+    <!-- section class="affiche-image bg-primaryM" style="background-color: #1d284b;">
+      <div class="container">
+        <img src="{{ asset('images/programme kinshasa innovation center.jpg') }}" class="img-fluid" alt="banderole sur la journée de l'entrepreneuriat en milieu universitaire" />
+      </div>
+    </section -->
+
     <!-- Section Equipe de Gestion -->
     <section id="equipe-de-gestion" class="equipe-de-gestion bg-danger-">
       <div class="container">
@@ -242,7 +253,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-sm-12 col-md-3 col-lg-2">
                 <div class="single-box">
                   <div class="img-area">
@@ -309,10 +319,16 @@
                       <p>Responsable incubation</p>
                     </div>
                 </div>              
-              </div>
-              
+              </div>              
             </div>
           </div>
+      </div>
+    </section>
+
+    <!-- Section banderole sur la journée de l'entrepreneuriat en milieu universitaire -->
+    <section class="banderole-image">
+      <div class="containerM">
+        <img src="{{ asset('images/Banderole.jpg') }}" class="img-fluid" alt="banderole sur la journée de l'entrepreneuriat en milieu universitaire" />
       </div>
     </section>
 
